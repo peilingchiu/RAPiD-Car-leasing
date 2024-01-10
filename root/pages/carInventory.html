@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('../images/car.jpg') center/cover no-repeat;
+            height: 300px;
+            text-align: center;
+            color: #fff;
+            padding: 50px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        input[type="text"],
+        select {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .car-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .car-link {
+            width: 30%;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Our Car Inventory</h1>
+    </header>
+
+    <section>
+        <form id="searchForm" onsubmit="redirectToCarDetails(); return false;">
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand">
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+
+            <label for="type">Type:</label>
+            <input type="text" id="type" name="type">
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year">
+
+            <!-- Changed button type to "submit" -->
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section>
+        <div class="car-links">
+            <!-- Replace the href attributes with actual links -->
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            <a href="carDetails.html" class="car-link">Car Model 1</a>
+            
+           
+            
+            <!-- Add more car links as needed -->
+        </div>
+    </section>
+
+    <script>
+        function redirectToCarDetails() {
+            // Redirect to carDetails.jpg when the form is submitted
+            window.location.href = 'carDetails.html';
+        }
+    </script>
+
+</body>
+
+</html>

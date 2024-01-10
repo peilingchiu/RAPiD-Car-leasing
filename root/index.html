@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/rapidStyle.css" type="text/css">
+    <title>CAR LEASING</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <!-- **********************************************************************************
+                           Header section for Amala to work on                                    
+/*************************************************************************************** -->
+    <header>
+        <section class="logo">
+            <img src="images/PNG-Logo-Lingscar.png" alt="Logo">
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Leasing</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <section class="login">
+            <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i> <!-- login icon -->
+                Login
+            </a>
+
+        </section>
+        <img src="images/car.jpg" alt="main image">
+    </header>
+    <!-- **********************************************************************************
+                          main: search bar and top leasing deal for Peiling to work on                                    
+ *************************************************************************************** -->
+    <!-- BEGIN main section -->
+    <main>
+        <!-- Peiling: search Bar -->
+
+        <section class="search-bar">
+            <ul class="search">
+                <li>
+                    <label for="make">Make</label>
+                    <input type="text" id="make">
+                </li>
+
+                <li>
+                    <label for="model">Model</label>
+                    <input type="text" id="model">
+                </li>
+
+                <li>
+                    <label for="year">Year</label>
+                    <input type="text" id="year">
+                </li>
+
+                <li>
+                    <label for="type">Type</label>
+                    <input type="text" id="type">
+                </li>
+
+                <li>
+                    <label for="budget">Monthly Budget</label>
+                    <input type="text" id="budget">
+                </li>
+                <li>
+                    <!-- <label for="type"></label> bug to fix, need to align search -->
+                    <button class="btn-" type="submit" onclick="redirectToCarInventory()">Search</button>
+                </li>
+            </ul>
+
+        </section>
+        <h2>Top lease deals</h2>
+        <!-- Peiling: top car leasing deals -->
+        <section class="cards">
+
+            <article>
+                <figure>
+                    <img src="images/electric-200X150.jpg" alt="car">
+                    <figcaption>
+                        <button class="btn-invert" type="submit"
+                            onclick="redirectToCarInventory()">Electric/Hybird</button>
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="images/trucks-200X150.jpg" alt="car">
+                    <figcaption>
+                        <button class="btn-invert" type="submit" onclick="redirectToCarInventory()">vans</button>
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="images/luxuryCars-200X150.jpg" alt="car">
+                    <figcaption>
+                        <button class="btn-invert" type="submit" onclick="redirectToCarInventory()">luxury cars</button>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- **********************************************************************************
+                         Raul:  how does car leasing works                                    
+ *************************************************************************************** -->
+        <section>
+            <h>how does car leasing works - under construction !</h>
+            <article>
+                <figure>
+                    <figurecaption></figurecaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <figurecaption></figurecaption>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <figurecaption></figurecaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+    <!-- END main section -->
+
+
+    <!-- **********************************************************************************
+                        Dhanashree  :  FOOTER                                    
+ *************************************************************************************** -->
+    <footer>
+        <section class="m">
+            <h1>For more information on our best deals subscribe to our newsletter.</h1>
+            <button>Email ID</button>
+            <p>Copyright &copy;2023 | Lings Cars</p>
+        </section>
+        <section class="d">
+            <article class="l">
+                <h2>Leasing Information</h2>
+                <ul>
+                    <li><a href="#">Car Leasing</a></li>
+                    <li><a href="#">Van Leasing</a></li>
+                    <li><a href="#">Leasing Terms</a></li>
+                    <li><a href="#">Short-term Leasing</a></li>
+                </ul>
+            </article>
+            <article class="s">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#">Maintainance</a></li>
+                    <li><a href="#">Introduce A friend</a></li>
+                    <li><a href="#">Car Accessories</a></li>
+                    <li><a href="#">Price Matching</a></li>
+                </ul>
+            </article>
+            <article class="c">
+                <h2>Contact Us</h2>
+                <p>Address:</p>
+                <p>1234 River Street, 4th Avenue,</p>
+                <p>UK</p>
+                <p>Call:1234-567-23233</p>
+                <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
+            </article>
+            <p class="p">Copyright &copy;2023 | Lings Cars</p>
+            <figure class="i">
+                <img src="." alt="">
+                <img src="." alt="">
+                <img src="." alt="">
+            </figure>
+        </section>
+    </footer>
+
+
+    <script>
+        /* Functions to redirect to different pages */
+        function redirectToCarInventory() {
+            // Redirect to carDetails.jpg when the form is submitted
+            window.location.href = 'pages/carInventory.html';
+            alert('redirecting to car inventory');
+        }
+    </script>
+</body>
+
+</html>

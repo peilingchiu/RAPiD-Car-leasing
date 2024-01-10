@@ -1,0 +1,303 @@
+/*---------------naming convention REFERENCE in case of adding new variables ------------*/
+/* --base-font-size: 16px; 
+    --base-maxwidth: 100%;
+    --reviewsio-logo-style: var(--logo-normal);
+    --common-star-color: #25c634;
+    --common-star-disabled-color: rgba(0, 0, 0, 0.25);
+    --medium-star-size: 22px;
+    --small-star-size: 19px;
+    --x-small-star-size: 19px;
+    --x-small-star-display: inline-flex;
+    --header-order: 1;
+    --header-width: 160px;
+    --header-bg-start-color: transparent;
+    --header-bg-end-color: transparent;
+    --header-gradient-direction: 135deg; */
+
+
+/****************************************************************************************/
+/*                                BEGIN  Global Variable                                */
+/****************************************************************************************/
+:root {
+  /* Typography */
+  --primary-font: 'Roboto', sans-serif;
+  --heading-font: 'Roboto Slab', serif;
+  --fw-l: 300;
+  /* Light font weight */
+  --fw-b: 500;
+  /* Bold font weight */
+  --fw-base: 700;
+  /* Bold font weight */
+  --fs-base: 1rem;
+  /* Base font size */
+
+
+  /* Color */
+  --primary-color: #0B1C55;
+  /* Dark blue - for header links, footer, some buttons */
+  --secondary-color: #D1D6E1;
+  /* Light gray pale blue */
+  --tertiary-color: #BBE1F6;
+  /* Light blue, sky blue */
+  --accent-color: #DAFCF6;
+  /* Light green pale cyan */
+
+  --text-lt-color: #fff;
+  --text-mid-color: #6c757d;
+  /* MAY DELETE IF NOT NEEDED */
+  --text-dk-color: #000;
+
+
+  /* Helper */
+  --spacer: 1rem;
+  --spacer-dbl: calc(var(--spacer) * 2);
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --padding: 8px;
+  --border-radius: 10px;
+
+
+  /* Grid helper */
+  --grid-item-mobile: repeat(1, 1fr);
+  --grid-item-mid: repeat(2, 1fr);
+  --grid-item-ml: repeat(3, 1fr);
+  --grid-item-large: repeat(4, 1fr);
+  --grid-item-very-large: repeat(6, 1fr);
+}
+
+/* END Global Variable */
+
+
+body {
+  /* designed variables*/
+  --visited-color: var(--tertiary-color);
+  --hover-color: var(--secondary-color);
+
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-l);
+  margin: auto;
+  max-width: 80%;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  font-size: calc(var(--fs-base) * 1.8);
+
+}
+
+h2 {
+  margin-top: var(--spacer);
+  font-size: calc(var(--fs-base) * 1.5);
+  text-align: center;
+}
+
+h3 {
+  margin-top: var(--spacer);
+  font-size: calc(var(--fs-base) * 1.2);
+  text-align: center;
+}
+
+/* p {
+  font-size: var(--fs-base);} */
+
+img {
+  max-width: 100%;
+  /* image will not exceed the width of its container */
+  height: auto;
+  /* image will not exceed the height of its container */
+}
+
+a:visited {
+  color: var(--visted-color);
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+/****************************************************************************************/
+/*                                BEGIN  style for search bar                           */
+/*                Style specfic for the class .search-bar                               */
+/****************************************************************************************/
+.search-bar {
+  background-color: var(--secondary-color);
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* Begin styling search */
+
+/* behavier for mobile version */
+ul.search {
+  display: grid;
+  gap: 10px;
+  /* Adjust the gap between columns if needed */
+}
+
+.search-bar label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/* Style for input fields */
+ul.search input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+
+}
+
+
+/****************************************************************************************/
+/*                                BEGIN  .btn                                           */
+/*                Style specfic for the class btn and inverted btn                      */
+/****************************************************************************************/
+
+
+/* Attribute Selector Styles */
+[class*='btn-'] {
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  cursor: pointer;
+  padding: 7px 24px;
+  transition: background-color .3s ease;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+.btn-invert {
+  background-color: var(--text-lt-color);
+  color: var(--text-dk-color);
+}
+
+/****************************************************************************************/
+/*                                BEGIN  .cards                                         */
+/*                Style specfic for the class cards in top leasing deal                 */
+/****************************************************************************************/
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cards article {
+  padding: var(--spacer-dbl);
+  background-color: var(--accent-color);
+}
+
+
+
+/* END .cards */
+
+/****************************************************************************************/
+/*                                BEGIN     FOOTER                                      */
+/****************************************************************************************/
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+}
+
+footer h1 {
+  color: var(--text-lt-color);
+}
+
+footer h2 {
+  color: var(--text-lt-color);
+  font-size: 1.25rem;
+  font-family: roboto-serif serif;
+
+}
+
+footer a {
+  color: var(--text-lt-color);
+  font-family: var(--primary-font);
+  text-decoration: none;
+}
+
+/* grid area for footer */
+.d {
+  display: none;
+
+}
+
+/* END FOOTER */
+
+/******  comment: isn't mobile first apporch means default action is mobile ? Question from Peiling */
+
+/****************************************************************************************/
+/*                                   Media queries                                      */
+/****************************************************************************************/
+
+@media screen and (min-width:700px) {
+
+  /* grid area for footer */
+  .m {
+    display: none;
+  }
+
+  .d {
+    display: grid;
+    grid-template-areas: "l s c"
+      "p p i";
+    grid-column: 1fr;
+    grid-row: auto;
+  }
+
+  .l {
+    grid-area: l;
+  }
+
+  .s {
+    grid-area: s;
+  }
+
+  .c {
+    grid-area: c;
+  }
+
+  .p {
+    grid-area: p;
+  }
+
+  .i {
+    grid-area: i;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+  /* for header link, wait for Amala to modify */
+  header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    margin-right: 15px; /* Adjust the margin as needed */
+}
+
+header nav a {
+    text-decoration: none;
+    color: black; /* Adjust the color as needed */
+}
+
+
+/****** SPECIFIC FOR SEARCH BAR */
+  .search-bar ul {
+    grid-template-columns: var(--grid-item-very-large);
+  }
+
+
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Information</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left-section {
+            width: 20%;
+        }
+
+        .car-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .small-images img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .right-section {
+            width: 75%;
+        }
+
+        .leasing-info {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .style-car{
+    display: grid;
+    
+    width: 50%;
+    border: solid 1px black;
+   
+}
+        .style-sub-car{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    border: solid 1px black;
+    gap: 1px; /* adds a gap between grid items */
+}
+
+
+.style-sub-car > * {
+    border: solid 1px black; /* adds border to every grid item */
+}
+
+.style-sub-car img:first-child {
+    border: none; /* removes border from first image */
+}
+
+.style-sub-car img:first-child {
+    grid-column: span 5;
+}
+    </style>
+</head>
+<body>
+<section class="style-car">
+    <div class="style-sub-car">
+        <img id="display-image" class="car-image" src="../images/mercedes-benz-c-class-coupe_sm.jpg" alt="Car Image">
+       
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small1.gif" alt="Small Image 1">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small2.gif" alt="Small Image 2">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small3.gif" alt="Small Image 3">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small4.gif" alt="Small Image 4">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small5.gif" alt="Small Image 5">
+       
+    </div>
+    <div class="style-sub-car">
+        <img id="display-image" class="car-image" src="../images/mercedes-benz-c-class-coupe_sm.jpg" alt="Car Image">
+       
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small1.gif" alt="Small Image 1">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small2.gif" alt="Small Image 2">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small3.gif" alt="Small Image 3">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small4.gif" alt="Small Image 4">
+            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small5.gif" alt="Small Image 5">
+       
+    </div>
+</section>
+    <div class="right-section">
+        <div class="leasing-info">
+            <h2>Lease Criteria</h2>
+            <p><strong>Tier 1A:</strong> Cars Over $200k (California residents only)</p>
+            <p><strong>Term of Lease:</strong> 60 months</p>
+            <p><strong>Tax Rate:</strong> 9.25%</p>
+            <p><strong>Miles Drive Per Year:</strong> 1000</p>
+            <p><strong>Cap Cost Reduction (minimum):</strong> $44,299.80</p>
+            <p><strong>Purchase Price:</strong> $442,998.00</p>
+            <p><strong>Admin Fee:</strong> $2,095.00</p>
+            <p><strong>Residual:</strong> $288,823.00</p>
+            <p><strong>Cap Cost Reduction:</strong> $44,299.80</p>
+            <p><strong>Cap Cost Reduction Tax:</strong> $3,654.73</p>
+            <p><strong>Deposit:</strong> $0</p>
+            <p><strong>First & Last Payment:</strong> $10,021.74</p>
+            <p><strong>License/Title Registration:</strong> $3,543.98</p>
+            <p><strong>Total Drive-Off:</strong> $61,520.26</p>
+            <p><strong>Base Payment:</strong> $4,628.98</p>
+            <p><strong>Sales Tax:</strong> $381.89</p>
+            <p><strong>Monthly Payment:</strong> $5,010.87</p>
+        </div>
+        
+        <button class="contact-button">Contact Agent</button>
+    </div>
+
+</body>
+</html>
+
