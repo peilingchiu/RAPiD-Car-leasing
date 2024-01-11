@@ -22,12 +22,9 @@
   /* Typography */
   --primary-font: 'Roboto', sans-serif;
   --heading-font: 'Roboto Slab', serif;
-  --fw-l: 300;
-  /* Light font weight */
-  --fw-b: 500;
-  /* Bold font weight */
-  --fw-base: 700;
-  /* Bold font weight */
+  --fw-l: 300; /* normal Light font weight */
+  --fw-b: 500; /* Basic font weight */
+  --fw-bold: 700; /* Bold font weight */
   --fs-base: 1rem;
   /* Base font size */
 
@@ -121,25 +118,31 @@ a:hover {
 /*                Style specfic for the class .search-bar                               */
 /****************************************************************************************/
 .search-bar {
-  background-color: var(--secondary-color);
+  --bg-search-bar: var(--secondary-color);
+  background-color: var(--bg-search-bar);
   width: 90%;
   margin: auto;
   padding: 10px;
   box-shadow: var(--shadow);
 }
 
-/* Begin styling search */
+/* Begin styling search bar*/
 
 /* behavier for mobile version */
 ul.search {
   display: grid;
-  gap: 10px;
-  /* Adjust the gap between columns if needed */
+  gap: 10px; 
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
 }
-
+.search .hide {
+  color: var(--bg-search-bar);
+}
 .search-bar label {
   display: block;
   margin-bottom: 0.5em;
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
 }
 
 /* Style for input fields */
@@ -148,6 +151,9 @@ ul.search input[type="text"] {
   padding: 8px;
   box-sizing: border-box;
 
+}
+figcaption {
+  width:100%;
 }
 
 
@@ -167,6 +173,7 @@ ul.search input[type="text"] {
   transition: background-color .3s ease;
   text-decoration: none;
 
+
 }
 
 .btn:hover {
@@ -176,6 +183,7 @@ ul.search input[type="text"] {
 .btn-invert {
   background-color: var(--text-lt-color);
   color: var(--text-dk-color);
+  width:100%
 }
 
 /****************************************************************************************/
@@ -232,7 +240,7 @@ footer a {
 
 /* END FOOTER */
 
-/******  comment: isn't mobile first apporch means default action is mobile ? Question from Peiling */
+
 
 /****************************************************************************************/
 /*                                   Media queries                                      */
@@ -297,6 +305,7 @@ header nav a {
 /****** SPECIFIC FOR SEARCH BAR */
   .search-bar ul {
     grid-template-columns: var(--grid-item-very-large);
+    align-self: end;
   }
 
 
