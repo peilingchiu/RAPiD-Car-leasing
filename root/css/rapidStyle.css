@@ -38,6 +38,8 @@
   /* Light blue, sky blue */
   --accent-color: #DAFCF6;
   /* Light green pale cyan */
+  --secondary-accent-color: #DEB992;
+  /* Gold */
 
   --text-lt-color: #fff;
   --text-mid-color: #6c757d;
@@ -206,6 +208,94 @@ figcaption {
 
 
 /* END .cards */
+/****************************************************************************************/
+/*                       BEGIN         how does car leasing works                                                           */
+/****************************************************************************************/
+.cards-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  background-color: var(--accent-color);
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  
+}
+.cards-container h2, h3 {
+  font-weight: var(--fw-base);
+  font-style: italic;
+  line-height: 1.25;
+  text-align: center;
+  padding: 1rem;
+}
+.cards-container p {
+  padding: var(--spacer) var(--spacer) ; 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  height: 100%;
+  padding: var(--spacer-dbl);
+  background-color:  #fff;
+  text-align: center;
+  width: 80%;
+  box-shadow: var(--shadow);
+}
+i {
+  font-size: 2.5rem;
+  color: #DEB992;
+  padding: var(--spacer);
+}
+.card .btn-invert {
+  margin-top: auto;
+}
+
+
+@media screen and (min-width:700px) {
+
+  /* grid area for how does car leasing works */
+ 
+  .cards-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: auto;
+      grid-gap: 2em;
+  }
+  .cards-container h2 {
+      grid-column: 1/4;
+      width: 80%;
+  }
+
+  .info-1 {
+      grid-column: 1/2;
+      height: 100%;
+      width: 100%;
+  }
+  .info-2 {
+      grid-column: 2/2;
+      height: 100%;
+      width: 100%;
+  }
+  .info-3 {
+      grid-column: 3/2;
+      height: 100%;
+      width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* grid area for how does car leasing works */
+  .cards-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: auto;
+      grid-gap: 2em;
+  }
+}
+
+
+
+/* END how does car leasing works */
 
 /****************************************************************************************/
 /*                                BEGIN     FOOTER                                      */
