@@ -51,8 +51,7 @@
     <!-- BEGIN main section -->
     <main>
         <!-- Peiling: search Bar -->
-
-        <section class="search-bar">
+        <form id="searchForm" class="search-bar" onsubmit="redirectToCarInventory(); return false;">
             <ul class="search">
                 <li>
                     <label for="make">Make</label>
@@ -80,11 +79,11 @@
                 </li>
                 <li>
                 <label for="search" class="hide">x</label>  
-                    <button id="search" class="btn-" type="submit" onclick="redirectToCarInventory()">Search</button>
+                <button type="submit" class="btn-">Search</button>
                 </li>
             </ul>
 
-        </section>
+        </form>
         <h2>Top lease deals</h2>
         <!-- Peiling: top car leasing deals -->
         <section class="top-lease">

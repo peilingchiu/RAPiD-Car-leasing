@@ -30,20 +30,14 @@
 
 
   /* Color */
-  --primary-color: #0B1C55;
-  /* Dark blue - for header links, footer, some buttons */
-  --secondary-color: #D1D6E1;
-  /* Light gray pale blue */
-  --tertiary-color: #BBE1F6;
-  /* Light blue, sky blue */
-  --accent-color: #DAFCF6;
-  /* Light green pale cyan */
-  --secondary-accent-color: #DEB992;
-  /* Gold */
+  --primary-color: #0B1C55;/* Dark blue - for header links, footer, some buttons */
+  --secondary-color: #D1D6E1;/* Light gray pale blue */
+  --tertiary-color: #BBE1F6;/* Light blue, sky blue */
+  --accent-color: #DAFCF6;/* Light green pale cyan */
+  --secondary-accent-color: #DEB992;/* Gold */
 
   --text-lt-color: #fff;
-  --text-mid-color: #6c757d;
-  /* MAY DELETE IF NOT NEEDED */
+  --text-mid-color: #6c757d; /* MAY DELETE IF NOT NEEDED */
   --text-dk-color: #000;
 
 
@@ -128,15 +122,15 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-/* Begin styling search bar*/
-
 /* behavier for mobile version */
 ul.search {
   display: grid;
   gap: 10px; 
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
+
 }
+
 .search .hide {
   color: var(--bg-search-bar);
 }
@@ -147,12 +141,17 @@ ul.search {
   font-weight: var(--fw-bold);
 }
 
-/* Style for input fields */
-ul.search input[type="text"] {
+/* Style for select fields */
+ul.search select {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+border-radius: var(--border-radius);
+}
 
+
+ul {
+    list-style-type: none;
 }
 figcaption {
   width:100%;
@@ -194,7 +193,8 @@ figcaption {
 /****************************************************************************************/
 
 .top-lease,
-.cards {
+.cards,
+.car-desc{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -209,7 +209,7 @@ figcaption {
 
 
 /****************************************************************************************/
-/*                       BEGIN         how does car leasing works                                                           */
+/*                       BEGIN         how does car leasing works                       */
 /****************************************************************************************/
 
 
@@ -242,7 +242,7 @@ main h2 {
   padding: var(--spacer) var(--spacer) ; 
 }
 
-.card {
+.card{
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
@@ -262,6 +262,21 @@ i {
   margin-top: auto;
 }
 
+/****************************************************************************************/
+/*                                car inventory                                         */
+/*                Style specfic for the class inventory page                            */
+/****************************************************************************************/
+
+.car-desc article{
+  background-color: #fff;
+  border:solid 5px var(--tertiary-color);
+}
+.car-desc img {
+  width: 250px;
+  height: 150px;
+  border:solid 5px var(--secondary-color);
+  margin-bottom: var(--spacer);
+}
 
 @media screen and (min-width:700px) {
 
@@ -390,6 +405,7 @@ header nav a {
 
 /****** SPECIFIC FOR SEARCH BAR */
   .search-bar ul {
+    
     grid-template-columns: var(--grid-item-very-large);
     align-self: end;
   }
