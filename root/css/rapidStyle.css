@@ -189,28 +189,34 @@ figcaption {
 }
 
 /****************************************************************************************/
-/*                                BEGIN  .cards                                         */
+/*                                BEGIN  top lease car section                          */
 /*                Style specfic for the class cards in top leasing deal                 */
 /****************************************************************************************/
 
+.top-lease,
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: var(--spacer) 0px;
 }
+
+.top-lease article {
+  padding: var(--spacer-dbl);
+  background-color: var(--tertiary-color);
+}
+
+
+/****************************************************************************************/
+/*                       BEGIN         how does car leasing works                                                           */
+/****************************************************************************************/
+
 
 .cards article {
   padding: var(--spacer-dbl);
   background-color: var(--accent-color);
 }
-
-
-
-/* END .cards */
-/****************************************************************************************/
-/*                       BEGIN         how does car leasing works                                                           */
-/****************************************************************************************/
 .cards-container {
   display: grid;
   place-items: center;
@@ -220,10 +226,13 @@ figcaption {
   justify-items: center;
   align-items: center;
   height: 100%;
-  
+  padding-bottom: var(--spacer-dbl);
+  margin-bottom: var(--spacer);
 }
-.cards-container h2, h3 {
-  font-weight: var(--fw-base);
+.cards-container h3,
+main h2 {
+  font-family: var(--heading-font);
+  font-weight: var(--fw-bold);
   font-style: italic;
   line-height: 1.25;
   text-align: center;
@@ -284,16 +293,6 @@ i {
       width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
-  /* grid area for how does car leasing works */
-  .cards-container {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-row: auto;
-      grid-gap: 2em;
-  }
-}
-
-
 
 /* END how does car leasing works */
 
@@ -327,10 +326,7 @@ footer a {
   display: none;
 
 }
-
 /* END FOOTER */
-
-
 
 /****************************************************************************************/
 /*                                   Media queries                                      */
@@ -399,4 +395,14 @@ header nav a {
   }
 
 
+}
+
+
+@media screen and (min-width: 1200px) {
+  /* Raul: grid area for how does car leasing works */
+  .cards-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: auto;
+      grid-gap: 2em;
+  }
 }
