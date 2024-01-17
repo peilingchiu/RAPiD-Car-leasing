@@ -12,21 +12,7 @@
     <!-- end font awesome -->
     <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
     <title>Car Inventory</title>
-    <style>
-/* .car-itm {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: var(--spacer) 0px;
-
    
-} */
-.car-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-    </style>
 </head>
 
 <body>
@@ -198,120 +184,141 @@
             </li>
             <li>
                 <label for="search" class="hide">x</label>
-                <button type="submit" class="btn-">Search</button>
+                <button type="submit" id="search" class="btn-" onclick="redirectToSearchCars()">Search</button>
             </li>
         </ul>
-        </form>
- <!----------------------------------------------------------------------------------------------------->
-<!--                        THIS SECTION IS ABOUT SEARCH CAR RESULTS                                  -->
-<!------------------------------------------------------------------------------------------------------->
-        <main >
-            <section class="car-desc">
-            <article >
-              <h2>Lamborghini Aventador</h2>
-              <figure class="">
-              
-                <img src="../images/2022-Lamborghini-Aventador.jpg" alt="2022-lamborghini-aventador">
-                <figcaption>
-                    <table >
-                    <tr>
-                        <td><b>Monthly price:</b></td>
-                        <td>£1500</td>
-                    </tr>
-                <tr>
-                    <td><b>Year:</b></td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td><b>Engine:</b></td>
-                    <td>6.5 cm³ LP, Petrol</td>
-                </tr>
-                <tr>
-                    <td><b>Kilometer:</b></td>
-                    <td>30000 km</td>
-                </tr>
-                <tr>
-                    <td><b>Condition:</b></td>
-                    <td>used</td>
-                </tr>
-                </table>
-            </figcaption>
-             <button class="btn-invert">View details</button> 
-            </figure>
-              
-           
+    </form>
+    <!----------------------------------------------------------------------------------------------------->
+    <!--                        THIS SECTION IS ABOUT SEARCH CAR RESULTS                                  -->
+    <!------------------------------------------------------------------------------------------------------->
+    <main>
+        <section class="car-desc">
+            <article>
+                <h2>Lamborghini Aventador</h2>
+                <figure class="">
+                    <img src="../images/2022-Lamborghini-Aventador-250x150.jpg" alt="2022-lamborghini-aventador">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£1500</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>6.5 cm³ LP, Petrol</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>30000 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>used</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
             </article>
-            <article >
+            <article>
                 <h2>BMW Alpina B4</h2>
                 <figure class="">
-                
-                  <img src="../images/bmw.jpg" alt="bmw-alpina-4">
-<figcaption>
-    <table>
-       
-        <tr>
-            <td><b>Monthly price:</b></td>
-            <td>£1000</td>
-        </tr>
-        <tr>
-            <td><b>Year:</b></td>
-            <td>2022</td>
-        </tr>
-        <tr>
-            <td><b>Engine:</b></td>
-            <td>3.0L Twin-Turbo</td>
-        </tr>
-        <tr>
-            <td><b>Kilometer:</b></td>
-            <td>30000 km</td>
-        </tr>
-        <tr>
-            <td><b>Condition:</b></td>
-            <td>Used</td>
-        </tr>
-    </table>
-              </figcaption>
-               <button class="btn-invert">View details</button> 
-              </figure>
-                
-             
-              </article>
-              <article >
+                    <img src="../images/bmw-250x150.jpg" alt="bmw-alpina-4">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£1000</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>3.0L Twin-Turbo</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>30000 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>Used</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert">View details</button>
+            </article>
+            <article>
                 <h2>Mecedes E 450 4MATIC Sedan</h2>
                 <figure class="">
-                
-                  <img src="../images/mecedes 2023 E.jpg" alt="2023-mecedes">
-                  <figcaption>
-                      <table >
-                      <tr>
-                          <td><b>Monthly price:</b></td>
-                          <td>£1351</td>
-                      </tr>
-                  <tr>
-                      <td><b>Year:</b></td>
-                      <td>2023</td>
-                  </tr>
-                  <tr>
-                      <td><b>Engine:</b></td>
-                      <td>Electric</td>
-                  </tr>
-                  <tr>
-                      <td><b>Kilometer:</b></td>
-                      <td>0 km</td>
-                  </tr>
-                  <tr>
-                      <td><b>Condition:</b></td>
-                      <td>new</td>
-                  </tr>
-                  </table>
-              </figcaption>
-               <button class="btn-invert">View details</button> 
-              </figure>
-                
-             
-              </article>
+                    <img src="../images/mecedes2023E-250x150.jpg" alt="2023-mecedes">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£1351</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>Electric</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>0 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>new</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+            <article>
+                <h2>Volderswagen e-Bulli</h2>
+                <figure class="">
+                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£722</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>1966</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>Electric</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>0 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>Renovated</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
         </section>
-        
+
     </main>
 
 
@@ -319,12 +326,40 @@
 
 
     <script>
+        function redirectToSearchCars() {
+            // Get form elements
+            var make = document.getElementById("make").value;
+            var model = document.getElementById("model").value;
+            var year = document.getElementById("year").value;
+            var type = document.getElementById("type").value;
+            var budget = document.getElementById("budget").value;
+
+            // Do something with the form data
+            console.log("Make: " + make);
+            console.log("Model: " + model);
+            console.log("Year: " + year);
+            console.log("Type: " + type);
+            console.log("Budget: " + budget);
+
+            // Show a pop-up message
+            alert("Please be patient while we search for your car with the following data: Make: " + make + ", Model: " + model + ", Year: " + year + ", Type: " + type + ", Budget: " + budget);
+          
+
+            // Redirect to car inventory or perform other actions
+            //window.location.href = 'carInventory.html';
+        }
         function redirectToCarDetails() {
+
             // Redirect to carDetails.jpg when the form is submitted
             window.location.href = 'carDetails.html';
+            // alert('redirecting to car inventory');
+
         }
     </script>
 
 </body>
 
 </html>
+
+<!-- references
+https://www.electrichunter.com/commercial-vehicles/volkswagen-e-bulli-fully-electric-camper-van-64900-euros -->

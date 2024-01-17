@@ -22,22 +22,31 @@
   /* Typography */
   --primary-font: 'Roboto', sans-serif;
   --heading-font: 'Roboto Slab', serif;
-  --fw-l: 300; /* normal Light font weight */
-  --fw-b: 500; /* Basic font weight */
-  --fw-bold: 700; /* Bold font weight */
+  --fw-l: 300;
+  /* normal Light font weight */
+  --fw-b: 500;
+  /* Basic font weight */
+  --fw-bold: 700;
+  /* Bold font weight */
   --fs-base: 1rem;
   /* Base font size */
 
 
   /* Color */
-  --primary-color: #0B1C55;/* Dark blue - for header links, footer, some buttons */
-  --secondary-color: #D1D6E1;/* Light gray pale blue */
-  --tertiary-color: #BBE1F6;/* Light blue, sky blue */
-  --accent-color: #DAFCF6;/* Light green pale cyan */
-  --secondary-accent-color: #DEB992;/* Gold */
+  --primary-color: #0B1C55;
+  /* Dark blue - for header links, footer, some buttons */
+  --secondary-color: #D1D6E1;
+  /* Light gray pale blue */
+  --tertiary-color: #BBE1F6;
+  /* Light blue, sky blue */
+  --accent-color: #DAFCF6;
+  /* Light green pale cyan */
+  --secondary-accent-color: #DEB992;
+  /* Gold */
 
   --text-lt-color: #fff;
-  --text-mid-color: #666; /* need it for form fields */
+  --text-mid-color: #666;
+  /* need it for form fields */
   --text-dk-color: #000;
 
 
@@ -86,7 +95,7 @@ h2 {
 }
 
 h3,
-.det-h3{
+.det-h3 {
   margin-top: var(--spacer);
   font-size: calc(var(--fs-base) * 1.2);
   text-align: center;
@@ -128,7 +137,7 @@ a:hover {
 /* behavier for mobile version */
 ul.search {
   display: grid;
-  gap: 10px; 
+  gap: 10px;
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
 
@@ -137,6 +146,7 @@ ul.search {
 .search .hide {
   color: var(--bg-search-bar);
 }
+
 .search-bar label {
   display: block;
   margin-bottom: 0.5em;
@@ -149,15 +159,16 @@ ul.search select {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
-border-radius: var(--border-radius);
+  border-radius: var(--border-radius);
 }
 
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
+
 figcaption {
-  width:100%;
+  width: 100%;
 }
 
 
@@ -189,7 +200,11 @@ figcaption {
 .btn-invert {
   background-color: var(--text-lt-color);
   color: var(--text-dk-color);
-  width:100%
+  margin-bottom: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /****************************************************************************************/
@@ -199,12 +214,13 @@ figcaption {
 
 .top-lease,
 .cards,
-.car-desc{
+.car-desc {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: var(--spacer) 0px;
+  gap: var(--spacer);
 }
 
 .top-lease article {
@@ -212,218 +228,353 @@ figcaption {
   background-color: var(--tertiary-color);
 }
 
+/* .car-desc article {
+  padding-right: var(--spacer);
+  padding-left: var(--spacer);
+  
+} */
+/***** Style to Cat Details ****/
 
-/****************************************************************************************/
-/*                       BEGIN         how does car leasing works                       */
-/****************************************************************************************/
-
-
-.cards article {
-  padding: var(--spacer-dbl);
-  background-color: var(--accent-color);
-}
-.cards-container {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  background-color: var(--accent-color);
-  justify-items: center;
-  align-items: center;
-  height: 100%;
-  padding-bottom: var(--spacer-dbl);
-  margin-bottom: var(--spacer);
-}
-.cards-container h3,
-main h2 {
-  font-family: var(--heading-font);
-  font-weight: var(--fw-bold);
-  font-style: italic;
-  line-height: 1.25;
-  text-align: center;
-  padding: 1rem;
-}
-.cards-container p {
-  padding: var(--spacer) var(--spacer) ; 
-}
-
-.card{
+.det-car {
   display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  height: 100%;
-  padding: var(--spacer-dbl);
-  background-color:  #fff;
-  text-align: center;
-  width: 80%;
-  box-shadow: var(--shadow);
-}
-i {
-  font-size: 2.5rem;
-  color: #DEB992;
-  padding: var(--spacer);
-}
-.card .btn-invert {
-  margin-top: auto;
+  justify-content: space-around;
+  border: solid 1px black;
+
 }
 
-/****************************************************************************************/
-/*                                car inventory                                         */
-/*                Style specfic for the class inventory page                            */
-/****************************************************************************************/
-
-.car-desc article{
-  background-color: #fff;
-  border:solid 5px var(--tertiary-color);
-}
-.car-desc img {
-  width: 250px;
-  height: 150px;
-  border:solid 5px var(--secondary-color);
-  margin-bottom: var(--spacer);
-}
-
-@media screen and (min-width:700px) {
-
-  /* grid area for how does car leasing works */
  
+
+  .det-car img {
+    box-sizing: border-box;
+    /* Include border in width calculation */
+    border: solid 5px var(--secondary-color);
+    padding: 10px;
+    flex: 1 0 100%;
+    /* Take up full width initially */
+    max-width: calc(50% - 20px);
+    /* Set max-width for 2 items per row on tablet and larger screens */
+  }
+
+  /****** Style for the section contact agent *****/
+  .det-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+
+  }
+
+  .basic input,
+  .basic textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    /* Include padding and border in the element's total width */
+  }
+
+  .basic textarea {
+    min-height: 250px;
+  }
+
+  input[type="email"] {
+    min-width: 225px;
+  }
+
+  label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 0.25em;
+    color: var(--text-mid-color);
+    font-family: var(--primary-font);
+    padding-top: var(--spacer);
+  }
+
+  /* Begin styling address */
+
+  ul {
+    padding-bottom: 20px;
+  }
+
+  ul.det-location {
+    display: grid;
+    grid-template-columns: 4fr 3fr 1fr 2fr;
+    gap: 10px;
+    /* Adjust the gap between columns if needed */
+
+  }
+
+  ul.det-location li:first-child {
+    grid-column: span 4;
+    /* Make the first item span four columns */
+  }
+
+  ul.det-location li:last-child {
+    grid-column: span 2;
+    /* Make the last item span 2 to make sure it align with address */
+  }
+
+  /* Style for input fields */
+  ul.det-location input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+
+  }
+
+  /* End styling address */
+
+  .det-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .det-checks,
+  .det-contactTime {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Adjust this value to change the spacing between checkboxes */
+    list-style: none;
+    /* Remove default list style */
+  }
+
+  .det-checks li,
+  .det-contactTime li {
+    display: flex;
+    align-items: center;
+  }
+
+  .det-checks input[type="checkbox"] {
+    margin-right: 5px;
+    /* Add some space between the checkbox and the label */
+  }
+
+  .det-contactTime {
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--text-dk-color);
+    font-size: calc(var(--fs-base) * 1.2);
+  }
+
+  /****************************************************************************************/
+  /*                       BEGIN         how does car leasing works                       */
+  /****************************************************************************************/
+
+
+  .cards article {
+    padding: var(--spacer-dbl);
+    background-color: var(--accent-color);
+  }
+
   .cards-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    background-color: var(--accent-color);
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: var(--spacer-dbl);
+    margin-bottom: var(--spacer);
+  }
+
+  .cards-container h3,
+  main h2 {
+    font-family: var(--heading-font);
+    font-weight: var(--fw-bold);
+    font-style: italic;
+    line-height: 1.25;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .cards-container p {
+    padding: var(--spacer) var(--spacer);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    height: 100%;
+    padding: var(--spacer-dbl);
+    background-color: #fff;
+    text-align: center;
+    width: 80%;
+    box-shadow: var(--shadow);
+  }
+
+  i {
+    font-size: 2.5rem;
+    color: #DEB992;
+    padding: var(--spacer);
+  }
+
+  .card {
+    margin-top: auto;
+
+  }
+
+  /****************************************************************************************/
+  /*                                car inventory                                         */
+  /*                Style specfic for the class inventory page                            */
+  /****************************************************************************************/
+
+  .car-desc article {
+    background-color: #fff;
+    border: solid 5px var(--tertiary-color);
+  }
+
+  .car-desc img {
+    width: 250px;
+    height: 150px;
+    border: solid 5px var(--secondary-color);
+    margin-bottom: var(--spacer);
+  }
+
+  @media screen and (min-width:700px) {
+
+    /* grid area for how does car leasing works */
+
+    .cards-container {
       grid-template-columns: 1fr 1fr 1fr;
       grid-row: auto;
       grid-gap: 2em;
-  }
-  .cards-container h2 {
+    }
+
+    .cards-container h2 {
       grid-column: 1/4;
       width: 80%;
-  }
+    }
 
-  .info-1 {
+    .info-1 {
       grid-column: 1/2;
       height: 100%;
       width: 100%;
-  }
-  .info-2 {
+    }
+
+    .info-2 {
       grid-column: 2/2;
       height: 100%;
       width: 100%;
-  }
-  .info-3 {
+    }
+
+    .info-3 {
       grid-column: 3/2;
       height: 100%;
       width: 100%;
+    }
   }
-}
 
-/* END how does car leasing works */
+  /* END how does car leasing works */
 
-/****************************************************************************************/
-/*                                BEGIN     FOOTER                                      */
-/****************************************************************************************/
-footer {
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-}
+  /****************************************************************************************/
+  /*                                BEGIN     FOOTER                                      */
+  /****************************************************************************************/
+  footer {
+    background-color: var(--primary-color);
+    color: var(--text-lt-color);
+  }
 
-footer h1 {
-  color: var(--text-lt-color);
-}
+  footer h1 {
+    color: var(--text-lt-color);
+  }
 
-footer h2 {
-  color: var(--text-lt-color);
-  font-size: 1.25rem;
-  font-family: roboto-serif serif;
+  footer h2 {
+    color: var(--text-lt-color);
+    font-size: 1.25rem;
+    font-family: roboto-serif serif;
 
-}
+  }
 
-footer a {
-  color: var(--text-lt-color);
-  font-family: var(--primary-font);
-  text-decoration: none;
-}
-
-/* grid area for footer */
-.d {
-  display: none;
-
-}
-/* END FOOTER */
-
-/****************************************************************************************/
-/*                                   Media queries                                      */
-/****************************************************************************************/
-
-@media screen and (min-width:700px) {
+  footer a {
+    color: var(--text-lt-color);
+    font-family: var(--primary-font);
+    text-decoration: none;
+  }
 
   /* grid area for footer */
-  .m {
-    display: none;
+  .d {display: none;}
+
+  /* END FOOTER */
+
+  
+
+  @media screen and (min-width: 1100px) {
+
+    /* for header link, wait for Amala to modify */
+    header nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav li {
+      margin-right: 15px;
+      /* Adjust the margin as needed */
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: black;
+      /* Adjust the color as needed */
+    }
+
+
+    /****** SPECIFIC FOR SEARCH BAR */
+    .search-bar ul {
+
+      grid-template-columns: var(--grid-item-very-large);
+      align-self: end;
+    }
+
+
   }
 
-  .d {
-    display: grid;
-    grid-template-areas: "l s c"
-      "p p i";
-    grid-column: 1fr;
-    grid-row: auto;
+
+  /****************************************************************************************/
+  /*                                   Media queries                                      */
+  /****************************************************************************************/
+
+  @media screen and (min-width:700px) {
+
+    /* grid area for footer */
+    .m {display: none;}
+
+    .d {
+      display: grid; 
+      grid-template-areas: "l s c" "p p i"; 
+      grid-template-columns: 1fr;
+       grid-row: auto;}
+
+    .l {grid-area: l;}
+    .s {grid-area: s;}
+    .c {grid-area: c;}
+    .p {grid-area: p;}
+    .i {grid-area: i;}
+
   }
 
-  .l {
-    grid-area: l;
-  }
+  @media screen and (min-width: 1200px) {
 
-  .s {
-    grid-area: s;
-  }
-
-  .c {
-    grid-area: c;
-  }
-
-  .p {
-    grid-area: p;
-  }
-
-  .i {
-    grid-area: i;
-  }
-
-}
-
-@media screen and (min-width: 1100px) {
-  /* for header link, wait for Amala to modify */
-  header nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-header nav li {
-    margin-right: 15px; /* Adjust the margin as needed */
-}
-
-header nav a {
-    text-decoration: none;
-    color: black; /* Adjust the color as needed */
-}
-
+/* ???????????????????????????????????????for header link, wait for Amala to modify */
+header nav ul {display: flex; list-style: none; padding: 0; margin: 0;}
+header nav li {margin-right: 15px;}
+header nav a {text-decoration: none; color: black;}
 
 /****** SPECIFIC FOR SEARCH BAR */
-  .search-bar ul {
-    
-    grid-template-columns: var(--grid-item-very-large);
-    align-self: end;
+.search-bar ul {grid-template-columns: var(--grid-item-very-large); align-self: end;}
+
+
+
+    /* Raul: grid area for how does car leasing works */
+    .cards-container {grid-template-columns: 1fr 1fr 1fr; grid-row: auto; grid-gap: 2em;}
+
+    /*Pei  set how image of cars are displayed in 1200 size */
+    .det-car img {max-width: calc(25% - 20px);}
+
   }
-
-
-}
-
-
-@media screen and (min-width: 1200px) {
-  /* Raul: grid area for how does car leasing works */
-  .cards-container {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-row: auto;
-      grid-gap: 2em;
-  }
-}

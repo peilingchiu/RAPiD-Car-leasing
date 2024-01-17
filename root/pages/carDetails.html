@@ -3,127 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Leasing Information</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-        }
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- font awesome     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" type="text/css">
+    <!-- end font awesome -->
 
-        .left-section {
-            width: 20%;
-        }
-
-        .car-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .small-images img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .right-section {
-            width: 75%;
-        }
-
-        .leasing-info {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .contact-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .style-car{
-    display: grid;
+    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script> <!-- font awesome for SoMe -->
+    <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
+    <title>CAR LEASING DETAIL</title>
     
-    width: 50%;
-    border: solid 1px black;
-   
-}
-        .style-sub-car{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-    border: solid 1px black;
-    gap: 1px; /* adds a gap between grid items */
-}
-
-
-.style-sub-car > * {
-    border: solid 1px black; /* adds border to every grid item */
-}
-
-.style-sub-car img:first-child {
-    border: none; /* removes border from first image */
-}
-
-.style-sub-car img:first-child {
-    grid-column: span 5;
-}
-    </style>
 </head>
-<body>
-<section class="style-car">
-    <div class="style-sub-car">
-        <img id="display-image" class="car-image" src="../images/mercedes-benz-c-class-coupe_sm.jpg" alt="Car Image">
-       
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small1.gif" alt="Small Image 1">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small2.gif" alt="Small Image 2">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small3.gif" alt="Small Image 3">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small4.gif" alt="Small Image 4">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small5.gif" alt="Small Image 5">
-       
-    </div>
-    <div class="style-sub-car">
-        <img id="display-image" class="car-image" src="../images/mercedes-benz-c-class-coupe_sm.jpg" alt="Car Image">
-       
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small1.gif" alt="Small Image 1">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small2.gif" alt="Small Image 2">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small3.gif" alt="Small Image 3">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small4.gif" alt="Small Image 4">
-            <img onclick="document.getElementById('display-image').src=this.src" src="../images/small5.gif" alt="Small Image 5">
-       
-    </div>
-</section>
-    <div class="right-section">
-        <div class="leasing-info">
-            <h2>Lease Criteria</h2>
-            <p><strong>Tier 1A:</strong> Cars Over $200k (California residents only)</p>
-            <p><strong>Term of Lease:</strong> 60 months</p>
-            <p><strong>Tax Rate:</strong> 9.25%</p>
-            <p><strong>Miles Drive Per Year:</strong> 1000</p>
-            <p><strong>Cap Cost Reduction (minimum):</strong> $44,299.80</p>
-            <p><strong>Purchase Price:</strong> $442,998.00</p>
-            <p><strong>Admin Fee:</strong> $2,095.00</p>
-            <p><strong>Residual:</strong> $288,823.00</p>
-            <p><strong>Cap Cost Reduction:</strong> $44,299.80</p>
-            <p><strong>Cap Cost Reduction Tax:</strong> $3,654.73</p>
-            <p><strong>Deposit:</strong> $0</p>
-            <p><strong>First & Last Payment:</strong> $10,021.74</p>
-            <p><strong>License/Title Registration:</strong> $3,543.98</p>
-            <p><strong>Total Drive-Off:</strong> $61,520.26</p>
-            <p><strong>Base Payment:</strong> $4,628.98</p>
-            <p><strong>Sales Tax:</strong> $381.89</p>
-            <p><strong>Monthly Payment:</strong> $5,010.87</p>
-        </div>
-        
-        <button class="contact-button">Contact Agent</button>
-    </div>
 
+<body>
+    <!-- navigation part-->
+    <header>
+        <nav>
+            <ul style="display: flex; justify-content: space-evenly; align-items: center;">
+                <li> <img src="../images/PNG-Logo-Lingscar.png" alt="Logo"></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Leasing</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">FAQ's</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li> <!-- login icon -->
+            </ul>
+        </nav>
+    </header>
+    <section class="det-cars">
+        <!-- Example car detail 1 -->
+        <section class="det-car">
+            <article>
+                <h2>volkswagen e-bulli fully-electric camper van</h2>
+                <figure class="">
+                    <img id="display-image" class="car-image" src="../images/VWdBullyeBully-250x150.jpg"
+                        alt="Car Image">
+                    <img onclick="document.getElementById('display-image').src=this.src"
+                        src="../images/VWdBullyeBully2-250x150.jpg" alt="Small Image 1">
+                    <img onclick="document.getElementById('display-image').src=this.src"
+                        src="../images/VWeBullyInt-250x150.jpg" alt="Small Image 2">
+                    <img onclick="document.getElementById('display-image').src=this.src"
+                        src="../images/VWeBullyInt2-250x150.jpg" alt="Small Image 3">
+                    <figcaption>
+                        <button class="btn-invert" onclick="redirectTocarCntAgent()">Book appoinment with leasing
+                            agent</button>
+                    </figcaption>
+
+                </figure>
+            </article>
+        </section>
+        <section>
+            <div class="det-info">
+                <h2>Lease Criteria</h2>
+                <p><strong>Description:</strong>Volkswagen Trucks presents e-BULLI, a fully electric vehicle that
+                    produces zero emissions on the road. The concept vehicle is equipped with drive system components
+                    from Volkswagen's latest electric vehicle and is based on a T1 Samba bus that was produced in 1966
+                    and has been completely renovated.</p>
+                <p><strong>Term of Lease:</strong> 60 months</p>
+                <p><strong>Tax Rate:</strong> 8.25%</p>
+                <p><strong>Miles Drive Per Year:</strong> 1000</p>
+                <p><strong>Cap Cost Reduction (minimum):</strong> $1950.00</p>
+                <p><strong>Purchase Price:</strong> $65,000.00</p>
+                <p><strong>Admin Fee:</strong> $1,495.00</p>
+                <p><strong>Residual:</strong> $52,250.00</p>
+                <p><strong>Cap Cost Reduction:</strong> $1,950.00</p>
+                <p><strong>Cap Cost Reduction Tax:</strong> $160.88</p>
+                <p><strong>Deposit:</strong> $0</p>
+                <p><strong>First and Last Payment:</strong> $1444.46</p>
+                <p><strong>License/Title Registration:</strong> $520.00</p>
+                <p><strong>Total Drive-Off:</strong> $4,075.04</p>
+                <p><strong>Base Payment:</strong> $667.05</p>
+                <p><strong>Sales Tax:</strong> $55.03</p>
+                <p><strong>Monthly Payment:</strong> $722.08</p>
+
+                <button class="btn-invert" onclick="redirectTocarCntAgent()">Book appoinment with leasing agent</button>
+            </div>
+        </section>
+        <section class="det-car">
+            <article>
+                <h2>Mecedes E 450 4MATIC Sedan</h2>
+                <figure class="">
+                    <img class="car-image" src="../images/2022-Lamborghini-Aventador-250x150.jpg" alt="Car Image">
+                    <img onclick="document.getElementById('display-image').src=this.src" src="../images/bmw-250x150.jpg"
+                        alt="Small Image 1">
+                    <img onclick="document.getElementById('display-image').src=this.src"
+                        src="../images/luxuryCars-250X150.jpg" alt="Small Image 2">
+                    <img onclick="document.getElementById('display-image').src=this.src"
+                        src="../images/mecedes2023E-250x150.jpg" alt="Small Image 3">
+                    <figcaption>
+                        <button class="btn-invert" onclick="redirectTocarCntAgent()">Book appoinment with leasing
+                            agent</button>
+                    </figcaption>
+
+                </figure>
+            </article>
+        </section>
+        <section>
+            <div class="det-info">
+                <h2>Lease Criteria</h2>
+                <p><strong>Description:</strong>With industry-advancing innovations in safety and driving ease, the E
+                    450 previews the future in bold style. In luxury and craftsmanship, it sets class standards. A turbo
+                    inline-6 with hybrid electric assist delivers advanced power.</p>
+                <p><strong>Term of Lease:</strong> 60 months</p>
+                <p><strong>Tax Rate:</strong> 9.25%</p>
+                <p><strong>Miles Drive Per Year:</strong> 1000</p>
+                <p><strong>Cap Cost Reduction (minimum):</strong> $44,299.80</p>
+                <p><strong>Purchase Price:</strong> $442,998.00</p>
+                <p><strong>Admin Fee:</strong> $2,095.00</p>
+                <p><strong>Residual:</strong> $288,823.00</p>
+                <p><strong>Cap Cost Reduction:</strong> $44,299.80</p>
+                <p><strong>Cap Cost Reduction Tax:</strong> $3,654.73</p>
+                <p><strong>Deposit:</strong> $0</p>
+                <p><strong>First and Last Payment:</strong> $10,021.74</p>
+                <p><strong>License/Title Registration:</strong> $3,543.98</p>
+                <p><strong>Total Drive-Off:</strong> $61,520.26</p>
+                <p><strong>Base Payment:</strong> $4,628.98</p>
+                <p><strong>Sales Tax:</strong> $381.89</p>
+                <p><strong>Monthly Payment:</strong> $5,010.87</p>
+
+                <button class="btn-invert" onclick="redirectTocarCntAgent()">Book appoinment with leasing agent</button>
+            </div>
+        </section>
+ </section>
+    <script>
+        function redirectTocarCntAgent() {
+
+            // Redirect to carDetails.jpg when the form is submitted
+            window.location.href = 'carCntAgent.html';
+            // alert('redirecting to car inventory');
+
+        }
+    </script>
 </body>
 </html>
-
