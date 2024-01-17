@@ -37,7 +37,7 @@
   --secondary-accent-color: #DEB992;/* Gold */
 
   --text-lt-color: #fff;
-  --text-mid-color: #6c757d; /* MAY DELETE IF NOT NEEDED */
+  --text-mid-color: #666; /* need it for form fields */
   --text-dk-color: #000;
 
 
@@ -85,10 +85,13 @@ h2 {
   text-align: center;
 }
 
-h3 {
+h3,
+.det-h3{
   margin-top: var(--spacer);
   font-size: calc(var(--fs-base) * 1.2);
   text-align: center;
+  font-weight: var(--fw-bold);
+  color: var(--text-dk-color);
 }
 
 /* p {
@@ -173,12 +176,14 @@ figcaption {
   padding: 7px 24px;
   transition: background-color .3s ease;
   text-decoration: none;
+  box-shadow: var(--shadow);
 
 
 }
 
-.btn:hover {
+[class*='btn-']:hover {
   background-color: var(--accent-color);
+  color: var(--text-dk-color);
 }
 
 .btn-invert {
