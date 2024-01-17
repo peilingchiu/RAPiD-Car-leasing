@@ -9,6 +9,8 @@
     <!-- font awesome     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" type="text/css">
     <!-- end font awesome -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">    <!-- material icons link     -->
     <link rel="stylesheet" href="css/rapidStyle.css" type="text/css">
     <script src="scripts/script.js"></script>
     <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script> <!-- font awesome for SoMe -->
@@ -24,6 +26,7 @@
         <section class="logo">
             <img src="images/PNG-Logo-Lingscar.png" alt="Logo">
         </section>
+        <input type="checkbox" class="navToggler" id="navToggler"> <!-- For hamburger menu -->
         <nav>
             <ul>
                 <li><a href="#">About us</a></li>
@@ -35,15 +38,18 @@
                 <li><a href="#">Contact us</a></li>
             </ul>
         </nav>
-        <section class="login">
+        <label for="navToggler" class="navTogglerMenu" name="navToggler">
+         <span class="material-icons-outlined mi menuOpen">menu</span>
+         <span class="material-icons-outlined mi menuClose">close</span>  <!-- material icons for menu -->
+          </label>
+         <section class="login">
             <a href="#">
-                <i class="fa fa-user" aria-hidden="true"></i> <!-- login icon -->
+                <i class="material-icons-outlined">account_circle</i> <!-- login icon -->
                 Login
             </a>
 
         </section>
-        <img src="images/car.jpg" alt="main image">
-    </header>
+        </header>      <!-- End for header -->
     <!-- **********************************************************************************
                           main: search bar and top leasing deal for Peiling to work on                                    
  *************************************************************************************** -->
