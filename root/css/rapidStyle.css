@@ -475,34 +475,148 @@ figcaption {
   /*                                BEGIN     FOOTER                                      */
   /****************************************************************************************/
   footer {
-    background-color: var(--primary-color);
-    color: var(--text-lt-color);
-  }
+    background-color:var(--primary-color);
+    color:var(--text-lt-color);
+    width: 100%;
+    padding:10px;
+}
 
-  footer h1 {
-    color: var(--text-lt-color);
-  }
+footer section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
 
-  footer h2 {
-    color: var(--text-lt-color);
+footer h2 {
+    color:var(--text-lt-color);
     font-size: 1.25rem;
-    font-family: roboto-serif serif;
+    font-family:var(--heading-font);
+    margin-bottom: 8px;
+}
+footer button{
+    width:30%;
+margin-top:10px;
+background-color: var(--text-lt-color);
+  color: var(--text-dk-color);
 
-  }
-
-  footer a {
-    color: var(--text-lt-color);
-    font-family: var(--primary-font);
+}
+footer a {
+    color:var(--text-lt-color);
+    font-family:var(--primary-font);
     text-decoration: none;
-  }
+}
 
-  /* grid area for footer */
-  .d {display: none;}
+footer a:visited {
+    color:var(--tertiary-color);
+}
+
+footer a:hover {
+    color:var(--secondary-color);
+}
+
+.d {
+    display: none;
+}
+
+.mIcon a {
+    display: inline-block;
+    margin: 15px;
+}
+
+.i a {
+    margin: 10px;
+}
 
   /* END FOOTER */
 
-  
+  /****************************************************************************************/
+  /*                                BEGIN    CONTACT US                                     */
+  /****************************************************************************************/
 
+.contactDetails {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: var(--shadow)
+}
+
+.contactDetails article {
+  background-color:var(--tertiary-color);
+  padding: 10px;
+}
+
+.contactDetails div {
+  border: solid 2px #0B1C55;
+  border-radius:var(--border-radius);
+  padding: 10px;
+}
+
+.contactDetails h2 {
+  color:var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family:var(--heading-font);
+
+}
+
+.contactDetails p {
+  color:var(--text-dk-color);
+  font-family:var(--primary-font);
+}
+
+.contactUs {
+  background-color:var(--secondary-color);
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  box-shadow: var(--shadow)
+}
+
+.contactUs h2 {
+  color:var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family:var(--heading-font);
+
+}
+
+.contactUs li {
+  color:var(--text-dk-color);
+  font-family: var(--primary-font);
+  padding:2px;
+   
+}
+
+.contactForm input{
+  width: 95%;
+border: solid 1px #0B1C55;
+  border-radius: 6px;
+  padding:10px;
+}
+.contactForm #message{
+      height:150px;
+  }
+
+  .contactForm .btn{
+      width:98%;
+margin:10px 0 0;
+border-radius: var(--border-radius);
+background-color: var(--primary-color);
+color: var(--text-lt-color);
+cursor: pointer;
+padding: 7px 24px;
+transition: background-color .3s ease;
+text-decoration: none;
+box-shadow: var(--shadow);
+  }
+
+.map {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+/* *************************************END OF CONTACT US CSS********************** */
   @media screen and (min-width: 1100px) {
 
     /* for header link, wait for Amala to modify */
@@ -531,33 +645,118 @@ figcaption {
       grid-template-columns: var(--grid-item-very-large);
       align-self: end;
     }
+    /* ******css for contact us page********* */
+    .contactDetails {
+      display: grid;
+      grid-template-areas: "hrs c1 c2";
+      grid-column: 1fr;
+      gap:15px;
+      grid-row:auto;
+      box-shadow:none;
+  
+  } 
 
-
+  .hours {
+      grid-area: hrs;
+     align-items: center ;
+     box-shadow: var(--shadow);
   }
+
+  .c1 {
+      grid-area: c1;
+      align-self: center;
+      box-shadow: var(--shadow);
+  }
+
+  .c2 {
+      grid-area: c2;
+      align-self: center;
+      box-shadow: var(--shadow);
+  }
+
+  .hours .c1 .c2 {
+      width: 350px;
+    
+  }
+  .contactDetails article{
+      width:100%;
+  }
+  .contactDetails div {
+      border: solid 2px #0B1C55;
+      border-radius:var(--border-radius);
+      width: auto;
+      height: 120px;
+      padding: 10px;
+      margin: auto;
+  }
+
+   .contactUs {
+      display: grid;
+      grid-template-areas: "form map";
+      grid-column: 1fr;
+      grid-row: auto;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+  }
+  .contactForm{grid-area: form;}
+ 
+  .map{grid-area: map;
+      width:80%;
+  height:auto;}
+
+}
+
+
 
 
   /****************************************************************************************/
   /*                                   Media queries                                      */
   /****************************************************************************************/
 
-  @media screen and (min-width:700px) {
+  
 
     /* grid area for footer */
-    .m {display: none;}
-
-    .d {
-      display: grid; 
-      grid-template-areas: "l s c" "p p i"; 
-      grid-template-columns: 1fr;
-       grid-row: auto;}
-
-    .l {grid-area: l;}
-    .s {grid-area: s;}
-    .c {grid-area: c;}
-    .p {grid-area: p;}
-    .i {grid-area: i;}
-
-  }
+    @media screen and (min-width:700px) {
+      .m {
+          display: none;
+      }
+  
+      .d {
+          display: grid;
+          grid-template-areas: "l s c"
+              "p s i";
+          grid-column: 1fr;
+          grid-row: auto;
+          text-align: left;
+      }
+  
+      .l {
+          grid-area: l;
+          
+      }
+  
+      .s {
+          grid-area: s;
+          margin-left: 75px; 
+      }
+  
+      .c {
+          grid-area: c;
+          margin-left: 125px;
+          
+      }
+  
+      .p {
+          grid-area: p;
+          margin:5px 0;
+        
+      }
+  
+      .i {
+          grid-area: i;
+          margin:10px 0 5px 125px;
+      }
+  
 
   @media screen and (min-width: 1200px) {
 
@@ -578,3 +777,4 @@ header nav a {text-decoration: none; color: black;}
     .det-car img {max-width: calc(25% - 20px);}
 
   }
+    }
