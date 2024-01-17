@@ -4,55 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- font awesome     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        type="text/css">
+    <!-- end font awesome -->
+    <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
     <title>Car Inventory</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: url('../images/car.jpg') center/cover no-repeat;
-            height: 300px;
-            text-align: center;
-            color: #fff;
-            padding: 50px;
-        }
-
-        section {
-            margin: 20px;
-        }
-
-        input[type="text"],
-        select {
-            padding: 10px;
-            margin: 5px;
-        }
-
-        button {
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-        }
-
-        .car-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .car-link {
-            width: 30%;
-            margin: 10px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-        }
-    </style>
+   
 </head>
 
 <body>
@@ -61,55 +21,345 @@
         <h1>Welcome to Our Car Inventory</h1>
     </header>
 
-    <section>
-        <form id="searchForm" onsubmit="redirectToCarDetails(); return false;">
-            <label for="brand">Brand:</label>
-            <input type="text" id="brand" name="brand">
+    <form id="searchForm" class="search-bar" onsubmit="redirectToCarInventory(); return false;">
+        <ul class="search">
+            <li>
+                <label for="make">Make</label>
+                <select id="make">
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Opel">Opel</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Renault">Renault</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Citroen">Citroen</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Rolls-Royce">Rolls-Royce</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="Aston Martin">Aston Martin</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Maserati">Maserati</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Bugatti">Bugatti</option>
+                </select>
+            </li>
 
-            <label for="model">Model:</label>
-            <input type="text" id="model" name="model">
+            <li>
+                <label for="model">Model</label>
+                <select id="model">
+                    <!-- Add your options here -->
+                    <option value="A3">Audi - A3</option>
+                    <option value="A4">Audi - A4</option>
+                    <option value="A8">Audi - A8</option>
+                    <option value="Q7">Audi - Q7</option>
+                    <option value="R8">Audi - R8</option>
+                    <option value="3 Series">BMW - 3 Series</option>
+                    <option value="5 Series">BMW - 5 Series</option>
+                    <option value="7 Series">BMW - 7 Series</option>
+                    <option value="X5">BMW - X5</option>
+                    <option value="M3">BMW - M3</option>
+                    <option value="C-Class">Mercedes-Benz - C-Class</option>
+                    <option value="E-Class">Mercedes-Benz - E-Class</option>
+                    <option value="S-Class">Mercedes-Benz - S-Class</option>
+                    <option value="GLC">Mercedes-Benz - GLC</option>
+                    <option value="AMG GT">Mercedes-Benz - AMG GT</option>
+                    <option value="Golf">Volkswagen - Golf</option>
+                    <option value="Passat">Volkswagen - Passat</option>
+                    <option value="Tiguan">Volkswagen - Tiguan</option>
+                    <option value="Arteon">Volkswagen - Arteon</option>
+                    <option value="Atlas">Volkswagen - Atlas</option>
+                    <option value="911">Porsche - 911</option>
+                    <option value="Cayman">Porsche - Cayman</option>
+                    <option value="Panamera">Porsche - Panamera</option>
+                    <option value="Cayenne">Porsche - Cayenne</option>
+                    <option value="Macan">Porsche - Macan</option>
+                    <option value="Astra">Opel - Astra</option>
+                    <option value="Corsa">Opel - Corsa</option>
+                    <option value="Insignia">Opel - Insignia</option>
+                    <option value="Zafira">Opel - Zafira</option>
+                    <option value="Crossland X">Opel - Crossland X</option>
+                    <option value="Fiesta">Ford - Fiesta</option>
+                    <option value="Focus">Ford - Focus</option>
+                    <option value="Mustang">Ford - Mustang</option>
+                    <option value="Explorer">Ford - Explorer</option>
+                    <option value="F-150">Ford - F-150</option>
+                    <option value="500">Fiat - 500</option>
+                    <option value="Panda">Fiat - Panda</option>
+                    <option value="Tipo">Fiat - Tipo</option>
+                    <option value="Punto">Fiat - Punto</option>
+                    <option value="Ducato">Fiat - Ducato</option>
+                    <option value="Clio">Renault - Clio</option>
+                    <option value="Megane">Renault - Megane</option>
+                    <option value="Captur">Renault - Captur</option>
+                    <option value="Kadjar">Renault - Kadjar</option>
+                    <option value="Zoe">Renault - Zoe</option>
+                    <option value="208">Peugeot - 208</option>
+                    <option value="308">Peugeot - 308</option>
+                    <option value="2008">Peugeot - 2008</option>
+                    <option value="3008">Peugeot - 3008</option>
+                    <option value="5008">Peugeot - 5008</option>
+                </select>
+            </li>
 
-            <label for="type">Type:</label>
-            <input type="text" id="type" name="type">
+            <li>
+                <label for="year">Year</label>
+                <select id="year">
+                    <!-- Add your options here -->
+                    <option value="2024">2024</option>
+                    <option value="2024">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1900">before 1900</option>
+                </select>
+            </li>
 
-            <label for="year">Year:</label>
-            <input type="text" id="year" name="year">
+            <li>
+                <label for="type">Type</label>
+                <select id="type">
+                    <!-- Add your options here -->
+                    <option value="suv">SUV</option>
+                    <option value="convertible">Convertible</option>
+                    <option value="two-door">2 Door</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="hatchback">Hatchback</option>
+                    <option value="wagon">Wagon</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="sports">Sports Car</option>
+                    <option value="pickup">Pickup Truck</option>
+                    <option value="minivan">Minivan</option>
+                    <option value="van">Van</option>
+                    <option value="luxury">Luxury Car</option>
+                    <option value="hybrid-electric">Hybrid/Electric</option>
+                    <!-- Add more options as required -->
+                </select>
+            </li>
 
-            <!-- Changed button type to "submit" -->
-            <button type="submit">Search</button>
-        </form>
-    </section>
+            <li>
+                <label for="budget">Monthly Budget</label>
+                <select id="budget">
+                    <!-- Add your options here -->
+                    <option value="1000">Up to $1000</option>
+                    <option value="2000">Up to $2000</option>
+                    <option value="3000">Up to $3000</option>
+                    <option value="4000">Up to $4000</option>
+                    <option value="5000">Up to $5000</option>
+                </select>
+            </li>
+            <li>
+                <label for="search" class="hide">x</label>
+                <button type="submit" id="search" class="btn-" onclick="redirectToSearchCars()">Search</button>
+            </li>
+        </ul>
+    </form>
+    <!----------------------------------------------------------------------------------------------------->
+    <!--                        THIS SECTION IS ABOUT SEARCH CAR RESULTS                                  -->
+    <!------------------------------------------------------------------------------------------------------->
+    <main>
+        <section class="car-desc">
+            <article>
+                <h2>Lamborghini Aventador</h2>
+                <figure class="">
+                    <img src="../images/2022-Lamborghini-Aventador-250x150.jpg" alt="2022-lamborghini-aventador">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£1500</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>6.5 cm³ LP, Petrol</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>30000 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>used</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+            <article>
+                <h2>BMW Alpina B4</h2>
+                <figure class="">
+                    <img src="../images/bmw-250x150.jpg" alt="bmw-alpina-4">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£1000</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>3.0L Twin-Turbo</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>30000 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>Used</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert">View details</button>
+            </article>
+            <article>
+                <h2>Mecedes E 450 4MATIC Sedan</h2>
+                <figure class="">
+                    <img src="../images/mecedes2023E-250x150.jpg" alt="2023-mecedes">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£1351</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>Electric</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>0 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>new</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+            <article>
+                <h2>Volderswagen e-Bulli</h2>
+                <figure class="">
+                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">
+                    <figcaption>
+                        <table>
+                            <tr>
+                                <td><b>Monthly price:</b></td>
+                                <td>£722</td>
+                            </tr>
+                            <tr>
+                                <td><b>Year:</b></td>
+                                <td>1966</td>
+                            </tr>
+                            <tr>
+                                <td><b>Engine:</b></td>
+                                <td>Electric</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kilometer:</b></td>
+                                <td>0 km</td>
+                            </tr>
+                            <tr>
+                                <td><b>Condition:</b></td>
+                                <td>Renovated</td>
+                            </tr>
+                        </table>
+                    </figcaption>
+                </figure>
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+        </section>
 
-    <section>
-        <div class="car-links">
-            <!-- Replace the href attributes with actual links -->
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            <a href="carDetails.html" class="car-link">Car Model 1</a>
-            
-           
-            
-            <!-- Add more car links as needed -->
-        </div>
-    </section>
+    </main>
+
+
+
+
 
     <script>
+        function redirectToSearchCars() {
+            // Get form elements
+            var make = document.getElementById("make").value;
+            var model = document.getElementById("model").value;
+            var year = document.getElementById("year").value;
+            var type = document.getElementById("type").value;
+            var budget = document.getElementById("budget").value;
+
+            // Do something with the form data
+            console.log("Make: " + make);
+            console.log("Model: " + model);
+            console.log("Year: " + year);
+            console.log("Type: " + type);
+            console.log("Budget: " + budget);
+
+            // Show a pop-up message
+            alert("Please be patient while we search for your car with the following data: Make: " + make + ", Model: " + model + ", Year: " + year + ", Type: " + type + ", Budget: " + budget);
+          
+
+            // Redirect to car inventory or perform other actions
+            //window.location.href = 'carInventory.html';
+        }
         function redirectToCarDetails() {
+
             // Redirect to carDetails.jpg when the form is submitted
             window.location.href = 'carDetails.html';
+            // alert('redirecting to car inventory');
+
         }
     </script>
 
 </body>
 
 </html>
+
+<!-- references
+https://www.electrichunter.com/commercial-vehicles/volkswagen-e-bulli-fully-electric-camper-van-64900-euros -->
