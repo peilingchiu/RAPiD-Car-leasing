@@ -78,33 +78,33 @@ body {
   font-family: var(--primary-font);
   font-weight: var(--fw-l);
   margin: auto;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 h1 {
-  color: var(--primary-color);
+  color: var(--text-dk-color);
   font-family: var(--heading-font);
   font-size: calc(var(--fs-base) * 1.8);
 
 }
 
 h2 {
-  margin-top: var(--spacer);
+  color: var(--text-dk-color);
   font-size: calc(var(--fs-base) * 1.5);
-  text-align: center;
+  font-weight: var(--fw-bold);
 }
 
-h3,
-.det-h3 {
-  margin-top: var(--spacer);
+
+h3
+ {
   font-size: calc(var(--fs-base) * 1.2);
-  text-align: center;
   font-weight: var(--fw-bold);
   color: var(--text-dk-color);
 }
-
-/* p {
-  font-size: var(--fs-base);} */
+.det-h3,
+.det-h2 {
+  margin-top: var(--spacer);
+  text-align: center;}
 
 img {
   max-width: 100%;
@@ -128,7 +128,7 @@ a:hover {
 .search-bar {
   --bg-search-bar: var(--secondary-color);
   background-color: var(--bg-search-bar);
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding: 10px;
   box-shadow: var(--shadow);
@@ -212,7 +212,7 @@ figcaption {
 /*                Style specfic for the class cards in top leasing deal                 */
 /****************************************************************************************/
 
-.top-lease,
+
 .cards,
 .car-desc {
   display: flex;
@@ -223,16 +223,23 @@ figcaption {
   gap: var(--spacer);
 }
 
-.top-lease article {
+#top article {
   padding: var(--spacer-dbl);
   background-color: var(--tertiary-color);
-}
 
-/* .car-desc article {
-  padding-right: var(--spacer);
-  padding-left: var(--spacer);
   
+}
+/* #top img {
+  min-width: 300px;
+  max-width: 100%;
 } */
+ #top {
+  margin-top: var(--spacer-dbl);
+  background-color: var(--text-lt-color);
+  border: 5px solid var(--tertiary-color);
+}
+ 
+
 /***** Style to Cat Details ****/
 
 .det-car {
@@ -368,6 +375,7 @@ figcaption {
     background-color: var(--accent-color);
   }
 
+  .top-lease,
   .cards-container {
     display: grid;
     place-items: center;
@@ -380,7 +388,10 @@ figcaption {
     padding-bottom: var(--spacer-dbl);
     margin-bottom: var(--spacer);
   }
-
+main {
+  width:80%;
+  margin:auto; 
+}
   .cards-container h3,
   main h2 {
     font-family: var(--heading-font);
@@ -438,13 +449,13 @@ figcaption {
   @media screen and (min-width:700px) {
 
     /* grid area for how does car leasing works */
-
+    .top-lease,
     .cards-container {
       grid-template-columns: 1fr 1fr 1fr;
       grid-row: auto;
       grid-gap: 2em;
     }
-
+     .top-lease,
     .cards-container h2 {
       grid-column: 1/4;
       width: 80%;
@@ -771,7 +782,12 @@ header nav a {text-decoration: none; color: black;}
 
 
     /* Raul: grid area for how does car leasing works */
-    .cards-container {grid-template-columns: 1fr 1fr 1fr; grid-row: auto; grid-gap: 2em;}
+    top-lease,
+    .cards-container 
+    {
+      grid-template-columns: 1fr 1fr 1fr; 
+      grid-row: auto; 
+      grid-gap: 2em;}
 
     /*Pei  set how image of cars are displayed in 1200 size */
     .det-car img {max-width: calc(25% - 20px);}
