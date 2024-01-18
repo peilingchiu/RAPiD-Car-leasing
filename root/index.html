@@ -24,15 +24,15 @@
                            Header section for Amala to work on                                    
 /*************************************************************************************** -->
 
-    <header>
-        <section class="navigation">
+    <header class="navigation">
+       
             <section class="logo">
                 <a href="#"><img src="images/PNG-Logo-Lingscar.png" alt="Logo"></a>
             </section>
             <!-- Hamburger Menu -->
-            <section class="showMenu">
+            <section >
               
-                <nav id="navbar">
+                <nav id="navbar" class="center-nav">
                     <ul>
                         <li><a href="#">About us</a></li>
                         <li><a href="pages/carInventory.html">Inventory</a></li>
@@ -43,20 +43,19 @@
                         <li><a href="pages/contact.html">Contact us</a></li>
                     </ul>
                 </nav>
-                <!-- <label for="navToggler" class="navTogglerMenu" >
-                    <span class="material-icons-outlined mi menuOpen">menu</span>
-                    <span class="material-icons-outlined mi menuClose">close</span> 
-                    
-                </label> -->
+                <div class="showMenu" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </section>
                 <section class="login">
                     <a href="#">
-                        <i class="fa fa-user fa-lg" aria-hidden="true"></i><br>
-                        <span onclick="showNavbarAndScreenSize()">Login</span>
+                        <i class="fa fa-user fa-lg" aria-hidden="true" onclick="showNavbarAndScreenSize()"></i>
+                     
                     </a>
 
                 </section>
-            </section>
-            </section>
+            
+            
     </header> <!-- End for header -->
     <!-- **********************************************************************************
                           main: search bar and top leasing deal for Peiling to work on                                    
@@ -165,7 +164,7 @@
                     <select id="year">
                         <!-- Add your options here -->
                         <option value="2024">2024</option>
-                        <option value="2024">2023</option>
+                        <option value="2023">2023</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
@@ -174,21 +173,7 @@
                         <option value="2017">2017</option>
                         <option value="2016">2016</option>
                         <option value="2015">2015</option>
-                        <option value="2014">2014</option>
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                        <option value="2011">2011</option>
-                        <option value="2010">2010</option>
-                        <option value="2009">2009</option>
-                        <option value="2008">2008</option>
-                        <option value="2007">2007</option>
-                        <option value="2006">2006</option>
-                        <option value="2005">2005</option>
-                        <option value="2004">2004</option>
-                        <option value="2003">2003</option>
-                        <option value="2002">2002</option>
-                        <option value="2001">2001</option>
-                        <option value="2000">2000</option>
+                        <option value="2000">from 2000 to 1900</option>
                         <option value="1900">before 1900</option>
                     </select>
                 </li>
@@ -237,7 +222,7 @@
             <h2>Top lease deals</h2>
             <article>
                 <figure>
-                    <img src="images/electric-250X150.jpg" alt="car">
+                    <img src="images/Tesla-400x300.jpg" alt="car">
                     <figcaption>
                         <button class="btn-invert" type="submit"
                             onclick="redirectToCarInventory()">Electric/Hybird</button>
@@ -246,7 +231,7 @@
             </article>
             <article>
                 <figure>
-                    <img src="images/VWdBullyeBully-250x150.jpg" alt="car" style="width: 200%;">
+                    <img src="images/VWe-Bulli-400x300.jpg" alt="car" style="width: 200%;">
                     <figcaption>
                         <button class="btn-invert" type="submit" onclick="redirectToCarInventory()">vans</button>
                     </figcaption>
@@ -254,7 +239,7 @@
             </article>
             <article>
                 <figure>
-                    <img src="images/luxuryCars-250X150.jpg" alt="car">
+                    <img src="images/Lux-400x300.jpg" alt="car">
                     <figcaption>
                         <button class="btn-invert" type="submit" onclick="redirectToCarInventory()">luxury cars</button>
                     </figcaption>
@@ -361,7 +346,39 @@
             // alert('redirecting to car inventory');
 
         }
-    </script>
-</body>
+      
+                /* Functions to redirect to different pages */
+                function redirectToCarInventory() {
 
-</html>
+                    // Redirect to carDetails.jpg when the form is submitted
+                    window.location.href = 'pages/carInventory.html';
+                    // alert('redirecting to car inventory');
+
+                }
+/***** THIS FUNCTION IS THERE FOR DEBUGGING PURPOSES *****/
+                function showNavbarAndScreenSize() {
+    // Make sure navbar is visible
+    document.getElementById('navbar').style.display = 'block';
+
+    // Display navbar property
+    var navbarStyle = document.getElementById('navbar').style;
+    
+    // Open a new popup window with the navbar style information
+    var navbarPopup = window.open('', 'Navbar Style', 'width=400,height=300');
+    navbarPopup.document.write('<p>Navbar style: ' + JSON.stringify(navbarStyle) + '</p>');
+    
+    // Show screensize in a new popup window
+    var screenSizePopup = window.open('', 'Screen Size', 'width=400,height=300');
+    screenSizePopup.document.write('<p>Window inner width: ' + window.innerWidth + '</p>');
+    screenSizePopup.document.write('<p>Window inner height: ' + window.innerHeight + '</p>');
+    console.log("Function called"); // Add this line
+}
+
+
+                    
+                
+            </script>
+        </body>
+
+        </html>
+    
