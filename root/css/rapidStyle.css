@@ -69,7 +69,7 @@
 
 /* END Global Variable */
 
-
+/** - body is an element selector **/
 body {
   /* designed variables*/
   --visited-color: var(--tertiary-color);
@@ -82,7 +82,10 @@ body {
   max-width: 100%;
 }
 
-.det-body { box-sizing: border-box; }
+/** - .det-boey is an class selector **/
+.det-body {
+  box-sizing: border-box;
+}
 
 h1 {
   color: var(--text-dk-color);
@@ -99,23 +102,24 @@ h2 {
 }
 
 
-h3
- {
+h3 {
   font-size: calc(var(--fs-base) * 1.2);
   font-weight: var(--fw-bold);
   color: var(--text-dk-color);
 }
+
 .det-h3,
 .det-h2 {
   margin-top: var(--spacer);
-  text-align: center;}
+  text-align: center;
+}
 
 img {
   max-width: 100%;
   /* image will not exceed the width of its container */
   height: auto;
   /* image will not exceed the height of its container */
-  
+
 }
 
 a:visited {
@@ -125,6 +129,7 @@ a:visited {
 a:hover {
   color: var(--hover-color);
 }
+
 /****************************************************************************************/
 /*                                   HEADER AND NAVIGATION                              */
 /*                                                                                      */
@@ -138,10 +143,13 @@ a:hover {
 
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
 main {
-  padding-top: 100px; /* leave space for the navigation bar as position is fixed header's height */
-} 
+  padding-top: 80px;
+  /* leave space for the navigation bar as position is fixed header's height */
+}
+
+/** - .hero img is a decedent selector **/
 .hero img {
-  width:100%
+  width: 100%
 }
 
 .navBar {
@@ -150,59 +158,69 @@ main {
   color: var(--text-dk-color);
   display: flex;
   width: 100%;
-  height: 500px;
+  height: 80px;
   position: fixed;
 
 }
 
-nav {
+.headerNav {
   position: absolute;
   top: 100%;
   background-color: var(--secondary-color);
   width: 100%;
   display: none;
 }
-nav li {
+
+.headerNav li {
   padding: var(--spacer);
   border-bottom: solid 1px #fafafa;
   text-decoration: none;
 }
-nav li a { 
+
+.headerNav li a {
   display: block;
   color: black;
   text-decoration: none;
-   font-weight: var(--fw-bold);
-  
+  font-weight: var(--fw-bold);
+
 }
-nav li a:hover {
+
+.headerNav li a:hover {
   color: var(--hover-color);
 }
-  
-.navToggler:checked ~ nav {
+
+.navToggler:checked~nav {
   display: block;
 }
+
 .navToggler {
   display: none;
 }
+
 .mi {
   color: var(--primary-color);
 }
+
 .menuClose {
   display: none;
 }
+
 .navTogglerMenu {
- 
+
   position: absolute;
   top: var(--spacer);
   left: var(--spacer);
   display: flex;
 }
-.navToggler:checked ~ .navTogglerMenu .menuClose {
+
+.navToggler:checked~.navTogglerMenu .menuClose {
   display: block;
 }
-.navToggler:checked ~ .navTogglerMenu .menuOpen {
+
+.navToggler:checked~.navTogglerMenu .menuOpen {
   display: none;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -210,12 +228,15 @@ nav li a:hover {
   top: .6rem;
   right: 8rem;
 }
+
 .logo img {
-   width: 80px; /* Adjust the width as needed */
+  width: 80px;
+  /* Adjust the width as needed */
   height: 50px;
   margin: 0 1rem 0 0;
-  
+
 }
+
 .login {
   display: flex;
   justify-content: end;
@@ -233,23 +254,26 @@ nav li a:hover {
 
 #searchForm,
 .search-bar {
-  display: none; /* Hide the search bar on mobile devices */
+  display: none;
+  /* Hide the search bar on mobile devices */
 }
+
 .box-viewCars,
 .btn-viewCars {
-  display: block; /* Adjust as needed */
+  display: block;
+  /* Adjust as needed */
 }
 
 /* Style for the "box-viewCars" (initially hidden) */
 .box-viewCars {
   background-color: var(--secondary-color);
-  padding:var(--spacer-dbl);
+  padding: var(--spacer-dbl);
 }
 
 .btn-viewCars {
-    font-size: var(--fs-large);
-    padding:var(--spacer);
-    width: 100%
+  font-size: var(--fs-large);
+  padding: var(--spacer);
+  width: 100%
 }
 
 
@@ -357,17 +381,19 @@ figcaption {
   padding: var(--spacer-dbl);
   background-color: var(--tertiary-color);
 
-  
+
 }
+
 #top .btn-invert {
   margin-top: var(--spacer);
 }
- #top {
+
+#top {
   margin-top: var(--spacer-dbl);
   background-color: var(--text-lt-color);
   border: 5px solid var(--tertiary-color);
 }
- 
+
 
 /***** Style to Cat Details ****/
 
@@ -378,428 +404,455 @@ figcaption {
 
 }
 
- 
-
-  .det-car img {
-    box-sizing: border-box;
-    /* Include border in width calculation */
-    border: solid 5px var(--secondary-color);
-    padding: 10px;
-    flex: 1 0 100%;
-    /* Take up full width initially */
-    max-width: calc(50% - 20px);
-    /* Set max-width for 2 items per row on tablet and larger screens */
-  }
-
-  /****** Style for the section contact agent *****/
-  .det-form {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-
-  }
-
-  .basic input,
-  .basic textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px;
-    /* Include padding and border in the element's total width */
-  }
-
-  .basic textarea {
-    min-height: 250px;
-  }
-
-  input[type="email"] {
-    min-width: 225px;
-  }
-
-  label {
-    display: block;
-    font-size: 1em;
-    margin-bottom: 0.25em;
-    color: var(--text-mid-color);
-    font-family: var(--primary-font);
-    padding-top: var(--spacer);
-  }
-
-  /* Begin styling address */
-
-  ul {
-    padding-bottom: 20px;
-  }
-
-  ul.det-location {
-    display: grid;
-    grid-template-columns: 4fr 3fr 1fr 2fr;
-    gap: 10px;
-    /* Adjust the gap between columns if needed */
-
-  }
-
-  ul.det-location li:first-child {
-    grid-column: span 4;
-    /* Make the first item span four columns */
-  }
-
-  ul.det-location li:last-child {
-    grid-column: span 2;
-    /* Make the last item span 2 to make sure it align with address */
-  }
-
-  /* Style for input fields */
-  ul.det-location input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-
-  }
-
-  /* End styling address */
-
-  .det-container {
-    display: flex;
-    flex-direction: column;
-  }
 
 
-
-  .det-checks,
-  .det-contactTime {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    /* Adjust this value to change the spacing between checkboxes */
-    list-style: none;
-    /* Remove default list style */
-  }
-
-  .det-checks li,
-  .det-contactTime li {
-    display: flex;
-    align-items: center;
-  }
-
-  .det-checks input[type="checkbox"] {
-    margin-right: 5px;
-    /* Add some space between the checkbox and the label */
-  }
-
-  .det-contactTime {
-    text-align: center;
-    font-family: var(--heading-font);
-    color: var(--text-dk-color);
-    font-size: calc(var(--fs-base) * 1.2);
-  }
-
-  /****************************************************************************************/
-  /*                       BEGIN         how does car leasing works                       */
-  /****************************************************************************************/
-
-
-  .cards article {
-    padding: var(--spacer-dbl);
-    background-color: var(--accent-color);
-  }
-
-
-  .cards-container {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
-    background-color: var(--accent-color);
-    justify-items: center;
-    align-items: center;
-    height: 100%;
-    padding-bottom: var(--spacer-dbl);
-    margin-bottom: var(--spacer);
-  }
-main {
-  width:80%;
-  margin:auto; 
+.det-car img {
+  box-sizing: border-box;
+  /* Include border in width calculation */
+  border: solid 5px var(--secondary-color);
+  padding: 10px;
+  flex: 1 0 100%;
+  /* Take up full width initially */
+  max-width: calc(50% - 20px);
+  /* Set max-width for 2 items per row on tablet and larger screens */
 }
-  .cards-container h3,
-  main h2 {
-    font-family: var(--heading-font);
-    font-weight: var(--fw-bold);
-    font-style: italic;
-    line-height: 1.25;
-    text-align: center;
-    padding: 1rem;
-  }
 
-  .cards-container p {
-    padding: var(--spacer) var(--spacer);
-  }
+/****** Style for the section contact agent *****/
+.det-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
-    height: 100%;
-    padding: var(--spacer-dbl);
-    background-color: #fff;
-    text-align: center;
-    width: 80%;
-    box-shadow: var(--shadow);
-  }
+}
 
-  i {
-    font-size: 2.5rem;
-    color: #DEB992;
-    padding: var(--spacer);
-  }
+.basic input,
+.basic textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  /* Include padding and border in the element's total width */
+}
 
-  .card {
-    margin-top: auto;
+.basic textarea {
+  min-height: 250px;
+}
 
-  }
+input[type="email"] {
+  min-width: 225px;
+}
 
-  /****************************************************************************************/
-  /*                                car inventory                                         */
-  /*                Style specfic for the class inventory page                            */
-  /****************************************************************************************/
+label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.25em;
+  color: var(--text-mid-color);
+  font-family: var(--primary-font);
+  padding-top: var(--spacer);
+}
 
-  .car-desc article {
-    background-color: #fff;
-    border: solid 5px var(--tertiary-color);
-  }
+/* Begin styling address */
 
-  .car-desc img {
-    width: 250px;
-    height: 150px;
-    border: solid 5px var(--secondary-color);
-    margin-bottom: var(--spacer);
-  }
+ul {
+  padding-bottom: 20px;
+}
 
- 
+ul.det-location {
+  display: grid;
+  grid-template-columns: 4fr 3fr 1fr 2fr;
+  gap: 10px;
+  /* Adjust the gap between columns if needed */
 
-  /* END how does car leasing works ______________*/
+}
+
+ul.det-location li:first-child {
+  grid-column: span 4;
+  /* Make the first item span four columns */
+}
+
+ul.det-location li:last-child {
+  grid-column: span 2;
+  /* Make the last item span 2 to make sure it align with address */
+}
+
+/* Style for input fields */
+ul.det-location input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+
+}
+
+/* End styling address */
+
+.det-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.det-checks,
+.det-contactTime {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Adjust this value to change the spacing between checkboxes */
+  list-style: none;
+  /* Remove default list style */
+}
+
+.det-checks li,
+.det-contactTime li {
+  display: flex;
+  align-items: center;
+}
+
+.det-checks input[type="checkbox"] {
+  margin-right: 5px;
+  /* Add some space between the checkbox and the label */
+}
+
+.det-contactTime {
+  text-align: center;
+  font-family: var(--heading-font);
+  color: var(--text-dk-color);
+  font-size: calc(var(--fs-base) * 1.2);
+}
+
+/****************************************************************************************/
+/*                       BEGIN         how does car leasing works                       */
+/****************************************************************************************/
+
+
+.cards article {
+  padding: var(--spacer-dbl);
+  background-color: var(--accent-color);
+}
+
+
+.cards-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  background-color: var(--accent-color);
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: var(--spacer-dbl);
+  margin-bottom: var(--spacer);
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.cards-container h3,
+main h2 {
+  font-family: var(--heading-font);
+  font-weight: var(--fw-bold);
+  font-style: italic;
+  line-height: 1.25;
+  text-align: center;
+  padding: 1rem;
+}
+
+.cards-container p {
+  padding: var(--spacer) var(--spacer);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  height: 100%;
+  padding: var(--spacer-dbl);
+  background-color: #fff;
+  text-align: center;
+  width: 80%;
+  box-shadow: var(--shadow);
+}
+
+i {
+  font-size: 2.5rem;
+  color: #DEB992;
+  padding: var(--spacer);
+}
+
+.card {
+  margin-top: auto;
+
+}
+
+/****************************************************************************************/
+/*                                car inventory                                         */
+/*                Style specfic for the class inventory page                            */
+/****************************************************************************************/
+
+.car-desc article {
+  background-color: #fff;
+  border: solid 5px var(--tertiary-color);
+}
+
+.car-desc img {
+  width: 250px;
+  height: 150px;
+  border: solid 5px var(--secondary-color);
+  margin-bottom: var(--spacer);
+}
+
+
+
+/* END how does car leasing works ______________*/
 
 
 /* ************************************************************************************************************ */
 /*---------CSS FOR Sign In, Sign up pswd and usrnmreset page------*/
-.signInPage{
-  height:100vh;
+.signInPage {
+  height: 100vh;
 }
-.signInPage footer{
+
+.signInPage footer {
   position: fixed;
   bottom: 0;
 }
-.signIn{
-  background-color:var(--secondary-color);
+
+.signIn {
+  background-color: var(--secondary-color);
   width: 80%;
   padding: 10px;
   margin: 15% auto;
   box-shadow: var(--shadow)
 }
 
-.signIn .btn{
-  width:98%;
-border-radius: var(--border-radius);
-background-color: var(--primary-color);
-color: var(--text-lt-color);
-cursor: pointer;
-padding: 7px 24px;
-transition: background-color .3s ease;
-text-decoration: none;
-box-shadow: var(--shadow);
-margin: 10px auto;
+.signIn .btn {
+  width: 98%;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  cursor: pointer;
+  padding: 7px 24px;
+  transition: background-color .3s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  margin: 10px auto;
 }
-.signIn li{
+
+.signIn li {
   margin-bottom: 5px;
 }
-.signIn input{
-  width: 95%;
-border: solid 1px #0B1C55;
-  border-radius: 6px;
-  padding:10px;
-margin-bottom: 10px;}
 
-  .signIn h2 {
-      color:var(--text-dk-color);
-      font-size: 1.25rem;
-      font-family:var(--heading-font);
-      margin-bottom: 10px;
-  
-  }
-  
-  .signIn  p {
-      color:var(--text-dk-color);
-      font-family:var(--primary-font);
-      margin-bottom: 10px;
-  }
+.signIn input {
+  width: 95%;
+  border: solid 1px #0B1C55;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.signIn h2 {
+  color: var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+
+}
+
+.signIn p {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
 
 /*---------CSS FOR Sign up page------*/
-.signUpPage{
-  height:100vh;
+.signUpPage {
+  height: 100vh;
 }
-.signUpPage footer{
+
+.signUpPage footer {
   position: fixed;
   bottom: 0;
 }
-.signUp{
-  background-color:var(--secondary-color);
+
+.signUp {
+  background-color: var(--secondary-color);
   width: 80%;
   padding: 10px;
   margin: 10% auto;
   box-shadow: var(--shadow)
 }
 
-.signUp .btn{
-  width:98%;
-border-radius: var(--border-radius);
-background-color: var(--primary-color);
-color: var(--text-lt-color);
-cursor: pointer;
-padding: 7px 24px;
-transition: background-color .3s ease;
-text-decoration: none;
-box-shadow: var(--shadow);
-margin: 10px auto;
+.signUp .btn {
+  width: 98%;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  cursor: pointer;
+  padding: 7px 24px;
+  transition: background-color .3s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  margin: 10px auto;
 }
-.signUp li{
+
+.signUp li {
   margin-bottom: 5px;
 }
-.signUp input{
+
+.signUp input {
   width: 95%;
-border: solid 1px #0B1C55;
+  border: solid 1px #0B1C55;
   border-radius: 6px;
-  padding:10px;
-margin-bottom: 10px;}
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
 .signUp h2 {
-      color:var(--text-dk-color);
-      font-size: 1.25rem;
-      font-family:var(--heading-font);
-      margin-bottom: 10px;
-  
-  }
-  
-.signUp  p {
-      color:var(--text-dk-color);
-      font-family:var(--primary-font);
-      margin-bottom: 10px;
-  }
-/* passowrd reset */
-.pswdresetPage{
-  height:100vh;
+  color: var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+
 }
-.pswdresetPage footer{
+
+.signUp p {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
+
+/* passowrd reset */
+.pswdresetPage {
+  height: 100vh;
+}
+
+.pswdresetPage footer {
   position: fixed;
   bottom: 0;
 }
-.pswdreset{
-  background-color:var(--secondary-color);
+
+.pswdreset {
+  background-color: var(--secondary-color);
   width: 80%;
   padding: 10px;
   margin: 10% auto;
   box-shadow: var(--shadow)
 }
 
-.pswdreset .btn{
-  width:98%;
-border-radius: var(--border-radius);
-background-color: var(--primary-color);
-color: var(--text-lt-color);
-cursor: pointer;
-padding: 7px 24px;
-transition: background-color .3s ease;
-text-decoration: none;
-box-shadow: var(--shadow);
-margin: 10px auto;
+.pswdreset .btn {
+  width: 98%;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  cursor: pointer;
+  padding: 7px 24px;
+  transition: background-color .3s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  margin: 10px auto;
 }
-.pswdreset li{
+
+.pswdreset li {
   margin-bottom: 5px;
 }
-.pswdreset input{
+
+.pswdreset input {
   width: 95%;
-border: solid 1px #0B1C55;
+  border: solid 1px #0B1C55;
   border-radius: 6px;
-  padding:10px;
-margin-bottom: 10px;}
-
-.pswdreset h2 {
-      color:var(--text-dk-color);
-      font-size: 1.25rem;
-      font-family:var(--heading-font);
-      margin-bottom: 10px;
-  
-  }
-  
-.pswdreset  p {
-      color:var(--text-dk-color);
-      font-family:var(--primary-font);
-      margin-bottom: 10px;
-  }
-
-
-  /****************************************************************************************/
-  /*                                BEGIN     FOOTER                                      */
-  /****************************************************************************************/
-  footer h1 { color:var(--text-lt-color);}
-  footer h2 { color:var(--text-lt-color);}
-  footer {
-    background-color:var(--primary-color);
-    color:var(--text-lt-color);
-    width: 100%;
-    padding:10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-footer section {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+.pswdreset h2 {
+  color: var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+
+}
+
+.pswdreset p {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
+
+
+/****************************************************************************************/
+/*                                BEGIN     FOOTER                                      */
+/****************************************************************************************/
+footer h1 {
+  color: var(--text-lt-color);
 }
 
 footer h2 {
-    color:var(--text-lt-color);
-    font-size: 1.25rem;
-    font-family:var(--heading-font);
-    margin-bottom: 8px;
+  color: var(--text-lt-color);
 }
-footer button{
-    width:30%;
-margin-top:10px;
-background-color: var(--text-lt-color);
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  width: 100%;
+  padding: 10px;
+}
+
+footer section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+footer h2 {
+  color: var(--text-lt-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 8px;
+}
+
+footer button {
+  width: 30%;
+  margin-top: 10px;
+  background-color: var(--text-lt-color);
   color: var(--text-dk-color);
 
 }
+
 footer a {
-    color:var(--text-lt-color);
-    font-family:var(--primary-font);
-    text-decoration: none;
+  color: var(--text-lt-color);
+  font-family: var(--primary-font);
+  text-decoration: none;
 }
 
+/** - a:visited is a pseudo class selector **/
 footer a:visited {
-    color:var(--tertiary-color);
+  color: var(--tertiary-color);
 }
 
 footer a:hover {
-    color:var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .d {
-    display: none;
+  display: none;
 }
 
 .mIcon a {
-    display: inline-block;
-    margin: 15px;
+  display: inline-block;
+  margin: 15px;
 }
 
 .i a {
-    margin: 10px;
+  margin: 10px;
 }
 
-  /* END FOOTER */
+/* END FOOTER */
 
-  /****************************************************************************************/
-  /*                                BEGIN    CONTACT US                                     */
-  /****************************************************************************************/
+/****************************************************************************************/
+/*                                BEGIN    CONTACT US                                     */
+/****************************************************************************************/
 
 .contactDetails {
   width: 80%;
@@ -810,30 +863,30 @@ footer a:hover {
 }
 
 .contactDetails article {
-  background-color:var(--tertiary-color);
+  background-color: var(--tertiary-color);
   padding: 10px;
 }
 
 .contactDetails div {
   border: solid 2px #0B1C55;
-  border-radius:var(--border-radius);
+  border-radius: var(--border-radius);
   padding: 10px;
 }
 
 .contactDetails h2 {
-  color:var(--text-dk-color);
+  color: var(--text-dk-color);
   font-size: 1.25rem;
-  font-family:var(--heading-font);
+  font-family: var(--heading-font);
 
 }
 
 .contactDetails p {
-  color:var(--text-dk-color);
-  font-family:var(--primary-font);
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
 }
 
 .contactUs {
-  background-color:var(--secondary-color);
+  background-color: var(--secondary-color);
   width: 80%;
   padding: 10px;
   margin: auto;
@@ -841,41 +894,42 @@ footer a:hover {
 }
 
 .contactUs h2 {
-  color:var(--text-dk-color);
+  color: var(--text-dk-color);
   font-size: 1.25rem;
-  font-family:var(--heading-font);
+  font-family: var(--heading-font);
 
 }
 
 .contactUs li {
-  color:var(--text-dk-color);
+  color: var(--text-dk-color);
   font-family: var(--primary-font);
-  padding:2px;
-   
+  padding: 2px;
+
 }
 
-.contactForm input{
+.contactForm input {
   width: 95%;
-border: solid 1px #0B1C55;
+  border: solid 1px #0B1C55;
   border-radius: 6px;
-  padding:10px;
+  padding: 10px;
 }
-.contactForm #message{
-      height:150px;
-  }
 
-  .contactForm .btn{
-      width:98%;
-margin:10px 0 0;
-border-radius: var(--border-radius);
-background-color: var(--primary-color);
-color: var(--text-lt-color);
-cursor: pointer;
-padding: 7px 24px;
-transition: background-color .3s ease;
-text-decoration: none;
-box-shadow: var(--shadow);
-  }
+.contactForm #message {
+  height: 150px;
+}
+
+.contactForm .btn {
+  width: 98%;
+  margin: 10px 0 0;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  cursor: pointer;
+  padding: 7px 24px;
+  transition: background-color .3s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
 
 .map {
   width: 100%;
@@ -884,21 +938,22 @@ box-shadow: var(--shadow);
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+
 /* *************************************END OF CONTACT US CSS********************** */
-  
 
 
-  /****************************************************************************************/
-  /*                                   Media queries                                      */
-  /****************************************************************************************/
 
-  
-  /* tablet size */
-    @media screen and (min-width: 700px) {
+/****************************************************************************************/
+/*                                   Media queries                                      */
+/****************************************************************************************/
 
-/* section to hide and show searchbar */
 
-/* #searchForm,
+/* tablet size */
+@media screen and (min-width: 700px) {
+
+  /* section to hide and show searchbar */
+
+  /* #searchForm,
 .search-bar {
   display: none; 
 }
@@ -909,266 +964,292 @@ box-shadow: var(--shadow);
 
 
 
-    
-      /* Navigation Bar */
 
-     .navbar {
-        
-        background-image: none;
-     }
-      .navTogglerMenu {
-        display: none;
-    }
-   
- header {
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            padding: 20px;
+  /* Navigation Bar */
 
-        
-        }
+  .navbar {
 
-    .logo {
-        display: flex;
+    background-image: none;
+  }
+
+  .navTogglerMenu {
+    display: none;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+
+  }
+
+  .logo {
+    display: flex;
     align-items: center;
     position: absolute;
     top: .6rem;
     left: var(--spacer);
-    }
+  }
 
 
-.logo img {
-    width: 100px; /* Adjust the width as needed */
+  .logo img {
+    width: 100px;
+    /* Adjust the width as needed */
     height: 80px;
-    
-}
-    nav {
-        all: unset;   /* to remove hamburger icon for desktop version */
-        align-self: flex-start;
-    }
-    nav ul {
-        display: flex;
-        margin-right: 1rem;
-    }
-    nav li {
-        border-bottom: none;
-        text-decoration: none;
-    }
-.login {
+
+  }
+
+  .headerNav {
+    all: unset;
+    /* to remove hamburger icon for desktop version */
+    align-self: flex-start;
+    z-index: 1000;
+    /* this is needed to make sure that the navigation is not blocked by main */
+  }
+
+  .headerNav ul {
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  .headerNav li {
+    border-bottom: none;
+    text-decoration: none;
+  }
+
+  .login {
     display: flex;
     justify-content: end;
     position: absolute;
     top: 1rem;
-    right:7rem;
+    right: 7rem;
 
-}
-
- /* grid area for how does car leasing works */
-
- .cards-container {
-   grid-template-columns: 1fr;
-   grid-row: auto;
-   grid-gap: 2em;
- }
-
- .cards-container h2 {
-   grid-column: 1/4;
-   width: 80%;
- }
-
- .info-1 {
-   grid-column: 1/2;
-   height: 100%;
-   width: 100%;
- }
-
- .info-2 {
-   grid-column: 2/2;
-   height: 100%;
-   width: 100%;
- }
-
- .info-3 {
-   grid-column: 3/2;
-   height: 100%;
-   width: 100%;
- }
- 
-      /***** Footer grid area *****/
-      .m {
-          display: none;
-      }
-  
-      .d {
-          display: grid;
-          grid-template-areas: "l s c"
-              "p s i";
-          grid-column: 1fr;
-          grid-row: auto;
-          text-align: left;
-      }
-  
-      .l {
-          grid-area: l;
-          
-      }
-  
-      .s {
-          grid-area: s;
-          margin-left: 75px; 
-      }
-  
-      .c {
-          grid-area: c;
-          margin-left: 125px;
-          
-      }
-  
-      .p {
-          grid-area: p;
-          margin:5px 0;
-        
-      }
-  
-      .i {
-          grid-area: i;
-          margin:10px 0 5px 125px;
-      }
-      /* SIGN IN AND SIGN UP MEDIA QUERRY */
-.signIn{width:33%;}
-.signUp{width:33%;}
-.pswdreset{width:33%;}
-}
-    
-/** end Tab size **/
-/***** Desktop size *****/
-
-    @media screen and (min-width: 1200px) {
-
-      /* header link, wait for Amala to modify */
-.showMenu {
-  display: none;
-}
-.navbar {
-  display: block;
-}
-
-
-      .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        font-family: var(--heading-font);
-    }
-      .center-nav,
-      .center-nav ul {
-        display: flex;
-        justify-content: space-between;
-      }
-    .logo img{
-      width:50%;
-    }
-    .center-nav ul li {
-      margin: 0 10px; /* Adjust this value as needed */
   }
-    
-  
-      /****** SPECIFIC FOR SEARCH BAR for desktopsize */
-  .search-bar,    
- #searchForm {
-  display: block; 
-}
 
-.box-viewCars,
-.btn-viewCars {
-  display: none; /* Adjust as needed */
-}
-
-
-/* always hide for desktop on viewCars*/
-.box-viewCars {
-  display: none;
-}
-
-      .search-bar ul {
-        grid-template-columns: var(--grid-item-very-large);
-        align-self: end;
-      }
-
-      /* Raul: grid area for how does car leasing works */
-
+  /* grid area for how does car leasing works */
 
   .cards-container {
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-row: auto; 
+    grid-template-columns: 1fr;
+    grid-row: auto;
     grid-gap: 2em;
   }
 
-      /* ******css for contact us page********* */
-      .contactDetails {
-        display: grid;
-        grid-template-areas: "hrs c1 c2";
-        grid-column: 1fr;
-        gap:15px;
-        grid-row:auto;
-        box-shadow:none;
-    
-    } 
-  
-    .hours {
-        grid-area: hrs;
-       align-items: center ;
-       box-shadow: var(--shadow);
-    }
-  
-    .c1 {
-        grid-area: c1;
-        align-self: center;
-        box-shadow: var(--shadow);
-    }
-  
-    .c2 {
-        grid-area: c2;
-        align-self: center;
-        box-shadow: var(--shadow);
-    }
-  
-    .hours .c1 .c2 {
-        width: 350px;
-      
-    }
-    .contactDetails article{
-        width:100%;
-    }
-    .contactDetails div {
-        border: solid 2px #0B1C55;
-        border-radius:var(--border-radius);
-        width: auto;
-        height: 120px;
-        padding: 10px;
-        margin: auto;
-    }
-  
-     .contactUs {
-        display: grid;
-        grid-template-areas: "form map";
-        grid-column: 1fr;
-        grid-row: auto;
-        box-shadow: var(--shadow);
-        margin-bottom: 20px;
-    }
-    .contactForm{grid-area: form;}
-   
-    .map{grid-area: map;
-        width:80%;
-    height:auto;}
-        /* SIGN IN AND SIGN UP MEDIA QUERRY */
-.signIn{max-width: 600px;}
-.signUp{max-width: 600px;}
-.pswdreset{max-width: 600px;}
-  
+  .cards-container h2 {
+    grid-column: 1/4;
+    width: 80%;
   }
-  
- 
+
+  .info-1 {
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .info-2 {
+    grid-column: 2/2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .info-3 {
+    grid-column: 3/2;
+    height: 100%;
+    width: 100%;
+  }
+
+  /***** Footer grid area *****/
+  .m {
+    display: none;
+  }
+
+  .d {
+    display: grid;
+    grid-template-areas: "l s c"
+      "p s i";
+    grid-column: 1fr;
+    grid-row: auto;
+    text-align: left;
+  }
+
+  .l {
+    grid-area: l;
+
+  }
+
+  .s {
+    grid-area: s;
+    margin-left: 75px;
+  }
+
+  .c {
+    grid-area: c;
+    margin-left: 125px;
+
+  }
+
+  .p {
+    grid-area: p;
+    margin: 5px 0;
+
+  }
+
+  .i {
+    grid-area: i;
+    margin: 10px 0 5px 125px;
+  }
+
+  /* SIGN IN AND SIGN UP MEDIA QUERRY */
+  .signIn {
+    width: 33%;
+  }
+
+  .signUp {
+    width: 33%;
+  }
+
+  .pswdreset {
+    width: 33%;
+  }
+}
+
+/** end Tab size **/
+/***** Desktop size *****/
+
+@media screen and (min-width: 1200px) {
+
+  /* header link, wait for Amala to modify */
+
+  .navbar {
+    display: block;
+  }
+
+  .center-nav,
+  .center-nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .center-nav ul li {
+    margin: 0 10px;
+    /* Adjust this value as needed */
+  }
+
+
+  /****** SPECIFIC FOR SEARCH BAR for desktopsize */
+  .search-bar,
+  #searchForm {
+    display: block;
+  }
+
+  .box-viewCars,
+  .btn-viewCars {
+    display: none;
+    /* Adjust as needed */
+  }
+
+
+  /* always hide for desktop on viewCars*/
+  .box-viewCars {
+    display: none;
+  }
+
+  .search-bar ul {
+    grid-template-columns: var(--grid-item-very-large);
+    align-self: end;
+  }
+
+  /* Raul: grid area for how does car leasing works */
+
+
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 2em;
+  }
+
+  /* ******css for contact us page********* */
+  .contactDetails {
+    display: grid;
+    grid-template-areas: "hrs c1 c2";
+    grid-column: 1fr;
+    gap: 15px;
+    grid-row: auto;
+    box-shadow: none;
+
+  }
+
+  .hours {
+    grid-area: hrs;
+    align-items: center;
+    box-shadow: var(--shadow);
+  }
+
+  .c1 {
+    grid-area: c1;
+    align-self: center;
+    box-shadow: var(--shadow);
+  }
+
+  .c2 {
+    grid-area: c2;
+    align-self: center;
+    box-shadow: var(--shadow);
+  }
+
+  .hours .c1 .c2 {
+    width: 350px;
+
+  }
+
+  .contactDetails article {
+    width: 100%;
+  }
+
+  .contactDetails div {
+    border: solid 2px #0B1C55;
+    border-radius: var(--border-radius);
+    width: auto;
+    height: 120px;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .contactUs {
+    display: grid;
+    grid-template-areas: "form map";
+    grid-column: 1fr;
+    grid-row: auto;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+
+  .contactForm {
+    grid-area: form;
+  }
+
+  .map {
+    grid-area: map;
+    width: 80%;
+    height: auto;
+  }
+
+  /* SIGN IN AND SIGN UP MEDIA QUERRY */
+  .signIn {
+    max-width: 600px;
+  }
+
+  .signUp {
+    max-width: 600px;
+  }
+
+  .pswdreset {
+    max-width: 600px;
+  }
+
+}
