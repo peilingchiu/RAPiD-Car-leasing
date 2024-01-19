@@ -87,32 +87,18 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
+/** default general style for all elements **/
+h1, h2, h3 {
   color: var(--text-dk-color);
   font-family: var(--heading-font);
-  font-size: calc(var(--fs-base) * 1.8);
-  font-weight: var(--fw-bold);
-
-}
-
-h2 {
-  color: var(--text-dk-color);
-  font-size: calc(var(--fs-base) * 1.5);
   font-weight: var(--fw-bold);
 }
 
-
-h3 {
-  font-size: calc(var(--fs-base) * 1.2);
-  font-weight: var(--fw-bold);
-  color: var(--text-dk-color);
-}
-
-.det-h3,
-.det-h2 {
-  margin-top: var(--spacer);
-  text-align: center;
-}
+h1 {font-size: calc(var(--fs-base) * 1.8);}
+h2 {font-size: calc(var(--fs-base) * 1.5);}
+h3 {font-size: calc(var(--fs-base) * 1.2);}
+  
+p {line-height: 1.5;}
 
 img {
   max-width: 100%;
@@ -395,16 +381,18 @@ figcaption {
 }
 
 
-/***** Style to Cat Details ****/
+/***** Style to Car Details ****/
 
+.det-h3,
+.det-h2 {
+  margin-top: var(--spacer);
+  text-align: center;
+}
 .det-car {
   display: flex;
   justify-content: space-around;
   border: solid 1px black;
-
 }
-
-
 
 .det-car img {
   box-sizing: border-box;
