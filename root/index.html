@@ -62,7 +62,7 @@
     <!-- BEGIN main section -->
     
     <main id="homePage">
-       <!-- <figure class="hero"><img src="images/heroDesktop-800.jpg" alt="hero" class="hero"></figure> -->
+        <figure class="hero"><img src="images/hero.jpg" alt="hero" class="hero"></figure>
 
         <!-- Peiling: search Bar -->
      <!-- for mobile only, hide the search bar -->
@@ -362,17 +362,26 @@
 
                 }
 
-      // JavaScript function to set different padding based on the page
-      function setPagePadding() {
-            var currentPage = window.location.pathname.split('/').pop(); // Get the current page name
+    //   JavaScript function to set different padding based on the page
+    //   function setPagePadding() {
+    //         var currentPage = window.location.pathname.split('/').pop(); // Get the current page name
 
-            // Check if the current page is 'index.html'
-            if (currentPage === 'index.html') {
-                document.querySelector('main').style.paddingTop = '600px';
-            } else {
-                document.querySelector('main').style.paddingTop = '100px';
-            }
-        }
+    //         // Check if the current page is 'index.html'
+    //         if (currentPage === 'index.html') {
+    //             document.querySelector('main').style.paddingTop = '600px';
+    //         } else {
+    //             document.querySelector('main').style.paddingTop = '100px';
+    //         }
+    //     }
+
+    
+
+
+
+// Function to check if the device is a mobile device
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
 
         // Call the function when the window has finished loading
         window.onload = setPagePadding;

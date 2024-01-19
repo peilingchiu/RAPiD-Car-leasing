@@ -82,6 +82,8 @@ body {
   max-width: 100%;
 }
 
+.det-body { box-sizing: border-box; }
+
 h1 {
   color: var(--text-dk-color);
   font-family: var(--heading-font);
@@ -136,18 +138,13 @@ a:hover {
 
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
 main {
-  padding-top: 100px; /* Adjust the value based on your header's height */
+  padding-top: 100px; /* leave space for the navigation bar as position is fixed header's height */
 } 
-
-/* .hero img {
-  width: 100%;
-  height: 500px;
-  margin:auto;
-} */
-
+.hero img {
+  width:100%
+}
 
 .navBar {
-  background-image: url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--text-dk-color);
@@ -234,14 +231,18 @@ nav li a:hover {
 /*                Style specfic for the class .search-bar          DEFAULT              */
 /****************************************************************************************/
 
-#searchForm {
-  display: block; /* Initially show the search bar */
+#searchForm,
+.search-bar {
+  display: none; /* Hide the search bar on mobile devices */
+}
+.box-viewCars,
+.btn-viewCars {
+  display: block; /* Adjust as needed */
 }
 
 /* Style for the "box-viewCars" (initially hidden) */
 .box-viewCars {
   background-color: var(--secondary-color);
-  display: none;
   padding:var(--spacer-dbl);
 }
 
@@ -581,6 +582,8 @@ main {
   /****************************************************************************************/
   /*                                BEGIN     FOOTER                                      */
   /****************************************************************************************/
+  footer h1 { color:var(--text-lt-color);}
+  footer h2 { color:var(--text-lt-color);}
   footer {
     background-color:var(--primary-color);
     color:var(--text-lt-color);
@@ -730,28 +733,35 @@ box-shadow: var(--shadow);
   /****************************************************************************************/
   /*                                   Media queries                                      */
   /****************************************************************************************/
+
   
+  /* tablet size */
     @media screen and (min-width: 700px) {
 
 /* section to hide and show searchbar */
 
-#searchForm,
+/* #searchForm,
 .search-bar {
-  display: none; /* Hide the search bar on mobile devices */
+  display: none; 
 }
 .box-viewCars,
 .btn-viewCars {
-  display: block; /* Adjust as needed */
-}
+  display: block;  */
 
 
 
 
     
       /* Navigation Bar */
+
+     .navbar {
+        
+        background-image: none;
+     }
       .navTogglerMenu {
         display: none;
     }
+   
  header {
             display: flex;
             justify-content: center;
@@ -878,7 +888,7 @@ box-shadow: var(--shadow);
 .showMenu {
   display: none;
 }
-#navbar {
+.navbar {
   display: block;
 }
 
@@ -908,6 +918,12 @@ box-shadow: var(--shadow);
  #searchForm {
   display: block; 
 }
+
+.box-viewCars,
+.btn-viewCars {
+  display: none; /* Adjust as needed */
+}
+
 
 /* always hide for desktop on viewCars*/
 .box-viewCars {
