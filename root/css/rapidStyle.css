@@ -30,6 +30,7 @@
   /* Bold font weight */
   --fs-base: 1rem;
   /* Base font size */
+  --fs-large: calc(var(--fs-base) * 2);
 
 
   /* Color */
@@ -85,6 +86,7 @@ h1 {
   color: var(--text-dk-color);
   font-family: var(--heading-font);
   font-size: calc(var(--fs-base) * 1.8);
+  font-weight: var(--fw-bold);
 
 }
 
@@ -111,6 +113,7 @@ img {
   /* image will not exceed the width of its container */
   height: auto;
   /* image will not exceed the height of its container */
+  
 }
 
 a:visited {
@@ -125,22 +128,131 @@ a:hover {
 /*                                                                                      */
 /****************************************************************************************/
 
-/* hide navebar and show menu by default */
+/****************************************************************************************/
+/*                                BEGIN  style Header section                          */
+/*                Mobile first hamburger menu                                           */
+/****************************************************************************************/
 
-/* hide navbar */
-#navbar {
-  display: none;
+
+/* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
+main {
+  padding-top: 100px; /* Adjust the value based on your header's height */
+} 
+
+/* .hero img {
+  width: 100%;
+  height: 500px;
+  margin:auto;
+} */
+
+
+.navBar {
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-dk-color);
+  display: flex;
+  width: 100%;
+  height: 500px;
+  position: fixed;
+
 }
 
-.showMenu {
+nav {
+  position: absolute;
+  top: 100%;
+  background-color: var(--secondary-color);
+  width: 100%;
+  display: none;
+}
+nav li {
+  padding: var(--spacer);
+  border-bottom: solid 1px #fafafa;
+  text-decoration: none;
+}
+nav li a { 
   display: block;
+  color: black;
+  text-decoration: none;
+   font-weight: var(--fw-bold);
+  
+}
+nav li a:hover {
+  color: var(--hover-color);
+}
+  
+.navToggler:checked ~ nav {
+  display: block;
+}
+.navToggler {
+  display: none;
+}
+.mi {
+  color: var(--primary-color);
+}
+.menuClose {
+  display: none;
+}
+.navTogglerMenu {
+ 
+  position: absolute;
+  top: var(--spacer);
+  left: var(--spacer);
+  display: flex;
+}
+.navToggler:checked ~ .navTogglerMenu .menuClose {
+  display: block;
+}
+.navToggler:checked ~ .navTogglerMenu .menuOpen {
+  display: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: .6rem;
+  right: 8rem;
+}
+.logo img {
+   width: 80px; /* Adjust the width as needed */
+  height: 50px;
+  margin: 0 1rem 0 0;
+  
+}
+.login {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: .6rem;
+  right: var(--spacer);
+  margin: 0 1rem 0 0;
 }
 
 
 /****************************************************************************************/
 /*                                BEGIN  style for search bar                           */
-/*                Style specfic for the class .search-bar                               */
+/*                Style specfic for the class .search-bar          DEFAULT              */
 /****************************************************************************************/
+
+#searchForm {
+  display: block; /* Initially show the search bar */
+}
+
+/* Style for the "box-viewCars" (initially hidden) */
+.box-viewCars {
+  background-color: var(--secondary-color);
+  display: none;
+  padding:var(--spacer-dbl);
+}
+
+.btn-viewCars {
+    font-size: var(--fs-large);
+    padding:var(--spacer);
+    width: 100%
+}
+
+
+
 .search-bar {
   --bg-search-bar: var(--secondary-color);
   background-color: var(--bg-search-bar);
@@ -148,6 +260,7 @@ a:hover {
   margin: auto;
   padding: 10px;
   box-shadow: var(--shadow);
+
 }
 
 /* behavier for mobile version */
@@ -390,7 +503,7 @@ figcaption {
     background-color: var(--accent-color);
   }
 
-  .top-lease,
+
   .cards-container {
     display: grid;
     place-items: center;
@@ -461,39 +574,7 @@ main {
     margin-bottom: var(--spacer);
   }
 
-  @media screen and (min-width:700px) {
-
-    /* grid area for how does car leasing works */
-    .top-lease,
-    .cards-container {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-row: auto;
-      grid-gap: 2em;
-    }
-     .top-lease,
-    .cards-container h2 {
-      grid-column: 1/4;
-      width: 80%;
-    }
-
-    .info-1 {
-      grid-column: 1/2;
-      height: 100%;
-      width: 100%;
-    }
-
-    .info-2 {
-      grid-column: 2/2;
-      height: 100%;
-      width: 100%;
-    }
-
-    .info-3 {
-      grid-column: 3/2;
-      height: 100%;
-      width: 100%;
-    }
-  }
+ 
 
   /* END how does car leasing works */
 
@@ -650,9 +731,101 @@ box-shadow: var(--shadow);
   /*                                   Media queries                                      */
   /****************************************************************************************/
   
-    @media screen and (min-width:700px) {
+    @media screen and (min-width: 700px) {
 
+/* section to hide and show searchbar */
+
+#searchForm,
+.search-bar {
+  display: none; /* Hide the search bar on mobile devices */
+}
+.box-viewCars,
+.btn-viewCars {
+  display: block; /* Adjust as needed */
+}
+
+
+
+
+    
       /* Navigation Bar */
+      .navTogglerMenu {
+        display: none;
+    }
+ header {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            padding: 20px;
+
+        
+        }
+
+    .logo {
+        display: flex;
+    align-items: center;
+    position: absolute;
+    top: .6rem;
+    left: var(--spacer);
+    }
+
+
+.logo img {
+    width: 100px; /* Adjust the width as needed */
+    height: 80px;
+    
+}
+    nav {
+        all: unset;   /* to remove hamburger icon for desktop version */
+        align-self: flex-start;
+    }
+    nav ul {
+        display: flex;
+        margin-right: 1rem;
+    }
+    nav li {
+        border-bottom: none;
+        text-decoration: none;
+    }
+.login {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 1rem;
+    right:7rem;
+
+}
+
+ /* grid area for how does car leasing works */
+
+ .cards-container {
+   grid-template-columns: 1fr;
+   grid-row: auto;
+   grid-gap: 2em;
+ }
+
+ .cards-container h2 {
+   grid-column: 1/4;
+   width: 80%;
+ }
+
+ .info-1 {
+   grid-column: 1/2;
+   height: 100%;
+   width: 100%;
+ }
+
+ .info-2 {
+   grid-column: 2/2;
+   height: 100%;
+   width: 100%;
+ }
+
+ .info-3 {
+   grid-column: 3/2;
+   height: 100%;
+   width: 100%;
+ }
  
       /***** Footer grid area *****/
       .m {
@@ -696,7 +869,7 @@ box-shadow: var(--shadow);
       }
   
     }
-
+/** end mobile sie **/
 /***** Desktop size *****/
 
     @media screen and (min-width: 1200px) {
@@ -730,7 +903,17 @@ box-shadow: var(--shadow);
   }
     
   
-      /****** SPECIFIC FOR SEARCH BAR */
+      /****** SPECIFIC FOR SEARCH BAR for desktopsize */
+  .search-bar,    
+ #searchForm {
+  display: block; 
+}
+
+/* always hide for desktop on viewCars*/
+.box-viewCars {
+  display: none;
+}
+
       .search-bar ul {
         grid-template-columns: var(--grid-item-very-large);
         align-self: end;
@@ -738,7 +921,7 @@ box-shadow: var(--shadow);
 
       /* Raul: grid area for how does car leasing works */
 
-  top-lease,
+
   .cards-container {
     grid-template-columns: 1fr 1fr 1fr; 
     grid-row: auto; 
