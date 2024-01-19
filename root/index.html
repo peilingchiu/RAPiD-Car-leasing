@@ -21,48 +21,54 @@
 
 <body>
     <!-- **********************************************************************************
-                           Header section for Amala to work on                                    
+                           Header section  to work on                                    
 /*************************************************************************************** -->
 
-    <header class="navigation">
-       
-            <section class="logo">
-                <a href="#"><img src="images/PNG-Logo-Lingscar.png" alt="Logo"></a>
-            </section>
-            <!-- Hamburger Menu -->
-            <section >
-              
-                <nav id="navbar" class="center-nav">
+<header class="navBar">
+    <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
+                <section class="logo">
+                    <a href="index.html"><img src="images/PNG-Logo-Lingscar.png" alt="Logo"></a>
+                </section>
+                <input type="checkbox" class="navToggler" id="navToggler"> <!-- For hamburger menu -->
+                <nav>
                     <ul>
                         <li><a href="#">About us</a></li>
-                        <li><a href="pages/carInventory.html">Inventory</a></li>
-                        <li><a href="#">Leasing</a></li>
+                        <li><a href="#">Inventory</a></li>
+                        <li><a href="pages/leasing.html">Leasing</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Offers</a></li>
                         <li><a href="#">FAQ's</a></li>
-                        <li><a href="pages/contact.html">Contact us</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                 </nav>
-                <div class="showMenu" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </section>
+                <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                    <span class="material-icons-outlined mi menuOpen">menu</span>
+                    <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
+                </label>
                 <section class="login">
                     <a href="#">
-                        <i class="fa fa-user fa-lg" aria-hidden="true" onclick="showNavbarAndScreenSize()"></i>
-                     
+                        <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                    <!-- login icon -->
                     </a>
-
+    
                 </section>
+    
             
-            
-    </header> <!-- End for header -->
+    
+        </header> <!-- End for header -->
     <!-- **********************************************************************************
                           main: search bar and top leasing deal for Peiling to work on                                    
  *************************************************************************************** -->
     <!-- BEGIN main section -->
-    <main>
+    
+    <main id="homePage">
+        <figure class="hero"><img src="images/hero.jpg" alt="hero" class="hero"></figure>
+
         <!-- Peiling: search Bar -->
+     <!-- for mobile only, hide the search bar -->
+     <article class="box-viewCars">
+     <button id="viewCars" class="btn-viewCars" onclick="redirectToCarInventory()">View Cars</button>
+    </article>
         <form id="searchForm" class="search-bar" onsubmit="redirectToCarInventory(); return false;">
             <ul class="search">
                 <li>
@@ -277,7 +283,7 @@
                 <button class="btn-invert" type="submit" onclick="redirectToleasing()">Learn more</button>
             </article>
         </section>
-
+    
     </main>
     <!-- END main section -->
 
@@ -355,6 +361,31 @@
                     // alert('redirecting to car inventory');
 
                 }
+
+    //   JavaScript function to set different padding based on the page
+    //   function setPagePadding() {
+    //         var currentPage = window.location.pathname.split('/').pop(); // Get the current page name
+
+    //         // Check if the current page is 'index.html'
+    //         if (currentPage === 'index.html') {
+    //             document.querySelector('main').style.paddingTop = '600px';
+    //         } else {
+    //             document.querySelector('main').style.paddingTop = '100px';
+    //         }
+    //     }
+
+    
+
+
+
+// Function to check if the device is a mobile device
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+        // Call the function when the window has finished loading
+        window.onload = setPagePadding;
+
 /***** THIS FUNCTION IS THERE FOR DEBUGGING PURPOSES *****/
                 function showNavbarAndScreenSize() {
     // Make sure navbar is visible
