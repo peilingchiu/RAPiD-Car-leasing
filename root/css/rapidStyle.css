@@ -50,6 +50,9 @@
   /* need it for form fields */
   --text-dk-color: #000;
 
+  --visted-color: #1e4fee;
+  --hover-color: #DEB992;
+
 
   /* Helper */
   --spacer: 1rem;
@@ -81,11 +84,11 @@ body {
   margin: auto;
   max-width: 100%;
 }
-
-/** - .det-boey is an class selector **/
-.det-body {
-  box-sizing: border-box;
+/** this icon is used when user sign in */
+.fa-smile-beam {
+  color: green;
 }
+
 
 /** default general style for all elements **/
 h1, h2, h3 {
@@ -238,7 +241,7 @@ main {
 /*                Style specfic for the class .search-bar          DEFAULT              */
 /****************************************************************************************/
 
-#searchForm,
+
 .search-bar {
   display: none;
   /* Hide the search bar on mobile devices */
@@ -362,48 +365,52 @@ figcaption {
   padding: var(--spacer) 0px;
   gap: var(--spacer);
 }
+/* method applied for all top leasing sections */
+[class*='top'] {
+display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--text-lt-color);
+    padding-bottom: var(--spacer-dbl);
+    margin-bottom: var(--spacer);
+    margin-top: var(--spacer-dbl);
+    /* border: 5px solid var(--tertiary-color); */
+}
 
-#top article {
+
+  
+  /** using class element with descendent selector **/
+  /*The elements will grow and shrink as needed, but they will start with a basis width of 300 pixels.*/
+  [class*='top'] > * {
+    flex: 1 0 auto;
+    flex-basis: 300px;
+    margin: 10px; /* Half of grid-gap to simulate the same spacing */
+  }
+
+
+  [class*='top'] article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: var(--spacer-dbl);
   background-color: var(--tertiary-color);
-
-
+  border: solid 20px var(--tertiary-color);
+  box-shadow: var(--shadow);
 }
 
-#top .btn-invert {
+[class*='top'] .btn-invert {
   margin-top: var(--spacer);
 }
-
-#top {
-  margin-top: var(--spacer-dbl);
-  background-color: var(--text-lt-color);
-  border: 5px solid var(--tertiary-color);
+[class*='top'] dl{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
-
 
 /***** Style to Car Details ****/
 
-.det-h3,
-.det-h2 {
-  margin-top: var(--spacer);
-  text-align: center;
-}
-.det-car {
-  display: flex;
-  justify-content: space-around;
-  border: solid 1px black;
-}
-
-.det-car img {
-  box-sizing: border-box;
-  /* Include border in width calculation */
-  border: solid 5px var(--secondary-color);
-  padding: 10px;
-  flex: 1 0 100%;
-  /* Take up full width initially */
-  max-width: calc(50% - 20px);
-  /* Set max-width for 2 items per row on tablet and larger screens */
-}
 
 /****** Style for the section contact agent *****/
 .det-form {
@@ -537,8 +544,7 @@ main {
   margin: auto;
 }
 
-.cards-container h3,
-main h2 {
+.cards-container h3 {
   font-family: var(--heading-font);
   font-weight: var(--fw-bold);
   font-style: italic;
@@ -902,7 +908,7 @@ footer a:hover {
   padding: 10px;
 }
 
-.contactForm #message {
+.contactForm .message {
   height: 150px;
 }
 
@@ -938,20 +944,6 @@ footer a:hover {
 
 /* tablet size */
 @media screen and (min-width: 700px) {
-
-  /* section to hide and show searchbar */
-
-  /* #searchForm,
-.search-bar {
-  display: none; 
-}
-.box-viewCars,
-.btn-viewCars {
-  display: block;  */
-
-
-
-
 
   /* Navigation Bar */
 
@@ -1130,8 +1122,7 @@ footer a:hover {
 
 
   /****** SPECIFIC FOR SEARCH BAR for desktopsize */
-  .search-bar,
-  #searchForm {
+  .search-bar {
     display: block;
   }
 

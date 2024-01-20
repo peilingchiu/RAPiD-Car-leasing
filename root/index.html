@@ -12,11 +12,11 @@
     <!-- end font awesome -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"><!-- material icons link     -->
     <link rel="stylesheet" href="css/rapidStyle.css" type="text/css">
-    <script src="scripts/script.js"></script>
-    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script><!-- font awesome for SoMe -->
     
+    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script><!-- font awesome for SoMe -->
+  
     <title>CAR LEASING</title>
-
+    <script src="scripts/scripts.js"></script>
 </head>
 
 <body>
@@ -222,10 +222,9 @@
                 </li>
             </ul>
         </form>
-        
+     <h2>Top lease deals</h2>
         <!-- Peiling: top car leasing deals -->
-        <section class="cards-container" id="top">
-            <h2>Top lease deals</h2>
+        <section class="top-container" > 
             <article>
                 <figure>
                     <img src="images/Tesla-400x300.jpg" alt="car">
@@ -330,11 +329,11 @@
                 <p>Call:1234-567-23233</p>
                 <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
             </article>
-            <p class="p">Copyright &copy;2023 | Lings Cars</p>
+            <p class="p">Copyright &copy;2024 | Lings Cars</p>
             <article class="i">
-                <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
-                <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
-                <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+                <a href="https://www.instagram.com/rapid_car_leasing?igsh=d2Z1Nm90Zjd4N3p4&utm_source=qr"><span class="fa fa-twitter fa-2x"></span></a>
+                <a href="https://www.facebook.com/lingscars/"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+                <a href="https://www.youtube.com/@LINGsCARS"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
             </article>
         </section>
 
@@ -344,7 +343,14 @@
 
 
     <script>
-        /* Functions to redirect to different pages */
+
+        // action on search-bar to be redirect to car inventory page 
+        document.querySelector('.search-bar').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the default form submission
+            redirectToCarInventory(); // Call your JavaScript function
+        });
+        
+     /* Functions to redirect to different pages */
         function redirectToCarInventory() {
 
             // Redirect to carDetails.jpg when the form is submitted

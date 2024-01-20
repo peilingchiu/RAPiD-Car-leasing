@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <!-- font awesome     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         type="text/css">
     <!-- end font awesome -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"><!-- material icons link     -->
     <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
+    <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script><!-- font awesome for SoMe -->
+    
     <title>Car Inventory</title>
    
 </head>
@@ -20,7 +24,7 @@
     <header>
         <h1>Welcome to Our Car Inventory</h1>
     </header>
-
+    <main>
     <form id="searchForm" class="search-bar" onsubmit="redirectToCarInventory(); return false;">
         <ul class="search">
             <li>
@@ -191,97 +195,76 @@
     <!----------------------------------------------------------------------------------------------------->
     <!--                        THIS SECTION IS ABOUT SEARCH CAR RESULTS                                  -->
     <!------------------------------------------------------------------------------------------------------->
-    <main>
-        <section class="car-desc">
+   
+        <section class="top-inventory">
+
             <article>
                 <h2>Lamborghini Aventador</h2>
-                <figure class="">
+                <figure >
                     <img src="../images/2022-Lamborghini-Aventador-250x150.jpg" alt="2022-lamborghini-aventador">
-                    <figcaption>
-                        <table>
-                            <tr>
-                                <td><b>Monthly price:</b></td>
-                                <td>£1500</td>
-                            </tr>
-                            <tr>
-                                <td><b>Year:</b></td>
-                                <td>2022</td>
-                            </tr>
-                            <tr>
-                                <td><b>Engine:</b></td>
-                                <td>6.5 cm³ LP, Petrol</td>
-                            </tr>
-                            <tr>
-                                <td><b>Kilometer:</b></td>
-                                <td>30000 km</td>
-                            </tr>
-                            <tr>
-                                <td><b>Condition:</b></td>
-                                <td>used</td>
-                            </tr>
-                        </table>
-                    </figcaption>
-                </figure>
+                 </figure>   
+                    <dl>
+                        <dt>Monthly price:</dt>
+                        <dd>£1500</dd>
+                    
+                        <dt>Year:</dt>
+                        <dd>2022</dd>
+                    
+                        <dt>Engine:</dt>
+                        <dd>6.5 cm³ LP</dd>
+                    
+                        <dt>Kilometer:</dt>
+                        <dd>30000 km</dd>
+                    
+                        <dt>Condition:</dt>
+                        <dd>used</dd>
+                    </dl>
+                  
+                
                 <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
             </article>
             <article>
                 <h2>BMW Alpina B4</h2>
-                <figure class="">
-                    <img src="../images/bmw-250x150.jpg" alt="bmw-alpina-4">
-                    <figcaption>
-                        <table>
-                            <tr>
-                                <td><b>Monthly price:</b></td>
-                                <td>£1000</td>
-                            </tr>
-                            <tr>
-                                <td><b>Year:</b></td>
-                                <td>2022</td>
-                            </tr>
-                            <tr>
-                                <td><b>Engine:</b></td>
-                                <td>3.0L Twin-Turbo</td>
-                            </tr>
-                            <tr>
-                                <td><b>Kilometer:</b></td>
-                                <td>30000 km</td>
-                            </tr>
-                            <tr>
-                                <td><b>Condition:</b></td>
-                                <td>Used</td>
-                            </tr>
-                        </table>
-                    </figcaption>
-                </figure>
+                <figure><img src="../images/bmw-250x150.jpg" alt="bmw-alpina-4"></figure>
+                <dl>
+                    <dt>Monthly price:</dt>
+                    <dd>£1000</dd>
+                  
+                    <dt>Year:</dt>
+                    <dd>2022</dd>
+                  
+                    <dt>Engine:</dt>
+                    <dd>3.0L T-Turbo</dd>
+                  
+                    <dt>Kilometer:</dt>
+                    <dd>30000 km</dd>
+                  
+                    <dt>Condition:</dt>
+                    <dd>Used</dd>
+                </dl>  
                 <button class="btn-invert">View details</button>
             </article>
             <article>
-                <h2>Mecedes E 450 4MATIC Sedan</h2>
+                <h2>Mecedes E 450 4MATIC</h2>
                 <figure class="">
                     <img src="../images/mecedes2023E-250x150.jpg" alt="2023-mecedes">
                     <figcaption>
-                        <table>
-                            <tr>
-                                <td><b>Monthly price:</b></td>
-                                <td>£1351</td>
-                            </tr>
-                            <tr>
-                                <td><b>Year:</b></td>
-                                <td>2023</td>
-                            </tr>
-                            <tr>
-                                <td><b>Engine:</b></td>
-                                <td>Electric</td>
-                            </tr>
-                            <tr>
-                                <td><b>Kilometer:</b></td>
-                                <td>0 km</td>
-                            </tr>
-                            <tr>
-                                <td><b>Condition:</b></td>
-                                <td>new</td>
-                            </tr>
-                        </table>
+                        <dl>
+                            <dt>Monthly price:</dt>
+                            <dd>£1351</dd>
+                          
+                            <dt>Year:</dt>
+                            <dd>2023</dd>
+                          
+                            <dt>Engine:</dt>
+                            <dd>Electric</dd>
+                          
+                            <dt>Kilometer:</dt>
+                            <dd>0 km</dd>
+                          
+                            <dt>Condition:</dt>
+                            <dd>New</dd>
+                          </dl>
                     </figcaption>
                 </figure>
                 <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
@@ -289,32 +272,53 @@
             <article>
                 <h2>Volderswagen e-Bulli</h2>
                 <figure class="">
-                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">
-                    <figcaption>
-                        <table>
-                            <tr>
-                                <td><b>Monthly price:</b></td>
-                                <td>£722</td>
-                            </tr>
-                            <tr>
-                                <td><b>Year:</b></td>
-                                <td>1966</td>
-                            </tr>
-                            <tr>
-                                <td><b>Engine:</b></td>
-                                <td>Electric</td>
-                            </tr>
-                            <tr>
-                                <td><b>Kilometer:</b></td>
-                                <td>0 km</td>
-                            </tr>
-                            <tr>
-                                <td><b>Condition:</b></td>
-                                <td>Renovated</td>
-                            </tr>
-                        </table>
-                    </figcaption>
-                </figure>
+                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">  </figure>          
+                        <dl>
+                            <dt>Monthly price:</dt><dd>£722</dd>
+                            <dt>Year:</dt><dd>1966</dd>
+                            <dt>Engine:</dt><dd>Electric</dd>
+                            <dt>Kilometer:</dt><dd>0 km</dd>
+                            <dt>Condition:</dt><dd>Renovated</dd>       
+                        </dl>                   
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+            <article>
+                <h2>Volderswagen e-Bulli</h2>
+                <figure class="">
+                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">  </figure>          
+                        <dl>
+                            <dt>Monthly price:</dt><dd>£722</dd>
+                            <dt>Year:</dt><dd>1966</dd>
+                            <dt>Engine:</dt><dd>Electric</dd>
+                            <dt>Kilometer:</dt><dd>0 km</dd>
+                            <dt>Condition:</dt><dd>Renovated</dd>       
+                        </dl>                   
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+            <article>
+                <h2>Volderswagen e-Bulli</h2>
+                <figure class="">
+                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">  </figure>          
+                        <dl>
+                            <dt>Monthly price:</dt><dd>£722</dd>
+                            <dt>Year:</dt><dd>1966</dd>
+                            <dt>Engine:</dt><dd>Electric</dd>
+                            <dt>Kilometer:</dt><dd>0 km</dd>
+                            <dt>Condition:</dt><dd>Renovated</dd>       
+                        </dl>                   
+                <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
+            </article>
+            <article>
+                <h2>Volderswagen e-Bulli</h2>
+                <figure class="">
+                    <img src="../images/VWdBullyeBully-250x150.jpg" alt="2023-mecedes">  </figure>          
+                        <dl>
+                            <dt>Monthly price:</dt><dd>£722</dd>
+                            <dt>Year:</dt><dd>1966</dd>
+                            <dt>Engine:</dt><dd>Electric</dd>
+                            <dt>Kilometer:</dt><dd>0 km</dd>
+                            <dt>Condition:</dt><dd>Renovated</dd>       
+                        </dl>                   
                 <button class="btn-invert" onclick="redirectToCarDetails()">View details</button>
             </article>
         </section>
@@ -322,7 +326,59 @@
     </main>
 
 
+        <!-- **********************************************************************************
+                        Dhanashree  :  FOOTER                                    
+ *************************************************************************************** -->
+    <footer>
+        <section class="m">
+            <h1>For more information on our best deals subscribe to our newsletter.</h1>
+            <button>Email ID</button>
+            <section class="mIcon">
+                <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+            </section>
+            <p>Copyright &copy;2023 | Lings Cars</p>
+        </section>
+        <section class="d">
+            <article class="l">
+                <h2>Leasing Information</h2>
+                <ul>
+                    <li><a href="#">Car Leasing</a></li>
+                    <li><a href="#">Van Leasing</a></li>
+                    <li><a href="#">Leasing Terms</a></li>
+                    <li><a href="#">Short-term Leasing</a></li>
+                </ul>
+            </article>
+            <article class="s">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#">Maintainance</a></li>
+                    <li><a href="#">Introduce A friend</a></li>
+                    <li><a href="#">Car Accessories</a></li>
+                    <li><a href="#">Price Matching</a></li>
+                </ul>
+            </article>
+            <article class="c">
+                <h2>Contact Us</h2>
+                <p>Address:</p>
+                <p>1234 River Street, 4th Avenue,</p>
+                <p>UK</p>
+                <p>Call:1234-567-23233</p>
+                <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
+            </article>
+            <p class="p">Copyright &copy;2023 | Lings Cars</p>
+            <article class="i">
+                <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+            </article>
+        </section>
 
+
+
+    </footer>
 
 
     <script>

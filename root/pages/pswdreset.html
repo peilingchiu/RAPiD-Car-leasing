@@ -11,13 +11,14 @@
     <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script>
     <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <link href="../css/rapidStyle.css" rel="stylesheet" type="text/css">
+    <script src="../scripts/scripts.js"></script>
 
 </head>
 
 <body class="pswdresetPage">
     <main class="pswdreset">
        <h2> Reset password </h2>
-            <form class="pswdresetForm" action="signIn.html"   method="post">
+            <form class="pswdresetForm" action="signIn.html"   method="post" onsubmit="handleReset(event)">
                 <ul>
                     <li>
                         <label for="email">Email Address</label></li>
