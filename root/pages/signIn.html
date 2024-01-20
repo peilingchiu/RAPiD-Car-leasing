@@ -11,13 +11,15 @@
     <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script>
     <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <link href="../css/rapidStyle.css" rel="stylesheet" type="text/css">
-
+    <script src="../scripts/scripts.js"></script>
 </head>
 
 <body class="signInPage">
+    <header><a href="../index.html">go home</a></header>
     <main class="signIn">
        <h2> Sign In</h2>
-            <form class="signInForm" action="#"   method="post">
+          
+                <form class="signInForm" action="../index.html" method="post" onsubmit="handleSign(event)">
                 <ul>
                     <li>
                         <label for="userName">Email*</label></li>
