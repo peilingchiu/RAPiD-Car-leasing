@@ -838,6 +838,163 @@ footer a:hover {
 
 /* END FOOTER */
 
+
+/****************************************************************************************/
+  /*                              begin---     Leasing page styling                       */
+  /****************************************************************************************/
+
+
+.leasingImage img {
+    padding-top: 1rem;
+}
+article.topDealers {
+    display: flex;
+    padding: 10px 0;
+}
+.topDealers h3 {
+    text-align: left;
+    padding-bottom: var(--spacer);
+}
+.topDealers img {
+    padding: 1rem;
+}
+.containerA {
+    padding: 0 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+article.discountedPricing {
+    display: flex;
+    padding-bottom: 10px;
+}
+.discountedPricing h3 {
+    text-align: left;
+    padding-bottom: var(--spacer);
+}
+.discountedPricing img {
+    padding: 1rem;
+}
+
+article.lowerPayments {
+    display: flex;
+    padding-bottom: 10px;
+}
+.lowerPayments h3 {
+    text-align: left;
+    padding-bottom: var(--spacer);
+}
+.lowerPayments img {
+    padding: 1rem;
+}
+.containerA {
+    background-color: var(--accent-color);
+    border-radius: 8px;
+}
+article.heading2 {
+    display: block;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+article.list {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.list img {
+    padding: 1rem;
+}
+.list p{
+    align-items: left;
+    text-align: center;
+    padding: 2rem;
+}
+article.list2 {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.list2 img {
+    padding: 1rem;
+}
+.list2 p{
+    align-items: left;
+    text-align: center;
+    padding: 2rem;
+}
+article.list3 {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.list3 img {
+    padding: 1rem;
+}
+.list3 p{
+    align-items: left;
+    text-align: center;
+    padding: 2rem;
+}
+.containerB {
+    
+    padding: 0 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+article.rules {
+    display: block;
+    
+}
+.rules h3 {
+    padding-top: var(--spacer);
+}
+.rules ul {
+    padding: 1rem;
+    
+}
+.rules li {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    text-align:left
+/*   list-style:disc;*/
+}
+.rules li img{
+    border: solid 1px grey;
+    border-radius: 30px;
+    margin:0 1rem;
+/*    padding-bottom: var(--spacer); */
+}
+.containerC {
+    background-color:var(--accent-color); 
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+article.important {
+    display: block;
+    
+}
+.important h3 {
+    padding: var(--spacer);
+}
+.important ul {
+    padding: var(--spacer);
+}
+.important li {
+    padding: var(--spacer);
+    list-style: disc;
+    margin: 1rem;
+}
+.containerD {
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.containerD p{
+    margin: 1rem;
+}
+ /****************************************************************************************/
+  /*                                End of Leasing page                                     */
+  /****************************************************************************************/
+
+
 /****************************************************************************************/
 /*                                BEGIN    CONTACT US                                     */
 /****************************************************************************************/
