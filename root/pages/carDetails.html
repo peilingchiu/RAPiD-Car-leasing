@@ -6,120 +6,59 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <!-- font awesome     -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        type="text/css">
     <!-- end font awesome -->
-
-    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script> <!-- font awesome for SoMe -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"><!-- material icons link     -->
     <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
+    
+    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script><!-- font awesome for SoMe -->
+    <script src="scripts/scripts.js"></script>
     <title>CAR LEASING DETAIL</title>
     
-
-<style>
-/* Default styling for all images */
-
-
-
-
-.det-car button {
-    margin-top: var(--spacer-dbl); 
-    padding: var(--spacer);
-    width: 100%;
-}
-
-
-.det-car {
-    display: grid;
-    border: solid 1px black;
-    gap: var(--spacer-dbl);
-    justify-items: center; 
-    align-items: center; 
-} 
-
-.det-imgs img {
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px; /* Add some spacing between images */
-    margin-top: 20px; /* Add white space on top of images */
-    border: solid 5px var(--secondary-color);
-}
-
-.det-imgs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns for desktop version */
-    gap: 10px; /* Add some gaps between columns */
-    box-sizing: border-box;
-    background-color: var(--text-lt-color);
-    padding: var(--spacer);
-}
-/* Make the first image span all columns */
-.det-imgs img:first-child {
-    grid-column: 1 / -1;
-    width: 600px; /* Make it fill the whole width of the grid */
-    justify-self: center; /* Center the image */
-}
-
-/* Adjust size for the rest of the images */
-.det-imgs img:not(:first-child) {
-    width: 150px;
-    height: auto;
-}
-
-
-.lease-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin: 0 auto; /* Center the grid horizontally */
-    max-width: 80%; /* Adjust the percentage as needed */
-}
-
-.lease-details > dd:first-child {
-    grid-column: 1 / -1;
-    margin-bottom: 20px;
-}
-
-.lease-details > dd:not(:first-child) {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-</style>
 </head>
-<body class="det-body">
+<body>
     <!-- navigation part-->
-    <header>
-        <nav>
-            <ul style="display: flex; justify-content: space-evenly; align-items: center;">
-                <li> <img src="../images/PNG-Logo-Lingscar.png" alt="Logo"></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Inventory</a></li>
-                <li><a href="#">Leasing</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">FAQ's</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li> <!-- login icon -->
-            </ul>
-        </nav>
-    </header>
-    <main>
-    <section class="det-car">
+    
+<header class="navBar">
+    <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
+                <section class="logo">
+                    <a href="index.html"><img src="../images/PNG-Logo-Lingscar.png" alt="Logo"></a>
+                </section>
+                <input type="checkbox" class="navToggler" id="navToggler"> <!-- For hamburger menu -->
+                <nav class="headerNav"> 
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="pages/carInventory.html">Inventory</a></li>
+                        <li><a href="pages/leasing.html">Leasing</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="pages/contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+                <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                    <span class="material-icons-outlined mi menuOpen">menu</span>
+                    <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
+                </label>
+                <section class="login">
+                    <a href="../pages/signIn.html">
+                        <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                    <!-- login icon -->
+                    </a>
+                </section>
+    
+        </header> <!-- End for header -->
+    <main >
+
+    <section class=".det-car">
         <!-- Example car detail 1 -->
   
             <article>
                 <h2>volkswagen e-bulli fully-electric camper van...</h2>
                 <article class="det-imgs">
-                    <img id="display-image" class="car-image" src="../images/VWdBullyeBully-250x150.jpg"
+                    <img id="display-image" class="car-image" src="../images/VWe-bulli-600X450.jpg"
                         alt="Car Image">
                     <img onclick="document.getElementById('display-image').src=this.src"
                         src="../images/VWdBullyeBully2-250x150.jpg" alt="Small Image 1">
@@ -128,7 +67,7 @@
                     <img onclick="document.getElementById('display-image').src=this.src"
                         src="../images/VWeBullyInt2-250x150.jpg" alt="Small Image 3">
                         <img onclick="document.getElementById('display-image').src=this.src"
-                        src="../images/VWdBullyeBully-250x150.jpg" alt="Small Image 3">
+                        src="../images/VWe-bulli-600X450.jpg" alt="Small Image 3">
                 </article>
                 <button class="btn-" onclick="redirectTocarCntAgent()">Book appoinment with leasing agent</button>       
             </article>
