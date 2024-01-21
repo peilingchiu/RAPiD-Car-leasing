@@ -1322,16 +1322,16 @@ box-shadow: var(--shadow);
     overflow: hidden;
     box-shadow: var(--shadow);
 }
-.det-location label{
+.zip-location label{
     display: grid;
     grid-template-columns: repeat 3 ;
     padding-bottom: .25em;
 }
-.det-checks ul{
+.loan-checks ul{
     display: grid;
     grid-template-columns: var(--grid-item-mid);}
 
-.det-contactTime ul{
+.day-contactTime ul{
         display: grid;
         grid-template-columns: var(--grid-item-mid);
 
