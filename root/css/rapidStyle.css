@@ -251,18 +251,21 @@ main {padding-top: 80px;}
   position: fixed;
 
 }
+header.navBar {
+    background-color: #fff; /*mobile size navigation header color*/
+}
 
 .headerNav {
   position: absolute;
   top: 100%;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color); /*menu li background color*/  
   width: 100%;
   display: none;
 }
 
 .headerNav li {
   padding: var(--spacer);
-  border-bottom: solid 1px #fafafa;
+  border-bottom: solid 2px #fff;
   text-decoration: none;
 }
 
@@ -287,7 +290,7 @@ main {padding-top: 80px;}
 }
 
 .mi {
-  color: var(--text-lt-color);
+  color: var(--primary-color);
 }
 
 .menuClose {
@@ -314,8 +317,8 @@ main {padding-top: 80px;}
   display: flex;
   align-items: center;
   position: absolute;
-  top: .6rem;
-  right: 8rem;
+  top: var(--spacer);
+  right: 10rem;
 }
 
 .logo img {
@@ -323,6 +326,7 @@ main {padding-top: 80px;}
   /* Adjust the width as needed */
   height: 50px;
   margin: 0 1rem 0 0;
+    
 
 }
 
@@ -330,13 +334,16 @@ main {padding-top: 80px;}
   display: flex;
   justify-content: end;
   position: absolute;
-  top: .6rem;
+  top: var(--spacer);
   right: var(--spacer);
   margin: 0 1rem 0 0;
 }
+.login i{
+    color: var(--primary-color);
+}
 
 .navBar {
-  background-color: var(--primary-color);
+  background-color: white;
   color: #fff
 }
 
@@ -1217,6 +1224,7 @@ article.important {
     justify-content: center;
     align-items: center;
     padding: 20px;
+      background-color:#fff; /*navigation background color*/
 
 
   }
@@ -1242,6 +1250,8 @@ article.important {
     /* to remove hamburger icon for desktop version */
     align-self: flex-start;
     z-index: 1000;
+
+      height: 50px;
     /* this is needed to make sure that the navigation is not blocked by main */
   }
 
@@ -1263,6 +1273,10 @@ article.important {
     right: 7rem;
 
   }
+    .login i {
+        color: var(--primary-color); /* change icon color here*/
+    }
+    
 
   /* grid area for how does car leasing works */
 
