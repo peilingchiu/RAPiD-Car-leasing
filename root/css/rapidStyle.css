@@ -958,15 +958,15 @@ footer a:hover {
 .leasingImage img {
     padding-top: 1rem;
 }
-article.topDealers {
+article.dealers {
     display: flex;
     padding: 10px 0;
 }
-.topDealers h3 {
+.dealers h3 {
     text-align: left;
     padding-bottom: var(--spacer);
 }
-.topDealers img {
+.dealers img {
     padding: 1rem;
 }
 .containerA {
