@@ -1254,7 +1254,10 @@ article.important {
 .contactDetails h3 {
   padding-bottom: 10px;
 }
-
+.contactDetails li {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+}
 
 .contactUs {
     background-color:var(--secondary-color);
