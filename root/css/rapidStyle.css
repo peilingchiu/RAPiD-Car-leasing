@@ -875,6 +875,56 @@ footer a:hover {
 
 /* END FOOTER */
 
+/****************************************************************************************/
+/*                                BEGIN    ABOUT US                                     */
+/****************************************************************************************/
+/* About Header */
+.about_us header img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.8;
+}
+.about_us header {
+  min-height: 400px;
+  color: var(--text-lt-color);
+  background: var(--primary-color);
+}
+.about_us header h1 {
+  color: var(--text-lt-color);
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: .5em;
+}
+.about_us h2 {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+.about_us header p {
+  color: var(--text-lt-color);
+  padding: 2em 1em;
+}
+/* About Main */
+#about-a {
+  padding: 2em;
+  background: var(--tertiary-color);
+}
+#about-b {
+  padding: 2em;
+  background: var(--accent-color);
+}
+#about-c {
+  padding: 2em;
+  background: var(--tertiary-color);
+}
+#about-d {
+  padding: 2em;
+  background: var(--accent-color);
+}
+
+/* *************************************END OF ABOUT US CSS********************** */
 
 /****************************************************************************************/
   /*                              begin---     Leasing page styling                       */
@@ -1329,7 +1379,41 @@ article.important {
     grid-row: auto;
     grid-gap: 2em;
   }
-
+  /* ******css for about us page********* */
+  @media (min-width: 700px) {
+    .aboutUs-grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 31em)) 1fr;
+    }
+    .about_us header {
+      background-color: var(--primary-color);
+      color: var(--text-lt-color)
+      
+    }
+    .about_us header img {
+      align-self: center;
+      grid-column: 3/4;
+      grid-row: 1/3;
+    }
+    .about_us header h1 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      text-align: left;
+      padding: 4em 0 0 0.5em;
+    }
+    .about_us header p {
+      margin-right: 1rem;
+      text-align: left;
+      grid-column: 2/3;
+      grid-row: 2/2;
+    }
+    .content-wrap, #about-b {
+      grid-column: 2/4;
+    }
+    #about-a, #about-b, #about-c, #about-d {
+      margin: 0 2em 0;
+    }
+  }
   /* ******css for contact us page********* */
   .contactDetails {
     display: grid;
