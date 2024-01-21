@@ -121,10 +121,7 @@ main {padding-top: 100px;}
   height: 80px;
   box-sizing: border-box;
   position: fixed;
-
-}
-header.navBar {
-    background-color: #fff; /*mobile size navigation header color*/
+  background-color: var(--text-lt-color); /*navigation background color*/
 }
 
 .headerNav {
@@ -143,10 +140,9 @@ header.navBar {
 
 .headerNav li a {
   display: block;
-  color: var(--text-lt-color);
+  color: var(--text-lt-color); /* for hamberger menu si li not shown */
   text-decoration: none;
   font-weight: var(--fw-bold);
-
 }
 
 .headerNav li a:hover {
@@ -1150,9 +1146,12 @@ article.important {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: var(--text-lt-color); /*navigation background color*/
+   
   }
 
+  .headerNav li a {
+    color: var(--text-dk-color);
+  }
   .logo {
     display: flex;
     align-items: center;
