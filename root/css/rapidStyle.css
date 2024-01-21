@@ -1,3 +1,142 @@
+/* Project- Group 3- Ling'c Cars website revamp
+   Group 3 members-Raul
+                   Pei
+                   Amala 
+                   Dhanashree  */
+/* *********************************************************************************************************
+                            TABLE OF CONTENTS
+                            1. CSS reset
+                            2.Global styles
+                              2.1 Color
+                              2.2 Typography
+                              2.3 Helper
+                              2.4 Grid Helper
+                            3. Header and Navigation
+                            4. Sign In and related pages
+                            5. Body 
+                            6.About Us page
+                            7.Inventory page
+                            8.Leasing page
+                            9.Services Page
+                           10.Offers page
+                           11.FAQs page
+                           12.Contact Us page
+
+************************************************************************************************************/
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            1. CSS reset (Eric mayer reset)
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            2.Global styles
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+                /* *************************************************
+                *****************************************************
+                            2.1 Color
+                *****************************************************
+                *****************************************************/
+
+                /* *************************************************
+                *****************************************************
+                            2.2 Typography
+                *****************************************************
+                *****************************************************/
+
+                /* *************************************************
+                *****************************************************
+                            2.3 Helper
+                *****************************************************
+                *****************************************************/
+
+                /* *************************************************
+                *****************************************************
+                            2.4 Grid Helper
+                *****************************************************
+                *****************************************************/
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            3. Header and Navigation
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            4. Sign In and related pages
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            5. Body
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                             6.About Us page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            7.Inventory page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            8.Leasing page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            9.Services Page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            10.Offers page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                             11.FAQs page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                             12.Contact Us page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+
+
+
+
+
 /*---------------naming convention REFERENCE in case of adding new variables ------------*/
 /* --base-font-size: 16px; 
     --base-maxwidth: 100%;
@@ -1086,92 +1225,117 @@ article.important {
 /*                                BEGIN    CONTACT US                                     */
 /****************************************************************************************/
 
+
 .contactDetails {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 20px;
-  text-align: left;
-  box-shadow: var(--shadow)
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: var(--shadow)
 }
 
 .contactDetails article {
-  background-color: var(--tertiary-color);
-  padding: 10px;
+    background-color:var(--tertiary-color);
+    padding: 10px;
 }
 
 .contactDetails div {
-  border: solid 2px #0B1C55;
-  border-radius: var(--border-radius);
-  padding: 10px;
+    border: solid 2px #0B1C55;
+    border-radius:var(--border-radius);
+    padding: 10px;
 }
 
 .contactDetails h2 {
-  color: var(--text-dk-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
+    color:var(--text-dk-color);
+    font-size: 1.25rem;
+    font-family:var(--heading-font);
 
 }
-/**** ?????????????? regular p has the same property *****/
-.contactDetails p {
-  color: var(--text-dk-color);
-  font-family: var(--primary-font);
+.contactDetails h3 {
+  padding-bottom: 10px;
 }
+
 
 .contactUs {
-  background-color: var(--secondary-color);
-  width: 80%;
-  padding: 10px;
-  margin: auto;
-  box-shadow: var(--shadow)
+    background-color:var(--secondary-color);
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    box-shadow: var(--shadow)
+}
+.contactUs h1 {
+    color:var(--text-dk-color);
+    font-size: 1.8rem;
+    padding-bottom: 5px;;
+    font-family:var(--heading-font);
+
 }
 
-/** ??????? h2 alreasy has same font and color, h3 is 1.2, we can change h3 to 1.25 */
-.contactUs h2 {
-  color: var(--text-dk-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
-
-}
 
 .contactUs li {
-  color: var(--text-dk-color);
-  font-family: var(--primary-font);
-  padding: 2px;
-
+    color:var(--text-dk-color);
+    font-family: var(--primary-font);
+    padding:2px;
+     
 }
 
-.contactForm input {
-  width: 95%;
+.contactForm input{
+    width: 95%;
   border: solid 1px #0B1C55;
-  border-radius: 6px;
-  padding: 10px;
+    border-radius: 6px;
+    padding:10px;
 }
+ .contactForm .message{
+        height:165px;
+    }
 
-.contactForm .message {
-  height: 150px;
-}
-
-.contactForm .btn {
-  width: 98%;
-  margin: 10px 0 0;
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  cursor: pointer;
-  padding: 7px 24px;
-  transition: background-color .3s ease;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-}
+    .contactForm .btn{
+        width:98%;
+margin:10px 0 0;
+border-radius: var(--border-radius);
+background-color: var(--primary-color);
+color: var(--text-lt-color);
+cursor: pointer;
+padding: 7px 24px;
+transition: background-color .3s ease;
+text-decoration: none;
+box-shadow: var(--shadow);
+    }
+.contactAgentPage .btn{ 
+    width:98%;
+    margin:10px 0 0;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-lt-color);
+    cursor: pointer;
+    padding: 7px 24px;
+    transition: background-color .3s ease;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+        }
+.contactAgentPage .contactDetails{width:100%;}
 
 .map {
-  width: 100%;
-  margin: auto;
-  margin-bottom: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
+.det-location label{
+    display: grid;
+    grid-template-columns: repeat 3 ;
+    padding-bottom: .25em;
+}
+.det-checks ul{
+    display: grid;
+    grid-template-columns: var(--grid-item-mid);}
 
+.det-contactTime ul{
+        display: grid;
+        grid-template-columns: var(--grid-item-mid);
+
+    }
 /* *************************************END OF CONTACT US CSS********************** */
 
 
@@ -1415,82 +1579,100 @@ article.important {
     }
   }
   /* ******css for contact us page********* */
-  .contactDetails {
-    display: grid;
-    grid-template-areas: "hrs c1 c2";
-    grid-column: 1fr;
-    gap: 15px;
-    grid-row: auto;
-    box-shadow: none;
+     .contactDetails {
+        display: grid;
+        grid-template-areas: "hrs c1 c2";
+        grid-column: 1fr;
+        gap:15px;
+        grid-row:auto;
+        box-shadow:none;
+    
+    } 
 
-  }
+    .hours {
+        grid-area: hrs;
+       align-items: center ;
+       box-shadow: var(--shadow);
+    }
 
-  .hours {
-    grid-area: hrs;
-    align-items: center;
-    box-shadow: var(--shadow);
-  }
+    .c1 {
+        grid-area: c1;
+        align-self: center;
+        box-shadow: var(--shadow);
+    }
 
-  .c1 {
-    grid-area: c1;
-    align-self: center;
-    box-shadow: var(--shadow);
-  }
+    .c2 {
+        grid-area: c2;
+        align-self: center;
+        box-shadow: var(--shadow);
+    }
 
-  .c2 {
-    grid-area: c2;
-    align-self: center;
-    box-shadow: var(--shadow);
-  }
+    .hours .c1 .c2 {
+        width: 350px;
+      
+    }
+    .contactDetails article{
+        width:100%;
+    }
+    .contactDetails div {
+        border: solid 2px #0B1C55;
+        border-radius:var(--border-radius);
+        width: auto;
+        height: 120px;
+        padding: 10px;
+        margin: auto;
+    }
 
-  .hours .c1 .c2 {
-    width: 350px;
+     .contactUs {
+        display: grid;
+        grid-template-areas: "form map";
+        grid-template-columns: var(--grid-item-mid);
+        grid-row: auto;
+        box-shadow: var(--shadow);
+        margin-bottom: 20px;
+    }
+    .contactForm{grid-area: form;}
+   
+    .map{grid-area: map;
+        width:80%;
+    height:90%;}
 
-  }
-
-  .contactDetails article {
-    width: 100%;
-  }
-
-  .contactDetails div {
-    border: solid 2px #0B1C55;
-    border-radius: var(--border-radius);
-    width: auto;
-    height: 120px;
-    padding: 10px;
+    
+/* CONTACT AGENT FORM */
+.contactAgentPage .contactUs {
     margin: auto;
-  }
-
-  .contactUs {
     display: grid;
-    grid-template-areas: "form map";
-    grid-column: 1fr;
+    grid-template-areas:"aT aT"
+     "form map"
+     "cAPh2 cAPh2"
+     "cD cD"
+     "btn btn";
+    grid-template-columns: var(--grid-item-mid);
     grid-row: auto;
     box-shadow: var(--shadow);
     margin-bottom: 20px;
-  }
+}
+.contactAgentPage .hours,.c1,.c2{
+    height:fit-content;
+}
+.agentTitle{grid-area: aT;}
+.contactDetails{grid-area: cD;}
+.cAPh2{grid-area: cAPh2;
+text-align: center;
+padding: 5px;}
+.btn{grid-area: btn;}
+.contactAgentPage .map{
+    margin-top: 45px;
+text-align: center;}
 
-  .contactForm {
-    grid-area: form;
-  }
+    .contactAgentPage .contactDetails{
+        width:100%;
+    }
+    
 
-  .map {
-    grid-area: map;
-    width: 80%;
-    height: auto;
-  }
-
-  /* SIGN IN AND SIGN UP MEDIA QUERRY */
-  .signIn {
-    max-width: 600px;
-  }
-
-  .signUp {
-    max-width: 600px;
-  }
-
-  .pswdreset {
-    max-width: 600px;
-  }
+     /* SIGN IN AND SIGN UP MEDIA QUERRY */
+.signIn{max-width: 600px;}
+.signUp{max-width: 600px;}
+.pswdreset{max-width: 600px;}
 
 }
