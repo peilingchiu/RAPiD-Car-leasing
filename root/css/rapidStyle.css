@@ -20,39 +20,23 @@
 /****************************************************************************************/
 :root {
   /* Typography */
-  --primary-font: 'Roboto', sans-serif;
-  --heading-font: 'Roboto Slab', serif;
-  --fw-l: 300;
-  /* normal Light font weight */
-  --fw-b: 500;
-  /* Basic font weight */
-  --fw-bold: 700;
-  /* Bold font weight */
+  --primary-font: 'Roboto', sans-serif;  /* normal Light font weight */
+  --heading-font: 'Roboto Slab', serif;  /* Basic font weight */
+  --fw-l: 300;                           /* Bold font weight */
+  --fw-b: 500;                           /* Base font size */
+  --fw-bold: 700;                        /* Large font size */
   --fs-base: 1rem;
-  /* Base font size */
   --fs-large: calc(var(--fs-base) * 2);
 
-
-  /* Color */
-  --primary-color: #0B1C55;
-  /* Dark blue - for header links, footer, some buttons */
-  --secondary-color: #D1D6E1;
-  /* Light gray pale blue */
-  --tertiary-color: #BBE1F6;
-  /* Light blue, sky blue */
-  --accent-color: #DAFCF6;
-  /* Light green pale cyan */
-  --secondary-accent-color: #DEB992;
-  /* Gold */
-
-  --text-lt-color: #fff;
-  --text-mid-color: #666;
-  /* need it for form fields */
+  --primary-color: #0B1C55;              /* Color */
+  --secondary-color: #D1D6E1;            /* Dark blue - for header links, footer, some buttons */
+  --tertiary-color: #BBE1F6;             /* Light gray pale blue */
+  --accent-color: #DAFCF6;               /* Light blue, sky blue */
+  --secondary-accent-color: #DEB992;     /* Light green pale cyan */
+  --text-lt-color: #fff;                 /* Gold */
+  --text-mid-color: #666;                /* need it for form fields */
   --text-dk-color: #000;
-
-  --visted-color: #1e4fee;
-  --hover-color: #DEB992;
-
+ 
 
   /* Helper */
   --spacer: 1rem;
@@ -62,21 +46,21 @@
   --border-radius: 10px;
 
 
-  /* Grid helper */
-  --grid-item-mobile: repeat(1, 1fr);
-  --grid-item-mid: repeat(2, 1fr);
-  --grid-item-ml: repeat(3, 1fr);
-  --grid-item-large: repeat(4, 1fr);
-  --grid-item-very-large: repeat(6, 1fr);
 }
 
 /* END Global Variable */
 
 /** - body is an element selector **/
+
 body {
   /* designed variables*/
-  --visited-color: var(--tertiary-color);
-  --hover-color: var(--secondary-color);
+ /* Grid helper */
+  --grid-item-mobile: repeat(1, 1fr);
+  --grid-item-mid: repeat(2, 1fr);
+  --grid-item-ml: repeat(3, 1fr);
+  --grid-item-large: repeat(4, 1fr);
+  --grid-item-very-large: repeat(6, 1fr);
+  --hover-color: var(--secondary-accent-color);
 
   color: var(--text-dk-color);
   font-family: var(--primary-font);
@@ -84,11 +68,6 @@ body {
   margin: auto;
   max-width: 100%;
 }
-/** this icon is used when user sign in */
-.fa-smile-beam {
-  color: green;
-}
-
 
 /** default general style for all elements **/
 h1, h2, h3 {
@@ -104,37 +83,22 @@ h3 {font-size: calc(var(--fs-base) * 1.2);}
 p {line-height: 1.5;}
 
 img {
-  max-width: 100%;
-  /* image will not exceed the width of its container */
+  max-width: 100%;      /* image will not exceed the width of its container */
   height: auto;
-  /* image will not exceed the height of its container */
+  
 
 }
 
-a:visited {
-  color: var(--visted-color);
-}
-
-a:hover {
-  color: var(--hover-color);
-}
+a:visited {color: var(--visted-color);}
+a:hover {color: var(--hover-color);}
 
 /****************************************************************************************/
 /*                                   HEADER AND NAVIGATION                              */
 /*                                                                                      */
 /****************************************************************************************/
 
-/****************************************************************************************/
-/*                                BEGIN  style Header section                          */
-/*                Mobile first hamburger menu                                           */
-/****************************************************************************************/
-
-
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
-main {
-  padding-top: 80px;
-  /* leave space for the navigation bar as position is fixed header's height */
-}
+main {padding-top: 80px;}
 
 /** - .hero img is a decedent selector **/
 .hero img {
@@ -168,7 +132,7 @@ main {
 
 .headerNav li a {
   display: block;
-  color: black;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: var(--fw-bold);
 
@@ -187,7 +151,7 @@ main {
 }
 
 .mi {
-  color: var(--primary-color);
+  color: var(--text-lt-color);
 }
 
 .menuClose {
@@ -235,6 +199,10 @@ main {
   margin: 0 1rem 0 0;
 }
 
+.navBar {
+  background-color: var(--primary-color);
+  color: #fff
+}
 
 /****************************************************************************************/
 /*                                BEGIN  style for search bar                           */
@@ -242,16 +210,10 @@ main {
 /****************************************************************************************/
 
 
-.search-bar {
-  display: none;
-  /* Hide the search bar on mobile devices */
-}
+.search-bar {display: none;}/* Hide the search bar on mobile devices */ 
 
 .box-viewCars,
-.btn-viewCars {
-  display: block;
-  /* Adjust as needed */
-}
+.btn-viewCars {display: block;}
 
 /* Style for the "box-viewCars" (initially hidden) */
 .box-viewCars {
@@ -1030,7 +992,7 @@ article.important {
   font-family: var(--heading-font);
 
 }
-
+/**** ?????????????? regular p has the same property *****/
 .contactDetails p {
   color: var(--text-dk-color);
   font-family: var(--primary-font);
@@ -1044,6 +1006,7 @@ article.important {
   box-shadow: var(--shadow)
 }
 
+/** ??????? h2 alreasy has same font and color, h3 is 1.2, we can change h3 to 1.25 */
 .contactUs h2 {
   color: var(--text-dk-color);
   font-size: 1.25rem;
@@ -1197,9 +1160,7 @@ article.important {
   }
 
   /***** Footer grid area *****/
-  .m {
-    display: none;
-  }
+  .m { display: none; }
 
   .d {
     display: grid;
@@ -1210,10 +1171,7 @@ article.important {
     text-align: left;
   }
 
-  .l {
-    grid-area: l;
-
-  }
+  .l { grid-area: l; }
 
   .s {
     grid-area: s;
@@ -1223,7 +1181,6 @@ article.important {
   .c {
     grid-area: c;
     margin-left: 125px;
-
   }
 
   .p {
@@ -1238,17 +1195,12 @@ article.important {
   }
 
   /* SIGN IN AND SIGN UP MEDIA QUERRY */
-  .signIn {
-    width: 33%;
-  }
-
-  .signUp {
-    width: 33%;
-  }
-
+  .signIn,
+  .signUp,
   .pswdreset {
     width: 33%;
   }
+
 }
 
 /** end Tab size **/
