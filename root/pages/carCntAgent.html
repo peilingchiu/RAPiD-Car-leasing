@@ -2,162 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <!-- font awesome     -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        type="text/css">
-    <!-- end font awesome -->
-    
-     <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
-<title>lease contact detail</title>
-  </head>
- 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width initialsclae=1">
+
+    <title>Contact Leasing Agent
+    </title>
+    <!--    fontawesome kit add to head-->
+    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script>
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/rapidStyle.css" rel="stylesheet" type="text/css">
+
+</head>
 
 <body>
-
-    <!-- Section 1: Header -->
-    <header>
-        <h1>Lease Your Dream Car with Confidence</h1>
-       <p>Our Lease Experts Ensure Reliable Options! Contact us now, and our specialists will promptly schedule an appointment to make your dream car a reality. </p>
+    <form class="contactAgentPage" action="mailto:phadkeda@gmail.com" method="post">
         
- 
-    </header>
-    <!-- this big section should set restriction not to allow max width : 1200 -->
-
-    <!-- Section 2: Main  contact info -->
-    <main>
-           
-   
-    <form action="#" method="post"  enctype="text/plain" class="det-form">
-        
-        <!--set 1-->
-        <fieldset class="basic">
-            <legend>THE BASICS</legend>
-
-            <ul>
-<!--               putting * so user know where are the required field-->
-                <li> 
-                    <label for="name">Your name*:</label>
-                    <input type="text" id="name" name="name" required >  <!-- I removed the place holder as in high comp there is none-->
-                </li>
-
-                <li>
-                    <label for="email">Your email*:</label>
-                    <input type="email" id="email" name="email" required >
-                </li>
-                <li>
-                    <label for="phone">Your telephone number*</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required >
-                </li>
-                <li>
-                    <label for="dob">Date of Birth*:</label>
-                    <input type="date" id="dob" name="dob" required >
-                </li>
-                <li>
-                    <label for="workPhone">Work Phone:</label>
-                    <input type="tel" id="workPhone" name="workPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                </li>
-                <li>
-                    <label for="ssn">Social Security Number*:</label>
-                    <input type="text" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}" required >
-                </li>
-                <li>
-                    <label for="income">Annual Income*:</label>
-                    <input type="number" id="income" name="income" required >
-                </li>
-                <li>
-                    <label>Your Question or message:</label>
-                    <textarea name="message" ></textarea>
-                </li>
-            </ul>
-        </fieldset>
-
-
-        <!-- Fieldset 2: more info -->
-        <fieldset class="det-container">
-            <legend>More info: Let us know a little more about you</legend>
-            <section>
-            <h3>Where do you live:</h3>
-                <ul class="det-location">
+        <section class="contactUs"> 
+            <div class="agentTitle">
+                <h1>Lease Your Dream Car with Confidence</h1>
+        <p>Our Lease Experts Ensure Reliable Options! Contact us now, and our specialists will promptly schedule an appointment to make your dream car a reality. </p>
+    </div>
+    <figure class="map"><img src="../images/heroDesktop-350_new.png" alt="car picture" width="100%"><figcaption><h3>Thank you for contacting us! Let us know the details and our Representative will contact you Shortly!</h3></figcaption></figure>
+            <fieldset class="contactForm">
+                <h2>Contact Form:</h2>
+                <ul>
                     <li>
-                        <label for="address">Address:</label>
-                        <input type="text" id="address">
+                        <label for="name">Name</label></li>
+                       <li> <input type="text" id="name" name="name" placeholder="Name" required>
                     </li>
                     <li>
-                        <label for="city">City:</label>
-                        <input type="text" id="city">
+                        <label for="email">Email</label></li>
+                       <li>
+                        <input type="text" id="email" name="email" disply="Email" placeholder="Email" required>
                     </li>
                     <li>
-                        <label for="state">State:</label>
-                        <input type="text" id="state">
+                        <label for="contact">Contact Number</label></li>
+                       <li>
+                        <input type="text" id="contact" name="contact"placeholder="Contact Number"  required>
                     </li>
                     <li>
-                        <label for="zip">ZIP:</label>
-                        <input type="text" id="zip">
+                        <label for="workContact">Work Phone Number</label></li>
+                       <li>
+                        <input type="text" id="workContact" name="workContact"placeholder="Work Phone Number" required>
                     </li>
+                    <li>
+                        <label for="dob">Date of Birth*:</label></li>
+                        <li>
+                        <input type="date" id="dob" name="dob" required >
+                    </li>
+                    <li>
+                        <label for="message">Your Question or Message</label></li>
+                       <li>
+                        <input type="text" id="message" class="message" name="message"placeholder="Your Message">
+                    </li>
+                    
                 </ul>
- </section>
- <section>
-            <h3>Do you have any loan: check all that apply</h3>
-     
-              <ul class="det-checks">
-                    <li>
-                        <input type="checkbox" id="home" name="home" value="home">
-                        <label for="home">Home Loan</label>
-                    </li>
+            </fieldset>
+            <br>
+            <h2  class="cAPh2">More info: Let us know a little more about you</h2>
+            <br>
+            <fieldset class="contactDetails">
+                 <article class="hours">
+                     <div class="det-location">
+                     <h3>Where do you live:</h3>
+                     <ul>
+                         <li>
+                            <label for="zip">ZIP Code:</label>
+                            <input type="text" id="zip">
+                        </li>
+                    </ul>
+                     </div>
+                 </article>
+                 <article class="c1" >
+                    <div class="det-checks">
+                     <h3>Do you have any loan: check all that apply</h3>
+                     <ul>
+                        <li>
+                            <input type="checkbox" id="home" name="home" value="home">
+                            <label for="home">Home Loan</label>
+                        </li>
+    
+                        <li>
+                            <input type="checkbox" id="auto" name="auto" value="auto">
+                            <label for="auto">Auto Loan</label>
+                        </li>
+    
+                        <li>
+                            <input type="checkbox" id="personal" name="personal" value="personal">
+                            <label for="personal">Personal Loan</label>
+                        </li>
+    
+                        <li>
+                            <input type="checkbox" id="other" name="other" value="other">
+                            <label for="other">Other Loan</label>
+                        </li>
+    
+                        <li>
+                            <input type="checkbox" id="noLoan" name="noLoan" value="noLoan">
+                            <label for="noLoan">No Loan</label>
+                        </li>            
+    
+                    </ul>
+                     </div>
+                 </article>
+                 <article class="c2">
+                    <div class="det-contactTime" >
+                     <h3>When is the best time to contact you:</h3>
+                     <ul >
+                        <li>
+                            <label>
+                                <input type="radio" name="contactTime" value="8-10am" id="8-10am">
+                                <span></span>8-10am
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="contactTime" value="10am-12pm" id="10am-12pm">
+                                <span></span>10am-12pm
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="contactTime" value="1-3pm" id="1-3pm">
+                                <span></span>1-3pm
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="contactTime" value="3-5pm" id="3-5pm">
+                                <span></span>3-5pm
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="contactTime" value="5-7pm" id="5-7pm">
+                                <span></span>5-7pm
+                            </label>
+                        </li>
+                    </ul>
+                     </div>
+                 </article>
+          
+            </fieldset>
+             <button class="btn" type="submit">Submit</button>
+        </section>
+       
+        </form>
 
-                    <li>
-                        <input type="checkbox" id="auto" name="auto" value="auto">
-                        <label for="auto">Auto Loan</label>
-                    </li>
 
-                    <li>
-                        <input type="checkbox" id="personal" name="personal" value="personal">
-                        <label for="personal">Personal Loan</label>
-                    </li>
 
-                    <li>
-                        <input type="checkbox" id="other" name="other" value="other">
-                        <label for="other">Other Loan</label>
-                    </li>
 
-                    <li>
-                        <input type="checkbox" id="noLoan" name="noLoan" value="noLoan">
-                        <label for="noLoan">No Loan</label>
-                    </li>
 
-                                  
-
+    <footer>
+        <section class="m">
+            <h1>For more information on our best deals subscribe to our newsletter.</h1>
+            <button>Email ID</button>
+            <section class="mIcon">
+                <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+            </section>
+            <p>Copyright &copy;2023 | Lings Cars</p>
+        </section>
+        <section class="d">
+            <article class="l">
+                <h2>Leasing Information</h2>
+                <ul>
+                    <li><a href="#">Car Leasing</a></li>
+                    <li><a href="#">Van Leasing</a></li>
+                    <li><a href="#">Leasing Terms</a></li>
+                    <li><a href="#">Short-term Leasing</a></li>
                 </ul>
- 
-               </section> 
-                <!-- Best time to contact -->
-<section>
-    <label class="det-h3">When is the best time to contact you:</label>
-    <ul class="det-contactTime" id="timeList">
-        <li>
-            <label>
-                <input type="radio" name="contactTime" value="8-12am" id="8-12am">
-                <span></span>8-12am
-            </label>
-        </li>
-        <li>
-            <label>
-                <input type="radio" name="contactTime" value="1-8pm" id="1-8pm">
-                <span></span>1-8pm
-            </label>
-        </li>
-    </ul>
-</section>
-      
-        </fieldset>
-<!-- submit  -->
-        <input type="submit" id="submit" class="btn-invert" value="Please contact us for leasing detail !">
-    </form>
-</main>
-    <footer><p>Copyright 2024, All right reserved</p></footer>
+            </article>
+            <article class="s">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#">Maintainance</a></li>
+                    <li><a href="#">Introduce A friend</a></li>
+                    <li><a href="#">Car Accessories</a></li>
+                    <li><a href="#">Price Matching</a></li>
+                </ul>
+            </article>
+            <article class="c">
+                <h2>Contact Us</h2>
+                <p>Address:</p>
+                <p>1234 River Street, 4th Avenue,</p>
+                <p>UK</p>
+                <p>Call:1234-567-23233</p>
+                <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
+            </article>
+            <p class="p">Copyright &copy;2023 | Lings Cars</p>
+            <article class="i">
+                <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+                <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+            </article>
+        </section>
+    </footer>
 
 </body>
 

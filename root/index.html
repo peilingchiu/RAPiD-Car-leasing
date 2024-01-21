@@ -61,15 +61,14 @@
  *************************************************************************************** -->
     <!-- BEGIN main section -->
     
-    <main id="homePage">
+    <main>
         <figure class="hero"><img src="images/hero.jpg" alt="hero" class="hero"></figure>
 
-        <!-- Peiling: search Bar -->
      <!-- for mobile only, hide the search bar -->
      <article class="box-viewCars">
      <button id="viewCars" class="btn-viewCars" onclick="redirectToCarInventory()">View Cars</button>
     </article>
-        <form id="searchForm" class="search-bar" onsubmit="redirectToCarInventory(); return false;">
+        <form  class="search-bar" onsubmit="redirectToCarInventory(); return false;">
             <ul class="search">
                 <li>
                     <label for="make">Make</label>
@@ -218,7 +217,7 @@
                 </li>
                 <li>
                     <label for="search" class="hide">x</label>
-                    <button type="submit" class="btn-" id="search">Search</button>
+                    <button type="submit" class="btn-" >Search</button>
                 </li>
             </ul>
         </form>
@@ -340,81 +339,7 @@
 
 
     </footer>
-
-
-    <script>
-
-        // action on search-bar to be redirect to car inventory page 
-        document.querySelector('.search-bar').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents the default form submission
-            redirectToCarInventory(); // Call your JavaScript function
-        });
-        
-     /* Functions to redirect to different pages */
-        function redirectToCarInventory() {
-
-            // Redirect to carDetails.jpg when the form is submitted
-            window.location.href = 'pages/carInventory.html';
-            // alert('redirecting to car inventory');
-
-        }
-      
-                /* Functions to redirect to different pages */
-                function redirectToCarInventory() {
-
-                    // Redirect to carDetails.jpg when the form is submitted
-                    window.location.href = 'pages/carInventory.html';
-                    // alert('redirecting to car inventory');
-
-                }
-
-    //   JavaScript function to set different padding based on the page
-    //   function setPagePadding() {
-    //         var currentPage = window.location.pathname.split('/').pop(); // Get the current page name
-
-    //         // Check if the current page is 'index.html'
-    //         if (currentPage === 'index.html') {
-    //             document.querySelector('main').style.paddingTop = '600px';
-    //         } else {
-    //             document.querySelector('main').style.paddingTop = '100px';
-    //         }
-    //     }
-
-    
-
-
-
-// Function to check if the device is a mobile device
-function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-        // Call the function when the window has finished loading
-        window.onload = setPagePadding;
-
-/***** THIS FUNCTION IS THERE FOR DEBUGGING PURPOSES *****/
-                function showNavbarAndScreenSize() {
-    // Make sure navbar is visible
-    document.getElementById('navbar').style.display = 'block';
-
-    // Display navbar property
-    var navbarStyle = document.getElementById('navbar').style;
-    
-    // Open a new popup window with the navbar style information
-    var navbarPopup = window.open('', 'Navbar Style', 'width=400,height=300');
-    navbarPopup.document.write('<p>Navbar style: ' + JSON.stringify(navbarStyle) + '</p>');
-    
-    // Show screensize in a new popup window
-    var screenSizePopup = window.open('', 'Screen Size', 'width=400,height=300');
-    screenSizePopup.document.write('<p>Window inner width: ' + window.innerWidth + '</p>');
-    screenSizePopup.document.write('<p>Window inner height: ' + window.innerHeight + '</p>');
-    console.log("Function called"); // Add this line
-}
-
-
-                    
-                
-            </script>
+   
         </body>
 
         </html>

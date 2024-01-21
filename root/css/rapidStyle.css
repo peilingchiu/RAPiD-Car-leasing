@@ -1,139 +1,3 @@
-/* Project- Group 3- Ling'c Cars website revamp
-   Group 3 members-Raul
-                   Pei
-                   Amala 
-                   Dhanashree  */
-/* *********************************************************************************************************
-                            TABLE OF CONTENTS
-                            1. CSS reset
-                            2.Global styles
-                              2.1 Color
-                              2.2 Typography
-                              2.3 Helper
-                              2.4 Grid Helper
-                            3. Header and Navigation
-                            4. Sign In and related pages
-                            5. Body 
-                            6.About Us page
-                            7.Inventory page
-                            8.Leasing page
-                            9.Services Page
-                           10.Offers page
-                           11.FAQs page
-                           12.Contact Us page
-
-************************************************************************************************************/
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            1. CSS reset (Eric mayer reset)
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            2.Global styles
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-                /* *************************************************
-                *****************************************************
-                            2.1 Color
-                *****************************************************
-                *****************************************************/
-
-                /* *************************************************
-                *****************************************************
-                            2.2 Typography
-                *****************************************************
-                *****************************************************/
-
-                /* *************************************************
-                *****************************************************
-                            2.3 Helper
-                *****************************************************
-                *****************************************************/
-
-                /* *************************************************
-                *****************************************************
-                            2.4 Grid Helper
-                *****************************************************
-                *****************************************************/
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            3. Header and Navigation
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            4. Sign In and related pages
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            5. Body
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             6.About Us page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            7.Inventory page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            8.Leasing page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            9.Services Page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            10.Offers page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             11.FAQs page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             12.Contact Us page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-
-
 /*---------------naming convention REFERENCE in case of adding new variables ------------*/
 /* --base-font-size: 16px; 
     --base-maxwidth: 100%;
@@ -205,6 +69,11 @@ body {
   max-width: 100%;
 }
 
+main {
+  width: 80%;
+  margin: auto;
+}
+
 /** default general style for all elements **/
 h1, h2, h3 {
   color: var(--text-dk-color);
@@ -215,7 +84,9 @@ h1, h2, h3 {
 h1 {font-size: calc(var(--fs-base) * 1.8);}
 h2 {font-size: calc(var(--fs-base) * 1.5);}
 h3 {font-size: calc(var(--fs-base) * 1.2);}
-  
+
+H5 {font-size: calc(var(--fs-base) * 1.5);
+    }  
 p {line-height: 1.5;}
 
 img {
@@ -234,9 +105,9 @@ a:hover {color: var(--hover-color);}
 /****************************************************************************************/
 
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
-main {padding-top: 80px;}
-
+main {padding-top: 100px;}
 /** - .hero img is a decedent selector **/
+
 .hero img {
   width: 100%
 }
@@ -248,6 +119,7 @@ main {padding-top: 80px;}
   display: flex;
   width: 100%;
   height: 80px;
+  box-sizing: border-box;
   position: fixed;
 
 }
@@ -265,13 +137,13 @@ header.navBar {
 
 .headerNav li {
   padding: var(--spacer);
-  border-bottom: solid 2px #fff;
+  border-bottom: solid 2px var(--text-lt-color);
   text-decoration: none;
 }
 
 .headerNav li a {
   display: block;
-  color: var(--primary-color);
+  color: var(--text-lt-color);
   text-decoration: none;
   font-weight: var(--fw-bold);
 
@@ -330,6 +202,8 @@ header.navBar {
 
 }
 
+.fa { color: var(--text-lt-color)}
+
 .login {
   display: flex;
   justify-content: end;
@@ -343,8 +217,8 @@ header.navBar {
 }
 
 .navBar {
-  background-color: white;
-  color: #fff
+  background-color: var(--text-lt-color);
+  color: var(--text-lt-color);
 }
 
 /****************************************************************************************/
@@ -353,7 +227,7 @@ header.navBar {
 /****************************************************************************************/
 
 
-.search-bar {display: none;}/* Hide the search bar on mobile devices */ 
+
 
 .box-viewCars,
 .btn-viewCars {display: block;}
@@ -372,12 +246,14 @@ header.navBar {
 
 
 
-.search-bar {
+.search-bar { 
+  display: none;/* Hide the search bar on mobile devices */ 
   --bg-search-bar: var(--secondary-color);
   background-color: var(--bg-search-bar);
   width: 100%;
   margin: auto;
-  padding: 10px;
+  margin-top: var(--spacer);
+  padding-left: var(--spacer);
   box-shadow: var(--shadow);
 
 }
@@ -391,9 +267,7 @@ ul.search {
 
 }
 
-.search .hide {
-  color: var(--bg-search-bar);
-}
+.search .hide {color: var(--bg-search-bar);}
 
 .search-bar label {
   display: block;
@@ -403,6 +277,7 @@ ul.search {
 }
 
 /* Style for select fields */
+search-bar button,
 ul.search select {
   width: 100%;
   padding: 8px;
@@ -410,13 +285,18 @@ ul.search select {
   border-radius: var(--border-radius);
 }
 
-
 ul {
   list-style-type: none;
 }
 
 figcaption {
   width: 100%;
+}
+
+.search-bar + h2 {
+  text-align: center;
+  padding-top:var(--spacer-dbl);
+ 
 }
 
 
@@ -436,6 +316,7 @@ figcaption {
   transition: background-color .3s ease;
   text-decoration: none;
   box-shadow: var(--shadow);
+  width:90%;
 
 
 }
@@ -448,7 +329,8 @@ figcaption {
 .btn-invert {
   background-color: var(--text-lt-color);
   color: var(--text-dk-color);
-  margin-bottom: 10px;
+  margin: 10px;
+ 
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -471,6 +353,8 @@ figcaption {
   gap: var(--spacer);
 }
 /* method applied for all top leasing sections */
+
+.det-car,
 [class*='top'] {
 display: flex;
     flex-wrap: wrap;
@@ -480,11 +364,9 @@ display: flex;
     padding-bottom: var(--spacer-dbl);
     margin-bottom: var(--spacer);
     margin-top: var(--spacer-dbl);
-    /* border: 5px solid var(--tertiary-color); */
+    
 }
 
-
-  
   /** using class element with descendent selector **/
   /*The elements will grow and shrink as needed, but they will start with a basis width of 300 pixels.*/
   [class*='top'] > * {
@@ -493,21 +375,17 @@ display: flex;
     margin: 10px; /* Half of grid-gap to simulate the same spacing */
   }
 
-
   [class*='top'] article {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--spacer-dbl);
-  background-color: var(--tertiary-color);
+  padding: var(--spacer);
+  background-color: var(--text-lt-color);
   border: solid 20px var(--tertiary-color);
   box-shadow: var(--shadow);
 }
 
-[class*='top'] .btn-invert {
-  margin-top: var(--spacer);
-}
 [class*='top'] dl{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -515,6 +393,62 @@ display: flex;
 }
 
 /***** Style to Car Details ****/
+
+
+
+.det-car button {
+  margin-top: var(--spacer-dbl); 
+  padding: var(--spacer);
+  width: 100%;
+}
+ 
+.det-imgs img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px; /* Add some spacing between images */
+  margin-top: 20px; /* Add white space on top of images */
+  border: solid 5px var(--secondary-color);
+}
+
+.det-imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns for desktop version */
+  gap: 10px; /* Add some gaps between columns */
+  box-sizing: border-box;
+  background-color: var(--text-lt-color);
+  padding: var(--spacer);
+}
+/* Make the first image span all columns */
+.det-imgs img:first-child {
+  grid-column: 1 / -1;
+  width: 600px; /* Make it fill the whole width of the grid */
+  justify-self: center; /* Center the image */
+}
+
+/* Adjust size for the rest of the images */
+.det-imgs img:not(:first-child) {
+  width: 100%;
+  height: auto;
+}
+
+
+.lease-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 0 auto; /* Center the grid horizontally */
+  max-width: 80%; /* Adjust the percentage as needed */
+}
+
+.lease-details > dd:first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+.lease-details > dd:not(:first-child) {
+  margin-bottom: 10px;
+}
 
 
 /****** Style for the section contact agent *****/
@@ -644,10 +578,6 @@ ul.det-location input[type="text"] {
   margin-bottom: var(--spacer);
 }
 
-main {
-  width: 80%;
-  margin: auto;
-}
 
 .cards-container h3 {
   font-family: var(--heading-font);
@@ -1210,11 +1140,7 @@ article.important {
 
   /* Navigation Bar */
 
-  .navbar {
-
-    background-image: none;
-  }
-
+ 
   .navTogglerMenu {
     display: none;
   }
@@ -1224,9 +1150,7 @@ article.important {
     justify-content: center;
     align-items: center;
     padding: 20px;
-      background-color:#fff; /*navigation background color*/
-
-
+    background-color: var(--text-lt-color); /*navigation background color*/
   }
 
   .logo {
@@ -1359,10 +1283,6 @@ article.important {
 @media screen and (min-width: 1200px) {
 
   /* header link, wait for Amala to modify */
-
-  .navbar {
-    display: block;
-  }
 
   .center-nav,
   .center-nav ul {
