@@ -124,7 +124,6 @@ main {padding-top: 100px;}
   background-color: var(--text-lt-color); /*navigation background color*/
 }
 
-
 .headerNav {
   position: absolute;
   top: 100%;
@@ -144,7 +143,6 @@ main {padding-top: 100px;}
   color: var(--text-lt-color); /* for hamberger menu si li not shown */
   text-decoration: none;
   font-weight: var(--fw-bold);
-
 }
 
 .headerNav li a:hover {
@@ -216,7 +214,7 @@ main {padding-top: 100px;}
 
 .navBar {
   background-color: var(--text-lt-color);
-  color: var(--text-dk-color);
+  color: var(--text-lt-color);
 }
 
 /****************************************************************************************/
