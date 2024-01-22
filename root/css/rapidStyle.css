@@ -1039,6 +1039,94 @@ article.important {
   /*                                End of Leasing page                                     */
   /****************************************************************************************/
 
+/****************************************************************************************/
+  /*                              begin---     Services page styling                       */
+  /****************************************************************************************/
+
+article.service1 {
+    background-color: var(--accent-color);
+     padding: var(--spacer);
+    margin: var(--spacer);
+    font-family: var(--heading-font);
+}
+article.service2 {
+ padding: var(--spacer);
+    margin: var(--spacer);
+    font-family: var(--heading-font);
+}
+.service2 span {
+     padding: var(--spacer);
+}
+article.service3 {
+
+     padding: var(--spacer);
+    margin: var(--spacer);
+    font-family: var(--heading-font);
+}
+.service3 span {
+     padding: var(--spacer);
+}
+section.maintain {
+    background-color: var(--accent-color);
+}
+article.inspection {
+
+     padding: var(--spacer);
+    margin: var(--spacer);
+    font-family: var(--heading-font);
+}
+.inspection span {
+    padding: var(--spacer);
+}
+article.repair {
+
+     padding: var(--spacer);
+    margin: var(--spacer);
+    font-family: var(--heading-font);
+}
+.repair span {
+    padding: var(--spacer);
+}
+article.maintenance {
+
+     padding: var(--spacer);
+    margin: var(--spacer);
+    font-family: var(--heading-font);
+}
+.maintenance span {
+    padding: var(--spacer);
+}
+section.insurance {
+
+    font-family: var(--heading-font); 
+    display: block;
+    margin-bottom: var(--spacer);
+}
+.ins {
+    margin-bottom: 1rem;
+}
+.ins1 {
+    background-color: var(--accent-color);
+    padding: var(--spacer);
+}
+.ins2 {
+    padding: var(--spacer);
+}
+.ins3 {
+    background-color: var(--accent-color);
+    padding: var(--spacer);
+}
+
+
+
+
+/****************************************************************************************/
+  /*                              END---     Services page styling                       */
+  /****************************************************************************************/
+
+
+
+
 
 /****************************************************************************************/
 /*                                BEGIN    CONTACT US                                     */
@@ -1330,6 +1418,11 @@ box-shadow: var(--shadow);
   position: fixed;
   bottom: 0;
 }
+   /*services page*/
+    .ins {
+        display: inline-flex;
+    }
+   
 }
 /** end @media min 700px **/
 
