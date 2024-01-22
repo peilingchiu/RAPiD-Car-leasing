@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if the user is redirected from the sign-in page
     if (signInIcon && userSignedIn === 'true') {
         signInIcon.classList.remove('fa-user');
-        signInIcon.classList.add('fa-solid', 'fa-person-rays');
+        signInIcon.classList.add('fa-solid', 'fa-face-smile');
         alert('You are signed in!');
         
         // Clear the sign-in status to avoid color change on subsequent visits
         localStorage.removeItem('userSignedIn');
     }
-    
     
 });
 

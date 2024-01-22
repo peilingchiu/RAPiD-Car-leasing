@@ -238,6 +238,7 @@ main {padding-top: 100px;}
   box-sizing: border-box;
   position: fixed;
   background-color: var(--text-lt-color); /*navigation background color*/
+
 }
 
 .headerNav {
@@ -537,20 +538,31 @@ display: flex;
 /****************************************************************************************/
 /*                       BEGIN         how does car leasing works                       */
 /****************************************************************************************/
-.cards {
+
+/* .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: var(--spacer) 0px;
   gap: var(--spacer);
-}
+} */
 
+
+/************************ECAMLE CHANGES USING SAME CLASS TOP *************/
+.top-cards  {
+  background-color: var(--accent-color);
+  position: relative;
+height: 300px;
+padding: var(--spacer);
+}
+.top-cards article {
+  background-color: white;
+}
 .cards article {
   padding: var(--spacer-dbl);
   background-color: var(--accent-color);
 }
-
 
 .cards-container {
   display: grid;
@@ -589,6 +601,7 @@ display: flex;
   text-align: center;
   width: 80%;
   box-shadow: var(--shadow);
+  border: none;
 }
 
 i {
@@ -618,9 +631,7 @@ i {
 
 /* ************************************************************************************************************ */
 /*---------CSS FOR Sign In, Sign up pswd and usrnmreset page------*/
-.signInPage {
-  height: 100vh;
-}
+/* ************************************************************************************************************ */
 .signIn {
   background-color: var(--secondary-color);
   width: 80%;
@@ -1138,8 +1149,81 @@ section.insurance {
 
 
 /****************************************************************************************/
-  /*                              END---     Services page styling                       */
-  /****************************************************************************************/
+   /**                             END---     Services page styling                    **/
+   /**                                         BEGIN FAQ                               **/       
+  /***************************************************************************************/
+
+  /*--------------------------------------------------------------
+FAQ's Header section 
+--------------------------------------------------------------*/
+/* FAQ's Header */
+.faq hero {
+  min-height: auto;
+  background: var(--primary-color);
+  width: 100%;
+}
+.faq hero h1 {
+  font-family: var(--heading-font);
+  color: var(--text-lt-color);
+  text-align: center;
+  padding: 1.5em;
+  padding-bottom: .5em;
+}
+.faq hero p {
+  color: var(--text-lt-color);
+  font-size: calc(var(--fs-base) * 1.2);
+  padding: .5rem 1rem 2rem;
+}
+/* FAQ's Main */
+
+.faq main h2 {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+.faq main h3 {
+  padding-bottom: 1em;
+  
+}
+
+.faq details {
+	margin-bottom: 3px;
+	width: 100%;
+	font-family: var(--primary-font);
+}
+
+.faq details p {
+  font-family: var(--primary-font);
+	padding: 20px;
+}
+
+.faq summary {
+	padding: 20px;
+	background-color: var(--tertiary-color);
+	border: 1px solid var(--accent-color);
+	outline: none;
+}
+
+.faq summary:hover,
+.faq summary:focus {
+	border: 1px solid var(--primary-color);
+}
+
+/** 4. - .faq details[open] is a decedent selector that open and collapse the section **/
+.faq details[open] summary {   
+	background-color: var(--tertiary-color);
+	border: 1px solid var(--accent-color);
+}
+
+.faq details[open] {
+	background: var(--accent-color);
+}
+
+.faq section {
+  padding: 1rem 1rem 0;
+}
+
+	
 
 
 
@@ -1162,6 +1246,11 @@ section.insurance {
     padding: 10px;
 }
 
+contactDetails > article > section {
+  border: 2px solid #000; /* Adjust as needed */
+  border-radius:var(--border-radius);
+    padding: 10px;
+}
 .contactDetails div {
     border: solid 2px #0B1C55;
     border-radius:var(--border-radius);
@@ -1356,6 +1445,7 @@ contactAgentMain .contactUs h1 {
     align-self: flex-start;/* to remove hamburger icon for desktop version */
     z-index: 1000;
     height: 50px; /* this is needed to make sure that the navigation is not blocked by main */
+
   }
 
   .headerNav ul {
@@ -1377,7 +1467,16 @@ contactAgentMain .contactUs h1 {
 
   }
  .login i { color: var(--primary-color); /* change icon color here*/ }
-    
+
+
+ /* RAUL ??????? FAQ, CHECK IF NEEDED */
+ .faq section {
+  padding: 1rem 2rem 0;
+  }
+.faq header p {
+  padding: .5rem 2rem 2rem;
+  }
+
   /* grid area for how does car leasing works */
 
   .cards-container {
@@ -1506,8 +1605,7 @@ contactAgentMain .contactUs h1 {
     display: flex;
     justify-content: space-between;
   }
-
-  .logo img {width: 50%;}
+  .logo {left: 7rem;}
   .center-nav ul li { margin: 0 10px;}
 
   /****** SPECIFIC FOR SEARCH BAR for desktopsize *****/
