@@ -777,18 +777,12 @@ i {
 .signInPage {
   height: 100vh;
 }
-
-.signInPage footer {
-  position: fixed;
-  bottom: 0;
-}
-
 .signIn {
   background-color: var(--secondary-color);
   width: 80%;
   padding: 10px;
-  margin: 15% auto;
-  box-shadow: var(--shadow)
+  margin: auto;
+  box-shadow: var(--shadow);
 }
 
 .signIn .btn {
@@ -829,6 +823,7 @@ i {
   font-family: var(--primary-font);
   margin-bottom: 10px;
 }
+
 
 /*---------CSS FOR Sign up page------*/
 .signUpPage {
@@ -1486,7 +1481,10 @@ box-shadow: var(--shadow);
   .pswdreset {
     width: 33%;
   }
-
+.signInPage footer {
+  position: fixed;
+  bottom: 0;
+}
 }
 
 /** end Tab size **/
