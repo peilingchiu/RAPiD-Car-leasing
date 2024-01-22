@@ -1327,7 +1327,6 @@ box-shadow: var(--shadow);
 }
 .zip-location label{
     display: grid;
-    grid-template-columns: repeat 3 ;
     padding-bottom: .25em;
 }
 .loan-checks ul{
