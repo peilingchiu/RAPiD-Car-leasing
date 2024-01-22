@@ -2,23 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width initialsclae=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- font awesome     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        type="text/css">
+    <!-- end font awesome -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"><!-- material icons link     -->
+    <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
+    
+    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script><!-- font awesome for SoMe -->
+  
     <title>Reset Password</title>
-    <!--    fontawesome kit add to head-->
-    <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script>
-    <link href="../css/reset.css" rel="stylesheet" type="text/css">
-    <link href="../css/rapidStyle.css" rel="stylesheet" type="text/css">
     <script src="../scripts/scripts.js"></script>
-
 </head>
 
 <body class="pswdresetPage">
+    <header class="navBar">
+        <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
+                    <section class="logo">
+                        <a href="../index.html"><img src="../images/PNG-Logo-Lingscar.png" alt="Logo"></a>
+                    </section>
+                    <input type="checkbox" class="navToggler" id="navToggler"> <!-- For hamburger menu -->
+                    <nav class="headerNav"> 
+                        <ul>
+                            <li><a href="../pages/aboutUs.html">About us</a></li>
+                            <li><a href="../pages/carInventory.html">Inventory</a></li>
+                            <li><a href="../pages/leasing.html">Leasing</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Offers</a></li>
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="../pages/contact.html">Contact us</a></li>
+                        </ul>
+                    </nav>
+                    <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                        <span class="material-icons-outlined mi menuOpen">menu</span>
+                        <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
+                    </label>
+                    <section class="login">
+                        <a href="../pages/signIn.html">
+                            <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                        <!-- login icon -->
+                        </a>
+        
+                    </section>
+        
+            </header> <!-- End for header -->
     <main class="pswdreset">
        <h2> Reset password </h2>
-            <form class="pswdresetForm" action="signIn.html"   method="post" onsubmit="handleReset(event)">
+            <form class="pswdresetForm" action=".../signIn.html"   method="post" onsubmit="handleReset(event)">
                 <ul>
                     <li>
                         <label for="email">Email Address</label></li>

@@ -896,7 +896,7 @@ i {
   background-color: var(--secondary-color);
   width: 80%;
   padding: 10px;
-  margin: 10% auto;
+  margin:auto;
   box-shadow: var(--shadow)
 }
 
