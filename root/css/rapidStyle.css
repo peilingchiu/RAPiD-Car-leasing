@@ -1327,7 +1327,6 @@ box-shadow: var(--shadow);
 }
 .zip-location label{
     display: grid;
-    grid-template-columns: repeat 3 ;
     padding-bottom: .25em;
 }
 .loan-checks ul{
@@ -1456,7 +1455,7 @@ box-shadow: var(--shadow);
     display: grid;
     grid-template-areas: "l s c"
       "p s i";
-    grid-column: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     grid-row: auto;
     text-align: left;
   }
@@ -1582,10 +1581,16 @@ box-shadow: var(--shadow);
     }
   }
   /* ******css for contact us page********* */
+  .contactAgentPage{
+    font-family: var(--primary-font);
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--text-dk-color);
+  }
      .contactDetails {
         display: grid;
         grid-template-areas: "hrs c1 c2";
-        grid-column: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap:15px;
         grid-row:auto;
         box-shadow:none;
