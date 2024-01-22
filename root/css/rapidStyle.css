@@ -1583,7 +1583,7 @@ box-shadow: var(--shadow);
   /* ******css for contact us page********* */
   .contactAgentPage{
     font-family: var(--primary-font);
-    font-size: 1.25;
+    font-size: 1.25em;
     font-weight: 400;
     color: var(--text-dk-color);
   }
