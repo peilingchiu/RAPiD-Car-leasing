@@ -15,14 +15,44 @@
     
   <body class="about_us">
     <!--header -->
-    <header id="showcase" class="aboutUs-grid">
-      <img class="about-image" src="https://images.pexels.com/photos/720815/pexels-photo-720815.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600" alt="young woman enjoying her new car">
-      <h1>About Lings Cars</h1>
-      <p>At Lings Cars, our mission is clear: to offer our customers in the UK the ultimate car leasing experience.We take pride in delivering unparalleled service and the finest car leasing solutions available. Whether you crave the reliability of a Fiat or the exhilaration of a Ferrari. Our monthly rental agreements are designed to be affordable, accommodating every budget without compromising on quality.</p>
-    </header>
+    <header class="navBar">
+      <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
+                  <section class="logo">
+                      <a href="index.html"><img src="images/PNG-Logo-Lingscar.png" alt="Logo"></a>
+                  </section>
+                  <input type="checkbox" class="navToggler" id="navToggler"> <!-- For hamburger menu -->
+                  <nav class="headerNav"> 
+                      <ul>
+                          <li><a href="pages/aboutUs.html">About us</a></li>
+                          <li><a href="pages/carInventory.html">Inventory</a></li>
+                          <li><a href="pages/leasing.html">Leasing</a></li>
+                          <li><a href="#">Services</a></li>
+                          <li><a href="#">Offers</a></li>
+                          <li><a href="#">FAQ's</a></li>
+                          <li><a href="pages/contact.html">Contact us</a></li>
+                      </ul>
+                  </nav>
+                  <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                      <span class="material-icons-outlined mi menuOpen">menu</span>
+                      <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
+                  </label>
+                  <section class="login">
+                      <a href="pages/signIn.html">
+                          <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                      <!-- login icon -->
+                      </a>
+      
+                  </section>
+    </header> <!-- End for header -->
+
          
     <!-- Main Area -->
     <main>
+      <hero id="showcase" class="aboutUs-grid">
+        <img class="about-image" src="https://images.pexels.com/photos/720815/pexels-photo-720815.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600" alt="young woman enjoying her new car">
+        <h1>About Lings Cars</h1>
+        <p>At Lings Cars, our mission is clear: to offer our customers in the UK the ultimate car leasing experience.We take pride in delivering unparalleled service and the finest car leasing solutions available. Whether you crave the reliability of a Fiat or the exhilaration of a Ferrari. Our monthly rental agreements are designed to be affordable, accommodating every budget without compromising on quality.</p>
+      </hero>
       <!--section about a -->
       <section id="about-a" class="aboutUs-grid">
         <article class="content-wrap">
@@ -56,6 +86,53 @@
       </section>
      
     </main>
+    <footer>
+      <section class="m">
+          <h1>For more information on our best deals subscribe to our newsletter.</h1>
+          <button>Email ID</button>
+          <section class="mIcon">
+              <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
+              <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+              <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+          </section>
+          <p>Copyright &copy;2023 | Lings Cars</p>
+      </section>
+      <section class="d">
+          <article class="l">
+              <h2>Leasing Information</h2>
+              <ul>
+                  <li><a href="#">Car Leasing</a></li>
+                  <li><a href="#">Van Leasing</a></li>
+                  <li><a href="#">Leasing Terms</a></li>
+                  <li><a href="#">Short-term Leasing</a></li>
+              </ul>
+          </article>
+          <article class="s">
+              <h2>Our Services</h2>
+              <ul>
+                  <li><a href="#">Insurance</a></li>
+                  <li><a href="#">Maintainance</a></li>
+                  <li><a href="#">Introduce A friend</a></li>
+                  <li><a href="#">Car Accessories</a></li>
+                  <li><a href="#">Price Matching</a></li>
+              </ul>
+          </article>
+          <article class="c">
+              <h2>Contact Us</h2>
+              <p>Address:</p>
+              <p>1234 River Street, 4th Avenue,</p>
+              <p>UK</p>
+              <p>Call:1234-567-23233</p>
+              <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
+          </article>
+          <p class="p">Copyright &copy;2024 | Lings Cars</p>
+          <article class="i">
+              <a href="https://www.instagram.com/rapid_car_leasing?igsh=d2Z1Nm90Zjd4N3p4&utm_source=qr"><span class="fa fa-twitter fa-2x"></span></a>
+              <a href="https://www.facebook.com/lingscars/"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+              <a href="https://www.youtube.com/@LINGsCARS"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+          </article>
+      </section>
+  </footer>
   
   </body>
 </html>
