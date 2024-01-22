@@ -19,7 +19,7 @@
     <script src="../scripts/scripts.js"></script>
 </head>
 
-<body class="signInPage">
+<body >
    <header class="navBar">
         <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
                     <section class="logo">
@@ -37,7 +37,7 @@
                             <li><a href="../pages/contact.html">Contact us</a></li>
                         </ul>
                     </nav>
-                    <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                    <label for="navToggler" class="navTogglerMenu" >
                         <span class="material-icons-outlined mi menuOpen">menu</span>
                         <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
                     </label>
@@ -50,29 +50,30 @@
                     </section>
         
             </header> <!-- End for header -->
-            <main class="signIn">
+            <main class="signInPage">
+                <section class="signIn">
                 <h2> Sign In</h2>
                    
                          <form class="signInForm" action="../index.html" method="post" onsubmit="handleSign(event)">
                          <ul>
                              <li>
                                  <label for="userName">Email*</label></li>
-                                <li> <input type="text" id="userName" name="userName" placeholder=" Email " pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                                <li> <input type="email" id="userName" name="userName" placeholder=" Email " pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address" required>
                              </li>
                              <li>
                                  <label for="pswd">Password*</label></li>
                                 <li>
                                  <input type="text" id="pswd" name="pswd"  placeholder="Password" required>
                              </li>
-                            
-                             <button class="btn" type="submit" onsubmit="returnToindex">Sign In</button>
+                        
                          </ul>
+                         <button class="btn" type="submit" onsubmit="returnToindex">Sign In</button>
                      </form>
                      <p>Don't have an account? <a href="../pages/signUp.html">Sign up.</a></p>
                      <p><a href="pswdreset.html">Forgot Password</a>  </p>
                     
              </main>
-            
+            </section>
           
     <footer>
         <section class="m">
