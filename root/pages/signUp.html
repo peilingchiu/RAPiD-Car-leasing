@@ -19,7 +19,7 @@
     <script src="../scripts/scripts.js"></script>
 </head>
 
-<body class="signUpPage">
+<body>
     <header class="navBar">
         <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
                     <section class="logo">
@@ -37,7 +37,7 @@
                             <li><a href="../pages/contact.html">Contact us</a></li>
                         </ul>
                     </nav>
-                    <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                    <label for="navToggler" class="navTogglerMenu">
                         <span class="material-icons-outlined mi menuOpen">menu</span>
                         <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
                     </label>
@@ -49,7 +49,8 @@
         
                     </section>
                 </header> <!-- End for header -->
-                <main class="signUp">
+                <main  class="signUpPage">
+                    <section class="signUp">
                     <h2> Sign up for exclusive offers and discounts!</h2>
                     <form class="signUpForm" action="../index.html" method="post" onsubmit="handleSign(event)">
                         <ul>
@@ -57,27 +58,30 @@
                                 <label for="userName">Email</label>
                             </li>
                             <li>
-                                <input type="text" name="userName" placeholder="Email" value="example@example.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                                <input type="email" id="userName" name="userName" placeholder="Email" value="example@example.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address" required>
                             </li>
                             <li>
                                 <label for="pswd">Password</label>
                             </li>
                             <li>
-                                <input type="password" name="pswd" placeholder="Password" value="password123" required>
+                                <input type="password" id="pswd" name="pswd" placeholder="Password" value="password123" required>
                             </li>
                             <li>
-                                <label for="pswd">Confirm Password</label>
+                                <label for="pswdconfirm">Confirm Password</label>
                             </li>
                             <li>
-                                <input type="password" name="pswd-Re" placeholder="Re-enter your password" value="password123" required>
+                                <input type="password" id="pswdconfirm" name="pswd-Re" placeholder="Re-enter your password" value="password123" required>
                             </li>
-                            <button class="btn" type="submit">Create Account</button>
+                            
                         </ul>
+                        <button class="btn" type="submit">Create Account</button>
                     </form>
                     <p>Already have an account? <a href="../pages/signIn.html">Log In.</a></p>
                            
-                           
+                </section>     
                     </main>
+
+
                     <footer>
                         <section class="m">
                             <h1>For more information on our best deals subscribe to our newsletter.</h1>
