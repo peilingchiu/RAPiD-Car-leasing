@@ -71,11 +71,20 @@ function handleReset(event) {
         // Redirect to car inventory or perform other actions
         //window.location.href = 'carInventory.html';
     }
+
     function redirectToCarDetails() {
 
         // Redirect to carDetails.jpg when the form is submitted
         window.location.href = 'carDetails.html';
         // alert('redirecting to car inventory');
+
+    }
+
+    function redirectTocarCntAgent() {
+
+        // Redirect to carDetails.jpg when the form is submitted
+        window.location.href = '../pages/carCntAgent.html';
+        // alert('redirectinging to car contact agent');
 
     }
  

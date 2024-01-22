@@ -13,13 +13,20 @@
     <link rel="stylesheet" href="../css/rapidStyle.css" type="text/css">
     
     <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script><!-- font awesome for SoMe -->
-    <script src="scripts/scripts.js"></script>
-    <title>CAR LEASING DETAIL</title>
     
+    <title>CAR LEASING DETAIL</title>
+    <script>
+    function redirectTocarCntAgent() {
+
+        // Redirect to carDetails.jpg when the form is submitted
+        window.location.href = 'carCntAgent.html';
+        // alert('redirectinging to car contact agent');
+
+    }
+    </script>
 </head>
 <body>
-    <!-- navigation part-->
-    
+    <!-- navigation part-->   
 <header class="navBar">
     <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
                 <section class="logo">
@@ -142,15 +149,60 @@
         </section> -->
  </section>
  </main>
+ <!-- **********************************************************************************
+                     FOOTER                                    
+ *************************************************************************************** -->
+ <footer>
+    <section class="m">
+        <h1>For more information on our best deals subscribe to our newsletter.</h1>
+        <button>Email ID</button>
+        <section class="mIcon">
+            <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
+            <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+            <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+        </section>
+        <p>Copyright &copy;2023 | Lings Cars</p>
+    </section>
+    <section class="d">
+        <article class="l">
+            <h2>Leasing Information</h2>
+            <ul>
+                <li><a href="#">Car Leasing</a></li>
+                <li><a href="#">Van Leasing</a></li>
+                <li><a href="#">Leasing Terms</a></li>
+                <li><a href="#">Short-term Leasing</a></li>
+            </ul>
+        </article>
+        <article class="s">
+            <h2>Our Services</h2>
+            <ul>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Maintainance</a></li>
+                <li><a href="#">Introduce A friend</a></li>
+                <li><a href="#">Car Accessories</a></li>
+                <li><a href="#">Price Matching</a></li>
+            </ul>
+        </article>
+        <article class="c">
+            <h2>Contact Us</h2>
+            <p>Address:</p>
+            <p>1234 River Street, 4th Avenue,</p>
+            <p>UK</p>
+            <p>Call:1234-567-23233</p>
+            <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
+        </article>
+        <p class="p">Copyright &copy;2024 | Lings Cars</p>
+        <article class="i">
+            <a href="https://www.instagram.com/rapid_car_leasing?igsh=d2Z1Nm90Zjd4N3p4&utm_source=qr"><span class="fa fa-twitter fa-2x"></span></a>
+            <a href="https://www.facebook.com/lingscars/"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+            <a href="https://www.youtube.com/@LINGsCARS"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+        </article>
+    </section>
 
-    <script>
-        function redirectTocarCntAgent() {
 
-            // Redirect to carDetails.jpg when the form is submitted
-            window.location.href = 'carCntAgent.html';
-            // alert('redirecting to car inventory');
 
-        }
-    </script>
+</footer>
+
+
 </body>
 </html>
