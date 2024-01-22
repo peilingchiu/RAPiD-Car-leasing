@@ -1036,9 +1036,26 @@ article.important {
     margin: 1rem;
 }
  /****************************************************************************************/
-  /*                                End of Leasing page                                     */
+  /*                                End LEASE, START OFFERS                                     */
   /****************************************************************************************/
+ .offersImage img { width:100%; }
 
+ .offers article {
+  padding: var(--spacer);
+  margin: var(--spacer);
+  font-family: var(--heading-font);
+}
+
+.offers article:first-child {
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  border: 10px solid var(--accent-color);
+  
+}
+
+.offers article span {
+  padding: var(--spacer);
+}
 /****************************************************************************************/
   /*                              begin---     Services page styling                       */
   /****************************************************************************************/
