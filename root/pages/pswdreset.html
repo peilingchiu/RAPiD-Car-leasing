@@ -19,7 +19,7 @@
     <script src="../scripts/scripts.js"></script>
 </head>
 
-<body class="pswdresetPage">
+<body>
     <header class="navBar">
         <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
                     <section class="logo">
@@ -37,7 +37,7 @@
                             <li><a href="../pages/contact.html">Contact us</a></li>
                         </ul>
                     </nav>
-                    <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                    <label for="navToggler" class="navTogglerMenu">
                         <span class="material-icons-outlined mi menuOpen">menu</span>
                         <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
                     </label>
@@ -50,22 +50,21 @@
                     </section>
         
             </header> <!-- End for header -->
-    <main class="pswdreset">
+    <main class="pswdresetPage">
+        <section class="pswdreset">
        <h2> Reset password </h2>
             <form class="pswdresetForm" action=".../signIn.html"   method="post" onsubmit="handleReset(event)">
                 <ul>
                     <li>
                         <label for="email">Email Address</label></li>
-                       <li> <input type="text" id="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                       <li> <input type="email" id="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address" required>
                     </li>
-                   
-                   
-                    <button class="btn" type="submit" onsubmit="returnToindex">Reset Password</button>
                 </ul>
+                <button class="btn" type="submit" onsubmit="returnToindex">Reset Password</button>
             </form>
             <p>Already have an account? <a href="../pages/signIn.html">Log In.</a></p>
             <p>Don't have an account? <a href="../pages/signUp.html">Sign up.</a></p>
-            
+        </section>
            
     </main>
     <footer>
