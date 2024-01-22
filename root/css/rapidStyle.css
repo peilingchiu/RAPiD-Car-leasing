@@ -279,7 +279,7 @@ main {padding-top: 100px;}
 
 .headerNav li a {
   display: block;
-  color: var(--text-lt-color); /* for hamberger menu si li not shown */
+  color: var(--text-dk-color); /* for hamberger menu si li not shown */
   text-decoration: none;
   font-family: var(--heading-font);
   font-weight: var(--fw-bold);
