@@ -1225,18 +1225,70 @@ text-decoration: none;
 box-shadow: var(--shadow);
     }
 
-.contactAgentPage .btn{ 
-    width:98%;
-    margin:10px 0 0;
-    border-radius: var(--border-radius);
-    background-color: var(--primary-color);
-    color: var(--text-lt-color);
-    cursor: pointer;
-    padding: 7px 24px;
-    transition: background-color .3s ease;
-    text-decoration: none;
+    /************ NEW CONTACT AGENT PAGE *********/
+  
+    .contactAgentMain {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Add this line to center align the items horizontally */
+      justify-content: center; /* Add this line to center align the items vertically */
+    }
+    #contactAgentMain > * {
+      margin-bottom: 20px; /* Adjust as needed */
+  }
+  .contactAgentMain > .contactUs > aside {
+    border: 2px solid white; /* Adjust as needed */
     box-shadow: var(--shadow);
-        }
+    padding:10px
+}
+contactAgentMain .contactUs h1 {
+  color: var(--primary-color);
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.75); /* Adjust the color of the text shadow */
+}
+    .cnt-zip h2 { padding-bottom: var(--spacer);}
+    .cnt-moreinfo {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; /* Changed from justify-self to justify-content */
+      gap: 20px; /* Adjust as needed */
+  }
+
+  .cnt-moreinfo > * {
+    min-width: 300px; /* Adjust as needed */
+    min-height: 100px;
+    padding:10px;
+    border-radius: var(--border-radius);
+    background-color: var(--tertiary-color);
+  }
+
+  .cnt-moreinfo > article > fieldset {
+    border-radius: 10px; /* Adjust as needed */
+    min-height: 100px;
+}
+  .cnt-moreinfo > * > fieldset {
+    background-color: var(--tertiary-color); /* Move the background color to the fieldset */
+}
+
+  .cnt-loan-checks ul {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.cnt-loan-checks li {
+    display: block;
+}
+    .btn-cntAgent{ 
+      width:60%;
+      text-align: center; /* Add this line to center align the button */
+    }
+   .contactAgentMain button {
+    margin:10px;
+    width:90%
+   }
+
+    /************ END NEW CONTACT AGENT PAGE *******/
 
 .contactAgentPage .contactDetails{width:100%;}
 
@@ -1259,7 +1311,7 @@ box-shadow: var(--shadow);
         display: grid;
         grid-template-columns: var(--grid-item-mid);
 
-    }
+    } 
 /* *************************************END OF CONTACT US CSS********************** */
 
 
@@ -1545,7 +1597,12 @@ box-shadow: var(--shadow);
     .map{grid-area: map;
         width:80%;
     height:90%;}
-
+/* span the image to 100% */
+    .contactAgentPage figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* This will ensure the aspect ratio of the image is maintained */
+  }
     
 /* CONTACT AGENT FORM */
 .contactAgentPage .contactUs {
@@ -1563,6 +1620,8 @@ box-shadow: var(--shadow);
 }
 .contactAgentPage .hours,.c1,.c2{
     height:fit-content;
+    overflow: auto;
+    padding: 10px;
 }
 .agentTitle{grid-area: aT;}
 .contactDetails{grid-area: cD;}
