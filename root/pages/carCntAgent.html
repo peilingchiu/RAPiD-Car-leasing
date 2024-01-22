@@ -12,10 +12,43 @@
     <script src="https://kit.fontawesome.com/c9bdf9749d.js" crossorigin="anonymous"></script>
     <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <link href="../css/rapidStyle.css" rel="stylesheet" type="text/css">
+    <script src="../scripts/scripts.js"></script>
 
 </head>
 
 <body>
+    <header class="navBar">
+        <!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
+                    <section class="logo">
+                        <a href="index.html"><img src="../images/PNG-Logo-Lingscar.png" alt="Logo"></a>
+                    </section>
+                    <input type="checkbox" class="navToggler" id="navToggler"> <!-- For hamburger menu -->
+                    <nav class="headerNav"> 
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Inventory</a></li>
+                            <li><a href="leasing.html">Leasing</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="#">Offers</a></li>
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </nav>
+                    <label for="navToggler" class="navTogglerMenu" name="navToggler">
+                        <span class="material-icons-outlined mi menuOpen">menu</span>
+                        <span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
+                    </label>
+                    <section class="login">
+                        <a href="signIn.html">
+                            <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                       
+                        </a>
+        
+                    </section>     
+
+            </header> <!-- End for header -->
+    <main>      
     <form class="contactAgentPage" action="mailto:phadkeda@gmail.com" method="post">
         
         <section class="contactUs"> 
@@ -23,42 +56,36 @@
                 <h1>Lease Your Dream Car with Confidence</h1>
         <p>Our Lease Experts Ensure Reliable Options! Contact us now, and our specialists will promptly schedule an appointment to make your dream car a reality. </p>
     </div>
-    <figure class="map"><img src="../images/heroDesktop-1000.jpg" alt="car picture" width="100%"><figcaption><h3>Thank you for contacting us! Let us know the details and our Representative will contact you Shortly!</h3></figcaption></figure>
-            <fieldset class="contactForm">
-                <h2>Contact Form:</h2>
-                <ul>
-                    <li>
-                        <label for="name">Name</label></li>
-                       <li> <input type="text" id="name" name="name" placeholder="Name" required>
-                    </li>
-                    <li>
-                        <label for="email">Email</label></li>
-                       <li>
-                        <input type="text" id="email" name="email" disply="Email" placeholder="Email" required>
-                    </li>
-                    <li>
-                        <label for="contact">Contact Number</label></li>
-                       <li>
-                        <input type="text" id="contact" name="contact"placeholder="Contact Number"  required>
-                    </li>
-                    <li>
-                        <label for="workContact">Work Phone Number</label></li>
-                       <li>
-                        <input type="text" id="workContact" name="workContact"placeholder="Work Phone Number" required>
-                    </li>
-                    <li>
-                        <label for="dob">Date of Birth*:</label></li>
-                        <li>
-                        <input type="date" id="dob" name="dob" required >
-                    </li>
-                    <li>
-                        <label for="message">Your Question or Message</label></li>
-                       <li>
-                        <input type="text" id="message" class="message" name="message"placeholder="Your Message">
-                    </li>
-                    
-                </ul>
-            </fieldset>
+    <figure class="map"><img src="../images/contactAgent.jpeg" alt="car picture" ><figcaption><h3>Thank you for contacting us! Let us know the details and our Representative will contact you Shortly!</h3></figcaption></figure>
+    <fieldset class="contactForm">
+        <legend>Contact Form:</legend>
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </li>
+            <li>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="Contact Number" required>
+            </li>
+            <li>
+                <label for="workContact">Work Phone Number:</label>
+                <input type="tel" id="workContact" name="workContact" placeholder="Work Phone Number" required>
+            </li>
+            <li>
+                <label for="dob">Date of Birth*:</label>
+                <input type="date" id="dob" name="dob" required>
+            </li>
+            <li>
+                <label for="message">Your Question or Message:</label>
+                <input type="text" id="message" class="message" name="message" placeholder="Your Message">
+            </li>
+        </ul>
+    </fieldset>
             <br>
             <h2  class="cAPh2">More info: Let us know a little more about you</h2>
             <br>
@@ -150,7 +177,7 @@
        
         </form>
 
-
+    </main>
 
 
 
@@ -193,7 +220,7 @@
                 <p>Call:1234-567-23233</p>
                 <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
             </article>
-            <p class="p">Copyright &copy;2023 | Lings Cars</p>
+            <p class="p">Copyright &copy;2024 | Lings Cars</p>
             <article class="i">
                 <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
                 <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>

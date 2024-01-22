@@ -132,28 +132,6 @@
 ************************************************************************************************************/
 
 
-
-
-
-
-
-/*---------------naming convention REFERENCE in case of adding new variables ------------*/
-/* --base-font-size: 16px; 
-    --base-maxwidth: 100%;
-    --reviewsio-logo-style: var(--logo-normal);
-    --common-star-color: #25c634;
-    --common-star-disabled-color: rgba(0, 0, 0, 0.25);
-    --medium-star-size: 22px;
-    --small-star-size: 19px;
-    --x-small-star-size: 19px;
-    --x-small-star-display: inline-flex;
-    --header-order: 1;
-    --header-width: 160px;
-    --header-bg-start-color: transparent;
-    --header-bg-end-color: transparent;
-    --header-gradient-direction: 135deg; */
-
-
 /****************************************************************************************/
 /*                                BEGIN  Global Variable                                */
 /****************************************************************************************/
@@ -192,8 +170,7 @@
 /** - body is an element selector **/
 
 body {
-  /* designed variables*/
- /* Grid helper */
+  /* designed variables and Grid helper */
   --grid-item-mobile: repeat(1, 1fr);
   --grid-item-mid: repeat(2, 1fr);
   --grid-item-ml: repeat(3, 1fr);
@@ -232,9 +209,9 @@ img {
   max-width: 100%;      /* image will not exceed the width of its container */
   height: auto;
   
-
 }
-
+ul {list-style-type: none;}
+/** 1. - a:visited is a pseudo class selector **/
 a:visited {color: var(--visted-color);}
 a:hover {color: var(--hover-color);}
 
@@ -245,8 +222,8 @@ a:hover {color: var(--hover-color);}
 
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
 main {padding-top: 100px;}
-/** - .hero img is a decedent selector **/
 
+/** - 2. img is a decedent selector of .hero **/
 .hero img {
   width: 100%
 }
@@ -279,47 +256,31 @@ main {padding-top: 100px;}
 
 .headerNav li a {
   display: block;
-  color: var(--text-dk-color); /* for hamberger menu si li not shown */
+  color: var(--text-dk-color); /** default li color for navigation links **/
   text-decoration: none;
   font-family: var(--heading-font);
   font-weight: var(--fw-bold);
 }
 
+/* cant use default because of ham menu */
 .headerNav li a:hover {
   color: var(--hover-color);
-}
+} 
 
-.navToggler:checked~nav {
-  display: block;
-}
-
-.navToggler {
-  display: none;
-}
-
-.mi {
-  color: var(--primary-color);
-}
-
-.menuClose {
-  display: none;
-}
+.navToggler:checked~nav {display: block;}
+.navToggler {display: none;}
+.mi {color: var(--primary-color);}
+.menuClose {display: none;}
 
 .navTogglerMenu {
-
   position: absolute;
   top: var(--spacer);
   left: var(--spacer);
   display: flex;
 }
 
-.navToggler:checked~.navTogglerMenu .menuClose {
-  display: block;
-}
-
-.navToggler:checked~.navTogglerMenu .menuOpen {
-  display: none;
-}
+.navToggler:checked~.navTogglerMenu .menuClose {display: block;}
+.navToggler:checked~.navTogglerMenu .menuOpen {display: none;}
 
 .logo {
   display: flex;
@@ -333,12 +294,10 @@ main {padding-top: 100px;}
   width: 80px;
   /* Adjust the width as needed */
   height: 50px;
-  margin: 0 1rem 0 0;
-    
-
+  margin: 0 1rem 0 0;  
 }
 
-.fa { color: var(--text-lt-color)}
+.fa { color: var(--text-lt-color);}
 
 .login {
   display: flex;
@@ -348,9 +307,7 @@ main {padding-top: 100px;}
   right: var(--spacer);
   margin: 0 1rem 0 0;
 }
-.login i{
-    color: var(--primary-color);
-}
+.login i {color: var(--primary-color);}
 
 .navBar {
   background-color: var(--text-lt-color);
@@ -361,9 +318,6 @@ main {padding-top: 100px;}
 /*                                BEGIN  style for search bar                           */
 /*                Style specfic for the class .search-bar          DEFAULT              */
 /****************************************************************************************/
-
-
-
 
 .box-viewCars,
 .btn-viewCars {display: block;}
@@ -379,8 +333,6 @@ main {padding-top: 100px;}
   padding: var(--spacer);
   width: 100%
 }
-
-
 
 .search-bar { 
   display: none;/* Hide the search bar on mobile devices */ 
@@ -420,19 +372,10 @@ ul.search select {
   box-sizing: border-box;
   border-radius: var(--border-radius);
 }
-
-ul {
-  list-style-type: none;
-}
-
-figcaption {
-  width: 100%;
-}
-
+/** - .search-bar button is a decedent selector, sibling **/
 .search-bar + h2 {
   text-align: center;
   padding-top:var(--spacer-dbl);
- 
 }
 
 
@@ -442,7 +385,7 @@ figcaption {
 /****************************************************************************************/
 
 
-/* Attribute Selector Styles */
+/** 3. Attribute Selector Styles **/
 [class*='btn-'] {
   border-radius: var(--border-radius);
   background-color: var(--primary-color);
@@ -453,8 +396,6 @@ figcaption {
   text-decoration: none;
   box-shadow: var(--shadow);
   width:90%;
-
-
 }
 
 [class*='btn-']:hover {
@@ -466,7 +407,6 @@ figcaption {
   background-color: var(--text-lt-color);
   color: var(--text-dk-color);
   margin: 10px;
- 
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -479,15 +419,8 @@ figcaption {
 /****************************************************************************************/
 
 
-.cards,
-.car-desc {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: var(--spacer) 0px;
-  gap: var(--spacer);
-}
+
+
 /* method applied for all top leasing sections */
 
 .det-car,
@@ -529,6 +462,17 @@ display: flex;
 }
 
 /***** Style to Car Details ****/
+
+
+.det-car article:nth-child(1) {
+  background-color: var(--accent-color);
+  padding: 10px;
+}
+
+.det-car article:nth-child(2) {
+  background-color: var(--tertiary-color);
+  padding: 10px;
+}
 
 .det-car h1 { 
   color: var(--primary-color);
@@ -590,113 +534,17 @@ display: flex;
 }
 
 
-/****** Style for the section contact agent *****/
-.det-form {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-
-}
-
-.basic input,
-.basic textarea {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8px;
-  /* Include padding and border in the element's total width */
-}
-
-.basic textarea {
-  min-height: 250px;
-}
-
-input[type="email"] {
-  min-width: 225px;
-}
-
-label {
-  display: block;
-  font-size: 1em;
-  margin-bottom: 0.25em;
-  color: var(--text-mid-color);
-  font-family: var(--primary-font);
-  padding-top: var(--spacer);
-}
-
-/* Begin styling address */
-
-ul {
-  padding-bottom: 20px;
-}
-
-ul.det-location {
-  display: grid;
-  grid-template-columns: 4fr 3fr 1fr 2fr;
-  gap: 10px;
-  /* Adjust the gap between columns if needed */
-
-}
-
-ul.det-location li:first-child {
-  grid-column: span 4;
-  /* Make the first item span four columns */
-}
-
-ul.det-location li:last-child {
-  grid-column: span 2;
-  /* Make the last item span 2 to make sure it align with address */
-}
-
-/* Style for input fields */
-ul.det-location input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-
-}
-
-/* End styling address */
-
-.det-container {
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.det-checks,
-.det-contactTime {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  /* Adjust this value to change the spacing between checkboxes */
-  list-style: none;
-  /* Remove default list style */
-}
-
-.det-checks li,
-.det-contactTime li {
-  display: flex;
-  align-items: center;
-}
-
-.det-checks input[type="checkbox"] {
-  margin-right: 5px;
-  /* Add some space between the checkbox and the label */
-}
-
-.det-contactTime {
-  text-align: center;
-  font-family: var(--heading-font);
-  color: var(--text-dk-color);
-  font-size: calc(var(--fs-base) * 1.2);
-}
-
 /****************************************************************************************/
 /*                       BEGIN         how does car leasing works                       */
 /****************************************************************************************/
-
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: var(--spacer) 0px;
+  gap: var(--spacer);
+}
 
 .cards article {
   padding: var(--spacer-dbl);
@@ -753,7 +601,7 @@ i {
   margin-top: auto;
 
 }
-
+/* END how does car leasing works ______________*/
 /****************************************************************************************/
 /*                                car inventory                                         */
 /*                Style specfic for the class inventory page                            */
@@ -766,10 +614,6 @@ i {
  margin-top: var(--spacer);
   margin-bottom: var(--spacer);
 } 
-
-
-
-/* END how does car leasing works ______________*/
 
 
 /* ************************************************************************************************************ */
@@ -843,6 +687,7 @@ i {
   box-shadow: var(--shadow)
 }
 
+/** ???????????? use same , call yours btn- **/
 .signUp .btn {
   width: 98%;
   border-radius: var(--border-radius);
@@ -900,6 +745,7 @@ i {
   box-shadow: var(--shadow)
 }
 
+/** ??????????????????????? you can use same class of btn- ??? ***/
 .pswdreset .btn {
   width: 98%;
   border-radius: var(--border-radius);
@@ -943,13 +789,8 @@ i {
 /****************************************************************************************/
 /*                                BEGIN     FOOTER                                      */
 /****************************************************************************************/
-footer h1 {
-  color: var(--text-lt-color);
-}
-
-footer h2 {
-  color: var(--text-lt-color);
-}
+footer h1 {color: var(--text-lt-color);}
+footer h2 {color: var(--text-lt-color);}
 
 footer {
   background-color: var(--primary-color);
@@ -982,30 +823,18 @@ footer button {
 footer a {
   color: var(--text-lt-color);
   font-family: var(--primary-font);
-  text-decoration: none;
+  text-decoration: none;  
 }
 
-/** - a:visited is a pseudo class selector **/
-footer a:visited {
-  color: var(--tertiary-color);
-}
 
-footer a:hover {
-  color: var(--secondary-color);
-}
-
-.d {
-  display: none;
-}
+.d {display: none;}
 
 .mIcon a {
   display: inline-block;
   margin: 15px;
 }
 
-.i a {
-  margin: 10px;
-}
+.i a {margin: 10px;}
 
 /* END FOOTER */
 
@@ -1066,7 +895,7 @@ footer a:hover {
 
 
 .leasingImage img {
-    padding-top: 1rem;
+padding-top: 1rem;
 }
 article.dealers {
     display: flex;
@@ -1151,8 +980,7 @@ article.list3 {
     text-align: center;
     padding: 2rem;
 }
-.containerB {
-    
+.containerB {  
     padding: 0 10px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -1183,12 +1011,11 @@ article.rules {
 }
 .containerC {
     background-color:var(--accent-color); 
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 article.important {
-    display: block;
-    
+    display: block; 
 }
 .important h3 {
     padding: var(--spacer);
@@ -1216,7 +1043,6 @@ article.important {
 /****************************************************************************************/
 /*                                BEGIN    CONTACT US                                     */
 /****************************************************************************************/
-
 
 .contactDetails {
     width: 80%;
@@ -1263,27 +1089,24 @@ article.important {
     font-size: 1.8rem;
     padding-bottom: 5px;;
     font-family:var(--heading-font);
-
 }
-
-
 .contactUs li {
     color:var(--text-dk-color);
     font-family: var(--primary-font);
-    padding:2px;
-     
+    padding:2px;  
 }
 
 .contactForm input{
     width: 95%;
   border: solid 1px #0B1C55;
-    border-radius: 6px;
+    border-radius: 6px;   /** ??? should we use the same border radius everywhere **/
     padding:10px;
 }
  .contactForm .message{
         height:165px;
     }
 
+    /**** ????? same, can we use default ??????, both btn repeated  */
     .contactForm .btn{
         width:98%;
 margin:10px 0 0;
@@ -1296,6 +1119,7 @@ transition: background-color .3s ease;
 text-decoration: none;
 box-shadow: var(--shadow);
     }
+
 .contactAgentPage .btn{ 
     width:98%;
     margin:10px 0 0;
@@ -1308,6 +1132,7 @@ box-shadow: var(--shadow);
     text-decoration: none;
     box-shadow: var(--shadow);
         }
+
 .contactAgentPage .contactDetails{width:100%;}
 
 .map {
@@ -1339,15 +1164,11 @@ box-shadow: var(--shadow);
 /****************************************************************************************/
 
 
-/* tablet size */
-@media screen and (min-width: 700px) {
+/** At least tablet size **/
+@media screen and (min-width: 950px) {
 
-  /* Navigation Bar */
-
- 
-  .navTogglerMenu {
-    display: none;
-  }
+  /* Navigation Bar, hide hamberger */
+  .navTogglerMenu { display: none; }
 
   .navBar {
     display: flex;
@@ -1356,10 +1177,8 @@ box-shadow: var(--shadow);
     padding: 20px;
    
   }
+  /* .headerNav li a { color: var(--text-dk-color);} */ /* already dark color by default */
 
-  .headerNav li a {
-    color: var(--text-dk-color);
-  }
   .logo {
     display: flex;
     align-items: center;
@@ -1367,7 +1186,6 @@ box-shadow: var(--shadow);
     top: .6rem;
     left: var(--spacer);
   }
-
 
   .logo img {
     width: 100px;
@@ -1378,12 +1196,9 @@ box-shadow: var(--shadow);
 
   .headerNav {
     all: unset;
-    /* to remove hamburger icon for desktop version */
-    align-self: flex-start;
+    align-self: flex-start;/* to remove hamburger icon for desktop version */
     z-index: 1000;
-
-      height: 50px;
-    /* this is needed to make sure that the navigation is not blocked by main */
+    height: 50px; /* this is needed to make sure that the navigation is not blocked by main */
   }
 
   .headerNav ul {
@@ -1404,11 +1219,8 @@ box-shadow: var(--shadow);
     right: 7rem;
 
   }
-    .login i {
-        color: var(--primary-color); /* change icon color here*/
-    }
+ .login i { color: var(--primary-color); /* change icon color here*/ }
     
-
   /* grid area for how does car leasing works */
 
   .cards-container {
@@ -1439,6 +1251,39 @@ box-shadow: var(--shadow);
     height: 100%;
     width: 100%;
   }
+/***** ABOUT US PAGE *****/
+.aboutUs-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 31em)) 1fr;
+}
+.about_us header {
+  background-color: var(--primary-color);
+  color: var(--text-lt-color)
+  
+}
+.about_us header img {
+  align-self: center;
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.about_us header h1 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: left;
+  padding: 4em 0 0 0.5em;
+}
+.about_us header p {
+  margin-right: 1rem;
+  text-align: left;
+  grid-column: 2/3;
+  grid-row: 2/2;
+}
+.content-wrap, #about-b {
+  grid-column: 2/4;
+}
+#about-a, #about-b, #about-c, #about-d {
+  margin: 0 2em 0;
+}
 
   /***** Footer grid area *****/
   .m { display: none; }
@@ -1486,46 +1331,29 @@ box-shadow: var(--shadow);
   bottom: 0;
 }
 }
+/** end @media min 700px **/
 
-/** end Tab size **/
-/***** Desktop size *****/
-
+/*******************************************************************/
+/**                          Desktop size                        ***/
+/*******************************************************************/
 @media screen and (min-width: 1200px) {
 
-  /* header link, wait for Amala to modify */
-
+  /* header link  */
   .center-nav,
   .center-nav ul {
     display: flex;
     justify-content: space-between;
   }
 
-  .logo img {
-    width: 50%;
-  }
+  .logo img {width: 50%;}
+  .center-nav ul li { margin: 0 10px;}
 
-  .center-nav ul li {
-    margin: 0 10px;
-    /* Adjust this value as needed */
-  }
-
-
-  /****** SPECIFIC FOR SEARCH BAR for desktopsize */
-  .search-bar {
-    display: block;
-  }
+  /****** SPECIFIC FOR SEARCH BAR for desktopsize *****/
+  
+  .search-bar {display: block;} /* to show the search bar on desktop devices */
 
   .box-viewCars,
-  .btn-viewCars {
-    display: none;
-    /* Adjust as needed */
-  }
-
-
-  /* always hide for desktop on viewCars*/
-  .box-viewCars {
-    display: none;
-  }
+  .btn-viewCars {  display: none; } /* hide viewbox and button for desktop */
 
   .search-bar ul {
     grid-template-columns: var(--grid-item-very-large);
@@ -1540,42 +1368,10 @@ box-shadow: var(--shadow);
     grid-row: auto;
     grid-gap: 2em;
   }
-  /* ******css for about us page********* */
-  @media (min-width: 700px) {
-    .aboutUs-grid {
-      display: grid;
-      grid-template-columns: 1fr repeat(2, minmax(auto, 31em)) 1fr;
-    }
-    .about_us header {
-      background-color: var(--primary-color);
-      color: var(--text-lt-color)
-      
-    }
-    .about_us header img {
-      align-self: center;
-      grid-column: 3/4;
-      grid-row: 1/3;
-    }
-    .about_us header h1 {
-      grid-column: 2/3;
-      grid-row: 1/2;
-      text-align: left;
-      padding: 4em 0 0 0.5em;
-    }
-    .about_us header p {
-      margin-right: 1rem;
-      text-align: left;
-      grid-column: 2/3;
-      grid-row: 2/2;
-    }
-    .content-wrap, #about-b {
-      grid-column: 2/4;
-    }
-    #about-a, #about-b, #about-c, #about-d {
-      margin: 0 2em 0;
-    }
-  }
+
+    
   /* ******css for contact us page********* */
+
   .contactAgentPage{
     font-family: var(--primary-font);
     font-size: 1.25em;
@@ -1673,9 +1469,11 @@ text-align: center;}
     }
     
 
-     /* SIGN IN AND SIGN UP MEDIA QUERRY */
-.signIn{max-width: 600px;}
-.signUp{max-width: 600px;}
-.pswdreset{max-width: 600px;}
+  /* SIGN IN AND SIGN UP MEDIA QUERRY */
+  .signIn,
+  .signUp,
+  .pswdreset {
+    max-width: 600px;
+  }
 
 }
