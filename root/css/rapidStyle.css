@@ -142,6 +142,7 @@ main {padding-top: 100px;}
   display: block;
   color: var(--text-lt-color); /* for hamberger menu si li not shown */
   text-decoration: none;
+  font-family: var(--heading-font);
   font-weight: var(--fw-bold);
 }
 
@@ -390,7 +391,10 @@ display: flex;
 
 /***** Style to Car Details ****/
 
-
+.det-car h1 { 
+  color: var(--primary-color);
+  text-align: center; }
+  
 
 .det-car button {
   margin-top: var(--spacer-dbl); 
@@ -616,17 +620,13 @@ i {
 /*                Style specfic for the class inventory page                            */
 /****************************************************************************************/
 
-.car-desc article {
-  background-color: #fff;
-  border: solid 5px var(--tertiary-color);
-}
-
-.car-desc img {
-  width: 250px;
+/** Restrict all image size to 250x150, keeping image original size 300x500 for car details page **/
+.top-inventory img {
+  width: 300px;
   height: 150px;
-  border: solid 5px var(--secondary-color);
+ margin-top: var(--spacer);
   margin-bottom: var(--spacer);
-}
+} 
 
 
 
