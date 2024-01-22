@@ -1129,7 +1129,6 @@ article.list {
     padding: 1rem;
 }
 .list p{
-    align-items: left;
     text-align: center;
     padding: 2rem;
 }
@@ -1142,7 +1141,6 @@ article.list2 {
     padding: 1rem;
 }
 .list2 p{
-    align-items: left;
     text-align: center;
     padding: 2rem;
 }
@@ -1155,7 +1153,6 @@ article.list3 {
     padding: 1rem;
 }
 .list3 p{
-    align-items: left;
     text-align: center;
     padding: 2rem;
 }
