@@ -270,7 +270,7 @@ a:hover {color: var(--hover-color);}
 .signUp p {
   color: var(--text-dk-color);
   font-family: var(--primary-font);
-  margin-bottom:10px 0;
+  margin-bottom:10px;
 }
 
 /* passowrd reset */
