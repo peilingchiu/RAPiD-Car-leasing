@@ -33,108 +33,9 @@
 
 /* *********************************************************************************************************
 *********************************************************************************************************** 
-                            2.Global styles
+                            2.Global styles/Global Variable 
 ***********************************************************************************************************
 ************************************************************************************************************/
-
-
-                /* *************************************************
-                *****************************************************
-                            2.1 Color
-                *****************************************************
-                *****************************************************/
-
-                /* *************************************************
-                *****************************************************
-                            2.2 Typography
-                *****************************************************
-                *****************************************************/
-
-                /* *************************************************
-                *****************************************************
-                            2.3 Helper
-                *****************************************************
-                *****************************************************/
-
-                /* *************************************************
-                *****************************************************
-                            2.4 Grid Helper
-                *****************************************************
-                *****************************************************/
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            3. Header and Navigation
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            4. Sign In and related pages
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            5. Body
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             6.About Us page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            7.Inventory page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            8.Leasing page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            9.Services Page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            10.Offers page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             11.FAQs page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             12.Contact Us page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/****************************************************************************************/
-/*                                BEGIN  Global Variable                                */
-/****************************************************************************************/
 :root {
   /* Typography */
   --primary-font: 'Roboto', sans-serif;  /* normal Light font weight */
@@ -210,10 +111,338 @@ img {
   height: auto;
   
 }
+
 ul {list-style-type: none;}
 /** 1. - a:visited is a pseudo class selector **/
 a:visited {color: var(--visted-color);}
 a:hover {color: var(--hover-color);}
+
+
+/****************************************************************************************/
+/*                                BEGIN  .btn                                           */
+/*                Style specfic for the class btn and inverted btn                      */
+/****************************************************************************************/
+
+
+/** 3. Attribute Selector Styles **/
+[class*='btn-'] {
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  cursor: pointer;
+  padding: 7px 24px;
+  transition: background-color .3s ease;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  width:90%;
+}
+
+[class*='btn-']:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dk-color);
+}
+
+.btn-invert {
+  background-color: var(--text-lt-color);
+  color: var(--text-dk-color);
+  margin: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+                /* *************************************************
+                *****************************************************
+                            2.1 Color
+                *****************************************************
+                *****************************************************/
+
+                /* *************************************************
+                *****************************************************
+                            2.2 Typography
+                *****************************************************
+                *****************************************************/
+
+                /* *************************************************
+                *****************************************************
+                            2.3 Helper
+                *****************************************************
+                *****************************************************/
+
+                /* *************************************************
+                *****************************************************
+                            2.4 Grid Helper
+                *****************************************************
+                *****************************************************/
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            3. Header and Navigation
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            4. Sign In and related pages
+***********************************************************************************************************
+************************************************************************************************************/
+.signIn {
+  background-color: var(--secondary-color);
+  width: 80%;
+  padding: 10px;
+  margin:10% auto;
+  box-shadow: var(--shadow);
+}
+
+.signIn .btn- {
+  width: 98%;
+  margin-bottom: 10px;
+}
+
+.signIn li {
+  margin-bottom: 5px;
+}
+
+.signIn input {
+  width: 95%;
+  border: solid 1px #0B1C55;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.signIn h2 {
+  color: var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+
+}
+
+.signIn p {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
+
+
+/*---------CSS FOR Sign up page------*/
+
+
+.signUpPage footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.signUp {
+  background-color: var(--secondary-color);
+  width: 80%;
+  padding: 10px;
+  margin:10% auto;
+  box-shadow: var(--shadow)
+}
+
+.signUp .btn- {
+  width: 98%;
+}
+
+.signUp li {
+  margin-bottom: 5px;
+}
+
+.signUp input {
+  width: 95%;
+  border: solid 1px #0B1C55;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.signUp h2 {
+  color: var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+
+}
+
+.signUp p {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  margin-bottom:10px;
+}
+
+/* passowrd reset */
+
+.pswdreset {
+  background-color: var(--secondary-color);
+  width: 80%;
+  padding: 10px;
+  margin:15% auto;
+  box-shadow: var(--shadow)
+}
+
+.pswdreset .btn- {
+  width: 98%;
+  margin-bottom: 10px
+}
+
+.pswdreset li {
+  margin-bottom: 5px;
+}
+
+.pswdreset input {
+  width: 95%;
+  border: solid 1px #0B1C55;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.pswdreset h2 {
+  color: var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+
+}
+
+.pswdreset p {
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+ margin:5px 0 10px;
+}
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            5. Body
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                             6.About Us page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            7.Inventory page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            8.Leasing page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            9.Services Page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                            10.Offers page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                             11.FAQs page
+***********************************************************************************************************
+************************************************************************************************************/
+
+
+/* *********************************************************************************************************
+*********************************************************************************************************** 
+                             12.Contact Us page
+***********************************************************************************************************
+************************************************************************************************************/
+/****************************************************************************************/
+/*                                BEGIN    CONTACT US                                     */
+/****************************************************************************************/
+
+.contactDetails {
+  width: 80%;
+  margin:15px auto;
+  text-align: left;
+  box-shadow: var(--shadow)
+}
+
+.contactDetails article {
+  background-color:var(--tertiary-color);
+  padding: 10px;
+}
+
+contactDetails > article > section {
+border: 2px solid #000; /* Adjust as needed */
+border-radius:var(--border-radius);
+  padding: 10px;
+}
+.contactDetails div {
+  border: solid 2px #0B1C55;
+  border-radius:var(--border-radius);
+  padding: 10px;
+}
+
+.contactDetails h2 {
+  color:var(--text-dk-color);
+  font-size: 1.25rem;
+  font-family:var(--heading-font);
+  margin-bottom:5px;
+
+}
+.contactDetails h3 {
+padding-bottom: 10px;
+}
+.contactDetails li {
+color: var(--text-dk-color);
+font-family: var(--primary-font);
+}
+
+.contactUs {
+  background-color:var(--secondary-color);
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  box-shadow: var(--shadow)
+}
+.contactUs h2{
+  margin-bottom:10px;
+}
+.contactUs li {
+  color:var(--text-dk-color);
+  font-family: var(--primary-font);
+  padding:2px;  
+}
+
+.contactForm input{
+  width: 95%;
+border: solid 1px #0B1C55;
+  border-radius: 6px;   /** ??? should we use the same border radius everywhere **/
+  padding:10px;
+  margin-bottom:5px;
+}
+.contactForm #message{
+      height:165px;
+  }
+
+  .contactForm .btn- {
+      width:98%;
+    margin:10px 0 0;
+  }
+
+
 
 /****************************************************************************************/
 /*                                   HEADER AND NAVIGATION                              */
@@ -380,39 +609,6 @@ ul.search select {
 }
 
 
-/****************************************************************************************/
-/*                                BEGIN  .btn                                           */
-/*                Style specfic for the class btn and inverted btn                      */
-/****************************************************************************************/
-
-
-/** 3. Attribute Selector Styles **/
-[class*='btn-'] {
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  cursor: pointer;
-  padding: 7px 24px;
-  transition: background-color .3s ease;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  width:90%;
-}
-
-[class*='btn-']:hover {
-  background-color: var(--accent-color);
-  color: var(--text-dk-color);
-}
-
-.btn-invert {
-  background-color: var(--text-lt-color);
-  color: var(--text-dk-color);
-  margin: 10px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
 
 /****************************************************************************************/
 /*                                BEGIN  top lease car section                          */
@@ -462,7 +658,47 @@ display: flex;
   align-items: center;
 }
 
-/***** Style to Car Details ****/
+/****************************************************************************************/
+/*                       BEGIN         how does car leasing works                       */
+/*       With respionsive style of flex using same class [top] to encourge code reuse   */
+/****************************************************************************************/
+/* re-use class top as much as possible, the the top leasing part */
+
+
+.top-cards  {
+  background-color: var(--accent-color);
+  min-height: 300px;
+  padding: var(--spacer);
+}
+
+.top-cards article {
+  display:flex;
+  border: none;  /* by default there is a border of 20px but for this one we don't need that */
+}
+/** using font awesome icon making it our color and bigger **/
+ i {
+  font-size: 2.5rem;
+  color: var(--secondary-accent-color);
+  padding: var(--spacer);
+} 
+
+
+/****************************************************************************************/
+/*                                car inventory                                         */
+/*                Style specfic for the class inventory page                            */
+/****************************************************************************************/
+
+/** Restrict all image size to 250x150, keeping image original size 300x500 for car details page **/
+.top-inventory img {
+  width: 300px;
+  height: 150px;
+ margin-top: var(--spacer);
+  margin-bottom: var(--spacer);
+} 
+
+
+/******************* SECTION FOR CAR DETAILS PAGE ********************/
+
 
 
 .det-car article:nth-child(1) {
@@ -535,266 +771,11 @@ display: flex;
 }
 
 
-/****************************************************************************************/
-/*                       BEGIN         how does car leasing works                       */
-/****************************************************************************************/
-
-/* .cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: var(--spacer) 0px;
-  gap: var(--spacer);
-} */
-
-
-/************************ECAMLE CHANGES USING SAME CLASS TOP *************/
-.top-cards  {
-  background-color: var(--accent-color);
-  position: relative;
-height: 300px;
-padding: var(--spacer);
-}
-.top-cards article {
-  background-color: white;
-}
-.cards article {
-  padding: var(--spacer-dbl);
-  background-color: var(--accent-color);
-}
-
-.cards-container {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  background-color: var(--accent-color);
-  justify-items: center;
-  align-items: center;
-  height: 100%;
-  padding-bottom: var(--spacer-dbl);
-  margin-bottom: var(--spacer);
-}
-
-
-.cards-container h3 {
-  font-family: var(--heading-font);
-  font-weight: var(--fw-bold);
-  font-style: italic;
-  line-height: 1.25;
-  text-align: center;
-  padding: 1rem;
-}
-
-.cards-container p {
-  padding: var(--spacer) var(--spacer);
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
-  height: 100%;
-  padding: var(--spacer-dbl);
-  background-color: #fff;
-  text-align: center;
-  width: 80%;
-  box-shadow: var(--shadow);
-  border: none;
-}
-
-i {
-  font-size: 2.5rem;
-  color: #DEB992;
-  padding: var(--spacer);
-}
-
-.card {
-  margin-top: auto;
-
-}
-/* END how does car leasing works ______________*/
-/****************************************************************************************/
-/*                                car inventory                                         */
-/*                Style specfic for the class inventory page                            */
-/****************************************************************************************/
-
-/** Restrict all image size to 250x150, keeping image original size 300x500 for car details page **/
-.top-inventory img {
-  width: 300px;
-  height: 150px;
- margin-top: var(--spacer);
-  margin-bottom: var(--spacer);
-} 
-
 
 /* ************************************************************************************************************ */
 /*---------CSS FOR Sign In, Sign up pswd and usrnmreset page------*/
 /* ************************************************************************************************************ */
-.signIn {
-  background-color: var(--secondary-color);
-  width: 80%;
-  padding: 10px;
-  margin: auto;
-  box-shadow: var(--shadow);
-}
 
-.signIn .btn {
-  width: 98%;
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  cursor: pointer;
-  padding: 7px 24px;
-  transition: background-color .3s ease;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  margin: 10px auto;
-}
-
-.signIn li {
-  margin-bottom: 5px;
-}
-
-.signIn input {
-  width: 95%;
-  border: solid 1px #0B1C55;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.signIn h2 {
-  color: var(--text-dk-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
-  margin-bottom: 10px;
-
-}
-
-.signIn p {
-  color: var(--text-dk-color);
-  font-family: var(--primary-font);
-  margin-bottom: 10px;
-}
-
-
-/*---------CSS FOR Sign up page------*/
-.signUpPage {
-  height: 100vh;
-}
-
-.signUpPage footer {
-  position: fixed;
-  bottom: 0;
-}
-
-.signUp {
-  background-color: var(--secondary-color);
-  width: 80%;
-  padding: 10px;
-  margin:auto;
-  box-shadow: var(--shadow)
-}
-
-/** ???????????? use same , call yours btn- **/
-.signUp .btn {
-  width: 98%;
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  cursor: pointer;
-  padding: 7px 24px;
-  transition: background-color .3s ease;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  margin: 10px auto;
-}
-
-.signUp li {
-  margin-bottom: 5px;
-}
-
-.signUp input {
-  width: 95%;
-  border: solid 1px #0B1C55;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.signUp h2 {
-  color: var(--text-dk-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
-  margin-bottom: 10px;
-
-}
-
-.signUp p {
-  color: var(--text-dk-color);
-  font-family: var(--primary-font);
-  margin-bottom: 10px;
-}
-
-/* passowrd reset */
-.pswdresetPage {
-  height: 100vh;
-}
-
-.pswdresetPage footer {
-  position: fixed;
-  bottom: 0;
-}
-
-.pswdreset {
-  background-color: var(--secondary-color);
-  width: 80%;
-  padding: 10px;
-  margin:auto;
-  box-shadow: var(--shadow)
-}
-
-/** ??????????????????????? you can use same class of btn- ??? ***/
-.pswdreset .btn {
-  width: 98%;
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  cursor: pointer;
-  padding: 7px 24px;
-  transition: background-color .3s ease;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  margin: 10px auto;
-}
-
-.pswdreset li {
-  margin-bottom: 5px;
-}
-
-.pswdreset input {
-  width: 95%;
-  border: solid 1px #0B1C55;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.pswdreset h2 {
-  color: var(--text-dk-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
-  margin-bottom: 10px;
-
-}
-
-.pswdreset p {
-  color: var(--text-dk-color);
-  font-family: var(--primary-font);
-  margin-bottom: 10px;
-}
 
 
 /****************************************************************************************/
@@ -906,6 +887,8 @@ footer a {
 
 
 .leasingImage img {
+  width: 100%;
+  margin:auto;
 padding-top: 1rem;
 }
 article.dealers {
@@ -1061,7 +1044,7 @@ article.important {
   background-color: var(--primary-color);
   color: var(--text-lt-color);
   border: 10px solid var(--accent-color);
-  
+
 }
 
 .offers article span {
@@ -1226,90 +1209,7 @@ FAQ's Header section
 }
 
 
-/****************************************************************************************/
-/*                                BEGIN    CONTACT US                                     */
-/****************************************************************************************/
 
-.contactDetails {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 20px;
-    text-align: left;
-    box-shadow: var(--shadow)
-}
-
-.contactDetails article {
-    background-color:var(--tertiary-color);
-    padding: 10px;
-}
-
-contactDetails > article > section {
-  border: 2px solid #000; /* Adjust as needed */
-  border-radius:var(--border-radius);
-    padding: 10px;
-}
-.contactDetails div {
-    border: solid 2px #0B1C55;
-    border-radius:var(--border-radius);
-    padding: 10px;
-}
-
-.contactDetails h2 {
-    color:var(--text-dk-color);
-    font-size: 1.25rem;
-    font-family:var(--heading-font);
-
-}
-.contactDetails h3 {
-  padding-bottom: 10px;
-}
-.contactDetails li {
-  color: var(--text-dk-color);
-  font-family: var(--primary-font);
-}
-
-.contactUs {
-    background-color:var(--secondary-color);
-    width: 80%;
-    padding: 10px;
-    margin: auto;
-    box-shadow: var(--shadow)
-}
-.contactUs h1 {
-    color:var(--text-dk-color);
-    font-size: 1.8rem;
-    padding-bottom: 5px;;
-    font-family:var(--heading-font);
-}
-.contactUs li {
-    color:var(--text-dk-color);
-    font-family: var(--primary-font);
-    padding:2px;  
-}
-
-.contactForm input{
-    width: 95%;
-  border: solid 1px #0B1C55;
-    border-radius: 6px;   /** ??? should we use the same border radius everywhere **/
-    padding:10px;
-}
- .contactForm .message{
-        height:165px;
-    }
-
-    /**** ????? same, can we use default ??????, both btn repeated  */
-    .contactForm .btn{
-        width:98%;
-margin:10px 0 0;
-border-radius: var(--border-radius);
-background-color: var(--primary-color);
-color: var(--text-lt-color);
-cursor: pointer;
-padding: 7px 24px;
-transition: background-color .3s ease;
-text-decoration: none;
-box-shadow: var(--shadow);
-    }
 
     /************ NEW CONTACT AGENT PAGE *********/
   
@@ -1465,6 +1365,7 @@ contactAgentMain .contactUs h1 {
   }
  .login i { color: var(--primary-color); /* change icon color here*/ }
 
+
   /* grid area for how does car leasing works */
 
   .cards-container {
@@ -1495,6 +1396,7 @@ contactAgentMain .contactUs h1 {
     height: 100%;
     width: 100%;
   }
+
 /***** ABOUT US PAGE *****/
 .aboutUs-grid {
   display: grid;
@@ -1568,10 +1470,7 @@ contactAgentMain .contactUs h1 {
   .pswdreset {
     width: 33%;
   }
-.signInPage footer {
-  position: fixed;
-  bottom: 0;
-}
+
    /*services page*/
     .ins {
         display: inline-flex;
@@ -1606,14 +1505,7 @@ contactAgentMain .contactUs h1 {
     align-self: end;
   }
 
-  /* Raul: grid area for how does car leasing works */
-
-
-  .cards-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row: auto;
-    grid-gap: 2em;
-  }
+  
 
     
   /* ******css for contact us page********* */
@@ -1651,7 +1543,11 @@ contactAgentMain .contactUs h1 {
         align-self: center;
         box-shadow: var(--shadow);
     }
+     .c2 p{
+      font-size: .925em;
+      line-height: 1.3;
 
+     }
     .hours .c1 .c2 {
         width: 350px;
       
