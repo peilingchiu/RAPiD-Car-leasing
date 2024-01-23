@@ -404,8 +404,6 @@ border-radius:var(--border-radius);
   font-size: 1.25rem;
   font-family:var(--heading-font);
   margin-bottom:5px;
-  padding:0;
-  text-align: left;
 
 }
 .contactDetails h3 {
@@ -433,10 +431,11 @@ font-family: var(--primary-font);
   font-family: var(--primary-font);
   padding:2px;  
 }
+
 .contactForm input{
   width: 95%;
 border: solid 1px #0B1C55;
-  border-radius: 6px;   /** ??? should we use the same border radius everywhere? no..its specifically for small fields otherwise its 10px **/
+  border-radius: 6px;   
   padding:10px;
   margin-bottom:5px;
 }
@@ -448,67 +447,8 @@ border: solid 1px #0B1C55;
       width:98%;
     margin:10px 0 0;
   }
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             13.Footer
-***********************************************************************************************************
-************************************************************************************************************/
-/****************************************************************************************/
-/*                                BEGIN     FOOTER                                      */
-/****************************************************************************************/
-footer h1 {color: var(--text-lt-color);}
-footer h2 {color: var(--text-lt-color);}
-
-footer {
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  width: 100%;
-  padding: 10px;
-}
-footer li{
-padding-bottom: 5px;
-}
-footer section {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-}
-
-footer h2 {
-  color: var(--text-lt-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
-  margin-bottom: 8px;
-  text-align: left;
- padding:0;
-}
-
-footer button {
-  width: 30%;
-  margin-top: 10px;
-  background-color: var(--text-lt-color);
-  color: var(--text-dk-color);
-
-}
-
-footer a {
-  color: var(--text-lt-color);
-  font-family: var(--primary-font);
-  text-decoration: none;  
-}
 
 
-.d {display: none;}
-
-.mIcon a {
-  display: inline-block;
-  margin: 15px;
-}
-
-.i a {margin: 10px;}
-
-/* END FOOTER */
-0
 
 /****************************************************************************************/
 /*                                   HEADER AND NAVIGATION                              */
@@ -844,6 +784,57 @@ display: flex;
 
 
 
+/****************************************************************************************/
+/*                                BEGIN     FOOTER                                      */
+/****************************************************************************************/
+footer h1 {color: var(--text-lt-color);}
+footer h2 {color: var(--text-lt-color);}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  width: 100%;
+  padding: 10px;
+}
+
+footer section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+footer h2 {
+  color: var(--text-lt-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 8px;
+}
+
+footer button {
+  width: 30%;
+  margin-top: 10px;
+  background-color: var(--text-lt-color);
+  color: var(--text-dk-color);
+
+}
+
+footer a {
+  color: var(--text-lt-color);
+  font-family: var(--primary-font);
+  text-decoration: none;  
+}
+
+
+.d {display: none;}
+
+.mIcon a {
+  display: inline-block;
+  margin: 15px;
+}
+
+.i a {margin: 10px;}
+
+/* END FOOTER */
 
 /****************************************************************************************/
 /*                                BEGIN    ABOUT US                                     */
