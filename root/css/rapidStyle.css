@@ -833,12 +833,11 @@ footer a {
 /****************************************************************************************/
 /*                                BEGIN    ABOUT US                                     */
 /****************************************************************************************/
-/* About Header */
+/* About US Header */
 .about_us #about-top {
   min-height: 400px;
   color: var(--text-lt-color);
   background: var(--primary-color);
-  padding-bottom: .5em;
 }
 #about-top img{
   background-position: center;
@@ -849,7 +848,7 @@ footer a {
   opacity: 0.8;
 }
 
-#about-top, h1 {
+.about_us h1 {
   color: var(--text-lt-color);
   text-align: center;
 }
@@ -865,18 +864,22 @@ footer a {
 #about-a {
   padding: 2em;
   background: var(--tertiary-color);
+  margin: 2em 0;
 }
 #about-b {
   padding: 2em;
   background: var(--accent-color);
+  margin-bottom: 1em;
 }
 #about-c {
   padding: 2em;
   background: var(--tertiary-color);
+  margin-bottom: 1em;
 }
 #about-d {
   padding: 2em;
   background: var(--accent-color);
+  margin-bottom: 1em;
 }
 
 /* *************************************END OF ABOUT US CSS********************** */
@@ -1410,7 +1413,7 @@ contactAgentMain .contactUs h1 {
 #about-top h1 {
   grid-column: 2/3;
   grid-row: 1/2;
-  text-align: left;
+  /* text-align: left; */
   padding: 2em 0 0 1em;
   margin-bottom: 0;
 }
@@ -1426,7 +1429,7 @@ contactAgentMain .contactUs h1 {
   grid-column: 2/4;
 }
 #about-a, #about-b, #about-c, #about-d {
-  margin: 0 2em 0;
+  margin: 1em 0;
 }
 
   /***** Footer grid area *****/
