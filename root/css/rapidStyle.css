@@ -613,7 +613,9 @@ border-radius:var(--border-radius);
   color:var(--text-dk-color);
   font-size: 1.25rem;
   font-family:var(--heading-font);
-  margin-bottom:5px;
+  margin-bottom:8px;
+  Padding:0;
+  text-align:left;
 
 }
 .contactDetails h3 {
@@ -1467,7 +1469,16 @@ contactAgentMain .contactUs h1 {
 #about-a, #about-b, #about-c, #about-d {
   margin: 1em 0;
 }
-
+/* ****Contact us *****/
+.contactDetails {
+  width: 80%;
+  /* margin:15px auto; */
+  text-align: center;
+  /* box-shadow: var(--shadow) */
+}
+.contactDetails h2{
+  text-align: center;
+}
   /***** Footer grid area *****/
   .m { display: none; }
 
@@ -1564,7 +1575,12 @@ contactAgentMain .contactUs h1 {
         box-shadow:none;
     
     } 
-
+    .contactDetails {
+      width: 85%;
+      margin:15px auto;
+      text-align: left;
+      box-shadow: var(--shadow)
+    }
     .hours {
         grid-area: hrs;
        align-items: center ;
@@ -1604,6 +1620,7 @@ contactAgentMain .contactUs h1 {
     }
 
      .contactUs {
+      width: 85%;
         display: grid;
         grid-template-areas: "form map";
         grid-template-columns: var(--grid-item-mid);
