@@ -1032,7 +1032,18 @@ article.important {
  /****************************************************************************************/
   /*                                End LEASE, START OFFERS                                     */
   /****************************************************************************************/
- .offersImage img { width:100%; }
+
+  .offers article:first-child p {
+    display: none; /* Hide the paragraph by default on smaller screens */
+  }
+  .offersImage img { width:100%; }
+ 
+ .offersImage {
+  position: relative;
+  margin-top: var(--spacer);  
+  background-color: var(--accent-color);
+   border: 10px solid var(--primary-color);
+}
 
  .offers article {
   padding: var(--spacer);
@@ -1040,16 +1051,47 @@ article.important {
   font-family: var(--heading-font);
 }
 
-.offers article:first-child {
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  border: 10px solid var(--accent-color);
 
-}
+
 
 .offers article span {
   padding: var(--spacer);
 }
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  position: relative;
+}
+
+
+
+.topText, .bottomText {
+  position: absolute;
+  width: 100%;
+
+  /* color: rgba(255, 255, 255, 0.7); Transparent white color */
+  background-color: transparent; /* Fully transparent background */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.topText {
+top: 1%; /* Adjust the top position, write text on top of image */
+
+}
+
+.bottomText {
+  bottom: 1%; /* Adjust the bottom position as needed */
+  color:var(--text-lt-color);
+}
+
+
+
+
+
+
 /****************************************************************************************/
   /*                              begin---     Services page styling                       */
   /****************************************************************************************/
@@ -1309,6 +1351,19 @@ contactAgentMain .contactUs h1 {
 
 /** At least tablet size **/
 @media screen and (min-width: 950px) {
+/** show offers **/
+.offers article:first-child p {
+  display: block; /* Show the paragraph on smaller screens (mobile devices) */
+}
+.topText h1 {color: var(--text-lt-color);}
+.topText h3 {
+  color:red;
+  text-shadow: var(--shadow);
+}
+.bottomText h2 {
+  color: var(--primary-color);
+  text-shadow: var(--shadow);
+}
 
   /* Navigation Bar, hide hamberger */
   .navTogglerMenu { display: none; }
