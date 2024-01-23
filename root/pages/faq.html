@@ -18,7 +18,7 @@
     <script src="scripts/scripts.js"></script>
   </head>
     
-  <body class="faq">
+  <body>
     <!--header -->
 	<header class="navBar">
 		<!-- i think its ok to define just a class in header call navBar, just don't use header as selector in css file so other files won't be affected -->
@@ -30,15 +30,14 @@
 						<ul>
 							<li><a href="../index.html">Home</a></li>
 							<li><a href="aboutUs.html">About us</a></li>
-							<li><a href="pages/carInventory.html">Inventory</a></li>
-							<li><a href="pages/leasing.html">Leasing</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Offers</a></li>
-							<li><a href="faq.html">FAQ's</a></li>
-							<li><a href="pages/contact.html">Contact us</a></li>
+							<li><a href="carInventory.html">Inventory</a></li>
+							<li><a href="leasing.html">Leasing</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="offers.html">Offers</a></li>
+							<li><a href="contact.html">Contact us</a></li>
 						</ul>
 					</nav>
-					<label for="navToggler" class="navTogglerMenu" name="navToggler">
+					<label for="navToggler" class="navTogglerMenu">
 						<span class="material-icons-outlined mi menuOpen">menu</span>
 						<span class="material-icons-outlined mi menuClose">close</span> <!-- material icons for menu -->
 					</label>
@@ -47,27 +46,23 @@
 							<i class="fa fa-user fa-lg" aria-hidden="true"></i>
 						<!-- login icon -->
 						</a>
-		
 					</section>
-		
-				
-		
 			</header> <!-- End for header -->
     
-         
     <!-- Main Area -->
-    <main>
-		<hero class="faq-grid">
+    <main class="faq">
+		<!--section top -->
+		<section id="faq-top">
 			<h1>Vehicle Leasing FAQs</h1>
 			<p>If you're thinking about leasing a vehicle but find yourself unsure about how the process works, you've come to the right place. Our comprehensive Vehicle Leasing FAQs are designed to simplify the complexities of car leasing and provide you with all the information you need.</p>
-		</hero>
+		</section>
       <!--section a -->
-      <section id="faq-a"class="faq-grid">
+      <section id="faq-a">
         <h2>Making car leasing easy</h2>
 
         <h3>Finance</h3>
       
-	      <details open>
+	      <details>
 		    <summary>Do I need a credit check for car leasing?</summary>
 		    <p>Yes, a credit check is typically required when leasing a vehicle. This involves a creditor examining your financial information by accessing your credit report to assess your reliability as a borrower and ensure your ability to meet monthly payments for the vehicle. The credit check generates a credit report, offering an overview of your financial history.</p>
 	      </details>
@@ -89,11 +84,11 @@
       </section>
       
       <!--section b -->
-      <section id="faq-b"class="faq-grid">
+      <section id="faq-b">
       
         <h3>Selecting a new vehicle</h3>
       
-	      <details open>
+	      <details>
 		    <summary>Are all the vehicles you provide brand new?</summary>
 		    <p>Certainly! Every vehicle we offer is brand new and sourced directly from dealerships. We have established strong relationships with top suppliers across the UK, allowing our pricing team to guarantee the best lease deals available.</p>
 	      </details>
@@ -117,11 +112,11 @@
       </section>
 
       <!--section c -->
-      <section id="faq-c"class="faq-grid">
+      <section id="faq-c">
       
         <h3>Leasing a Vehicle</h3>
       
-	      <details open>
+	      <details>
 		    <summary>Am I allowed to bring my vehicle abroad?</summary>
 		    <p>Absolutely! You simply need to notify the finance company about your destination and travel dates, and they will supply you with the necessary documentation.</p>
 	      </details>
@@ -144,52 +139,51 @@
       
     </main>
 	<footer>
-        <section class="m">
-            <h1>For more information on our best deals subscribe to our newsletter.</h1>
-            <button>Email ID</button>
-            <section class="mIcon">
-                <a href="#"><span class="fa fa-twitter fa-2x"></span></a>
-                <a href="#"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
-                <a href="#"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
-            </section>
-            <p>Copyright &copy;2023 | Lings Cars</p>
-        </section>
-        <section class="d">
-            <article class="l">
-                <h2>Leasing Information</h2>
-                <ul>
-                    <li><a href="#">Car Leasing</a></li>
-                    <li><a href="#">Van Leasing</a></li>
-                    <li><a href="#">Leasing Terms</a></li>
-                    <li><a href="#">Short-term Leasing</a></li>
-                </ul>
-            </article>
-            <article class="s">
-                <h2>Our Services</h2>
-                <ul>
-                    <li><a href="#">Insurance</a></li>
-                    <li><a href="#">Maintainance</a></li>
-                    <li><a href="#">Introduce A friend</a></li>
-                    <li><a href="#">Car Accessories</a></li>
-                    <li><a href="#">Price Matching</a></li>
-                </ul>
-            </article>
-            <article class="c">
-                <h2>Contact Us</h2>
-                <p>Address:</p>
-                <p>1234 River Street, 4th Avenue,</p>
-                <p>UK</p>
-                <p>Call:1234-567-23233</p>
-                <p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
-            </article>
-            <p class="p">Copyright &copy;2024 | Lings Cars</p>
-            <article class="i">
-                <a href="https://www.instagram.com/rapid_car_leasing?igsh=d2Z1Nm90Zjd4N3p4&utm_source=qr"><span class="fa fa-twitter fa-2x"></span></a>
-                <a href="https://www.facebook.com/lingscars/"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
-                <a href="https://www.youtube.com/@LINGsCARS"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
-            </article>
-        </section>
-    </footer>
-  
+		<section class="m">
+			<h1>For more information on our best deals subscribe to our newsletter.</h1>
+			<button class="">Email ID</button>
+			<section class="mIcon">
+				<a href="https://twitter.com"><span class="fa fa-twitter fa-2x"></span></a>
+				<a href="https://facebook.com"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+				<a href="https://youtube.com"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+			</section>
+			<p>Copyright &copy;2024 | Lings Cars</p>
+		</section>
+		<section class="d">
+			<article class="l">
+				<h2><a href="../pages/leasing.html">Leasing Information</a></h2>
+				<ul>
+					<li>Car Leasing</li>
+					<li>Van Leasing</li>
+					<li>Leasing Terms</li>
+					<li>Short-term Leasing</li>
+				</ul>
+			</article>
+			<article class="s">
+				<h2><a href="../pages/services.html">Our Services</a></h2>
+				<ul>
+					<li>Insurance</li>
+					<li>Maintainance</li>
+					<li>Introduce A friend</li>
+					<li>Car Accessories</li>
+					<li>Price Matching</li>
+				</ul>
+			</article>
+			<article class="c">
+				<h2><a href="../pages/contact.html">Contact Us</a></h2>
+				<p>Address:</p>
+				<p>1234 River Street, 4th Avenue,</p>
+				<p>UK</p>
+				<p>Call:1234-567-23233</p>
+				<p><a href="mailto@ling@linscar.com">Email:ling@linscar.com</a></p>
+			</article>
+			<p class="p">Copyright &copy;2024 | Lings Cars</p>
+			<article class="i">
+				<a href="https://twitter.com"><span class="fa fa-twitter fa-2x"></span></a>
+				<a href="https://facebook.com"><span class="fa-brands fa-square-facebook fa-2x"></span></a>
+				<a href="https://youtube.com"><span class="fa-brands fa-square-youtube fa-2x"></span></a>
+			</article>
+		</section>
+	</footer>
   </body>
 </html>
