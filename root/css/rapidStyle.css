@@ -881,6 +881,9 @@ article.dealers {
     padding: 10px 0;
 }
 .dealers h3 {
+     font-size: 1rem;
+     font-family: var(--heading-font);
+    font-weight: var(--fw-b);
     text-align: left;
     padding-bottom: var(--spacer);
 }
@@ -896,6 +899,9 @@ article.discountedPricing {
     padding-bottom: 10px;
 }
 .discountedPricing h3 {
+	font-size: 1rem;
+        font-family: var(--heading-font);
+	font-weight: var(--fw-b);
     text-align: left;
     padding-bottom: var(--spacer);
 }
@@ -908,6 +914,9 @@ article.lowerPayments {
     padding-bottom: 10px;
 }
 .lowerPayments h3 {
+	font-size: 1rem;
+        font-family: var(--heading-font);
+	font-weight: var(--fw-b);
     text-align: left;
     padding-bottom: var(--spacer);
 }
@@ -932,6 +941,9 @@ article.list {
     padding: 1rem;
 }
 .list p{
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-l);
     text-align: center;
     padding: 2rem;
 }
@@ -944,6 +956,10 @@ article.list2 {
     padding: 1rem;
 }
 .list2 p{
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-l);
+  font-size: 1rem;
     text-align: center;
     padding: 2rem;
 }
@@ -956,6 +972,10 @@ article.list3 {
     padding: 1rem;
 }
 .list3 p{
+ color: var(--text-dk-color);
+  font-family: var(--primary-font);
+	font-weight: var(--fw-l);
+	font-size: 1rem;
     text-align: center;
     padding: 2rem;
 }
@@ -1556,6 +1576,12 @@ contactAgentMain .contactUs h1 {
     grid-template-columns: var(--grid-item-very-large);
     align-self: end;
   }
+	/* ******css for services page********* */
+	.servicesImage {
+		width: 100%;
+		margin: auto;
+	}
+	
 
   
 
