@@ -1206,13 +1206,23 @@ FAQ's Header section
       align-items: center; /* Add this line to center align the items horizontally */
       justify-content: center; /* Add this line to center align the items vertically */
     }
+    .contactAgentMain .contactForm {
+      display:flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-right: var(--spacer-dbl);
+      margin-bottom: var(--spacer-dbl);
+    }
+
     #contactAgentMain > * {
       margin-bottom: 20px; /* Adjust as needed */
   }
-  .contactAgentMain > .contactUs > aside {
+  .contactAgentMain .map {
     border: 2px solid white; /* Adjust as needed */
     box-shadow: var(--shadow);
-    padding:10px
+    padding: var(--spacer);
+    width: 90%;
+   
 }
 contactAgentMain .contactUs h1 {
   color: var(--primary-color);
@@ -1224,19 +1234,25 @@ contactAgentMain .contactUs h1 {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around; /* Changed from justify-self to justify-content */
-      gap: 20px; /* Adjust as needed */
+      margin-top: var(--spacer-dbl);
+      gap: 20px; 
   }
 
   .cnt-moreinfo > * {
-    min-width: 300px; /* Adjust as needed */
+    width: 330px; 
     min-height: 100px;
     padding:10px;
     border-radius: var(--border-radius);
     background-color: var(--tertiary-color);
   }
+  .cnt-moreinfo > * > fieldset:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
   .cnt-moreinfo > article > fieldset {
-    border-radius: 10px; /* Adjust as needed */
+    border-radius: 10px; 
     min-height: 100px;
 }
   .cnt-moreinfo > * > fieldset {
