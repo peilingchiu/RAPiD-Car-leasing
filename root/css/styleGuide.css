@@ -169,7 +169,7 @@
 .typography-body {
 	max-width: 500px;
 }
-.click > div {
+.click > button {
 	margin-bottom: 20px;
 }
 .forms {
