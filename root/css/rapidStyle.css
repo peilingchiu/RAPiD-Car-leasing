@@ -828,12 +828,11 @@ footer a {
   background-size: cover;
   width: 100%;
   z-index: 0;
-  opacity: 0.8;
 }
-
 .about_us h1 {
   color: var(--text-lt-color);
   text-align: center;
+  padding-top: 1em;
 }
 .about_us h2 {
   padding-top: 1.5em;
@@ -847,7 +846,7 @@ footer a {
 #about-a {
   padding: 2em;
   background: var(--tertiary-color);
-  margin: 2em 0;
+  margin: 1em 0;
 }
 #about-b {
   padding: 2em;
@@ -882,6 +881,9 @@ article.dealers {
     padding: 10px 0;
 }
 .dealers h3 {
+     font-size: 1rem;
+     font-family: var(--heading-font);
+    font-weight: var(--fw-b);
     text-align: left;
     padding-bottom: var(--spacer);
 }
@@ -897,6 +899,9 @@ article.discountedPricing {
     padding-bottom: 10px;
 }
 .discountedPricing h3 {
+	font-size: 1rem;
+        font-family: var(--heading-font);
+	font-weight: var(--fw-b);
     text-align: left;
     padding-bottom: var(--spacer);
 }
@@ -909,6 +914,9 @@ article.lowerPayments {
     padding-bottom: 10px;
 }
 .lowerPayments h3 {
+	font-size: 1rem;
+        font-family: var(--heading-font);
+	font-weight: var(--fw-b);
     text-align: left;
     padding-bottom: var(--spacer);
 }
@@ -933,6 +941,9 @@ article.list {
     padding: 1rem;
 }
 .list p{
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-l);
     text-align: center;
     padding: 2rem;
 }
@@ -945,6 +956,10 @@ article.list2 {
     padding: 1rem;
 }
 .list2 p{
+  color: var(--text-dk-color);
+  font-family: var(--primary-font);
+  font-weight: var(--fw-l);
+  font-size: 1rem;
     text-align: center;
     padding: 2rem;
 }
@@ -957,6 +972,10 @@ article.list3 {
     padding: 1rem;
 }
 .list3 p{
+ color: var(--text-dk-color);
+  font-family: var(--primary-font);
+	font-weight: var(--fw-l);
+	font-size: 1rem;
     text-align: center;
     padding: 2rem;
 }
@@ -1184,17 +1203,21 @@ FAQ's Header section
   color: var(--text-lt-color);
   text-align: center;
   padding-top: 1.5em;
+  padding-bottom: 1em;
 }
 #faq-top p {
   color: var(--text-lt-color);
-  text-align: center;
-  font-size: calc(var(--fs-base) * 1.2);
-  padding: .5rem 3rem 1rem 1rem;
+  font-size: calc(var(--fs-base) * 1.1);
+  padding: .5rem 4rem 2rem;
 }
 /* FAQ's Main */
 
 .faq main, h2 {
   text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+.faq main, h3 {
   padding: 1rem;
 }
 
@@ -1447,11 +1470,11 @@ contactAgentMain .contactUs h1 {
   grid-column: 3/4;
   grid-row: 1/3;
 }
-#about-top h1 {
+.about_us h1 {
   grid-column: 2/3;
   grid-row: 1/2;
-  /* text-align: left; */
-  padding: 2em 0 0 1em;
+  text-align: left;
+  padding: 5em 0 0 0.5em;
   margin-bottom: 0;
 }
 #about-top p {
@@ -1553,6 +1576,12 @@ contactAgentMain .contactUs h1 {
     grid-template-columns: var(--grid-item-very-large);
     align-self: end;
   }
+	/* ******css for services page********* */
+	.servicesImage {
+		width: 100%;
+		margin: auto;
+	}
+	
 
   
 
