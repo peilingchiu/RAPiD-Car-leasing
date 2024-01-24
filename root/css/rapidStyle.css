@@ -13,6 +13,7 @@
                               02.4 Default style for all pags     
                               02.5 Grid Helper 
                             03. Header and Navigation
+                               03.1 search bar
                             04. Sign In and related pages
                            
                             06.About Us page
@@ -245,10 +246,9 @@ main {padding-top: 100px;}
   color: var(--text-lt-color);
 }
 
-/****************************************************************************************/
-/*                                BEGIN  style for search bar                           */
-/*                Style specfic for the class .search-bar          DEFAULT              */
-/****************************************************************************************/
+/**----------------------------------------------------**/
+/*           03.1  style for common search bar          */
+/**-----------------------------------------------------*/
 
 .box-viewCars,
 .btn-viewCars {display: block;}
@@ -1205,6 +1205,7 @@ FAQ's Header section
       flex-direction: column;
       align-items: center; /* Add this line to center align the items horizontally */
       justify-content: center; /* Add this line to center align the items vertically */
+      width:100%;
     }
     .contactAgentMain .contactForm {
       display:flex;
