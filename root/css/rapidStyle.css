@@ -814,7 +814,7 @@ footer a {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  z-index: 0;
+
 }
 .about_us h1 {
   color: var(--text-lt-color);
@@ -1025,39 +1025,13 @@ article.important {
   /*                                End LEASE, START OFFERS                                     */
   /****************************************************************************************/
 
-  .offersImage img {
-     width:100%; 
-  }
- 
-   /* .offersImage {
-    margin-top: 10px;
-    z-index: 0;
-   } */
-/* Hide .promotionText in image by default */
-/* .promotionTextInImage {display: none;}
-.promotionTextInMobile {display: block;} */
-
- .offers article {
-  padding: var(--spacer);
-  margin: var(--spacer);
-  font-family: var(--heading-font);
-}
-
 
 .offers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  
   margin: 20px;
  
 }
-
-
-
-
-
-
-
 
 /****************************************************************************************/
   /*                              begin---     Services page styling                       */
@@ -1512,10 +1486,7 @@ contactAgentMain .contactUs h1 {
     align-self: end;
   }
 	/* ******css for services page********* */
-	.servicesImage {
-		width: 100%;
-		margin: auto;
-	}
+
 	
 
   /* ******css for contact us page********* */
