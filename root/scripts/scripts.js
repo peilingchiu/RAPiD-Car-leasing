@@ -80,7 +80,7 @@ function handleReset(event) {
     function redirectTocarCntAgent() {
 
         // Redirect to carContact.html when the form is submitted
-         window.location.href = 'pages/Contact.html';
+         window.location.href = 'pages/contact.html';
         
 
     }
