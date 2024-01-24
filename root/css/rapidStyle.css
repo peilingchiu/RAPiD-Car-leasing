@@ -1567,19 +1567,20 @@ contactAgentMain .contactUs h1 {
     color: var(--text-dk-color);
   }
      .contactDetails {
+      width: 85%;
+      margin:15px auto;
+      text-align: left;
+      box-shadow: var(--shadow)
         display: grid;
         grid-template-areas: "hrs c1 c2";
         grid-template-columns: 1fr 1fr 1fr;
         gap:15px;
         grid-row:auto;
-        box-shadow:none;
     
     } 
-    .contactDetails {
-      width: 85%;
-      margin:15px auto;
+    .contactDetails h2 {
       text-align: left;
-      box-shadow: var(--shadow)
+     
     }
     .hours {
         grid-area: hrs;
