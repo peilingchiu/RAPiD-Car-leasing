@@ -12,18 +12,21 @@
                               02.3 Helper
                               02.4 Default style for all pags     
                               02.5 Grid Helper 
-                            03. Header and Navigation
+                            03. Home page + Header and Navigation
                                03.1 search bar
+                               03.2 Top leasing deal section
+                               03.3 Top cards - how does car leasing work 
                             04. Sign In and related pages
-                           
-                            06.About Us page
-                            07.Inventory page
-                            08.Leasing page
-                            09.Services Page
-                           10.Offers page
-                           11.FAQs page
-                           12.Contact Us page
-                           13.Footer
+                            05. About Us page
+                            06. Contact Us page
+                            07. Car Inventory page
+                            08. Car details page
+                            09. Leasing page
+                            10. Offers page
+                            11. Services Page
+                            12. FAQ page
+                            13. Contact Agent page
+                            14. Footer
 
 ************************************************************************************************************/
 
@@ -72,13 +75,11 @@ h1, h2, h3 {
   font-family: var(--heading-font);
   font-weight: var(--fw-bold);
 }
-
+/** S1. - h1,h2,h2,p,img are element selectors **/
 h1 {font-size: calc(var(--fs-base) * 1.8);}
 h2 {font-size: calc(var(--fs-base) * 1.5);}
 h3 {font-size: calc(var(--fs-base) * 1.2);}
-
-H5 {font-size: calc(var(--fs-base) * 1.5);
-    }  
+ 
 p {line-height: 1.5;}
 
 img {
@@ -87,12 +88,14 @@ img {
   
 }
 
+/** comment 7 selecters, we name it S1 to  S2 **/
+
 ul {list-style-type: none;}
-/** 1. - a:visited is a pseudo class selector **/
+/** S2. - a:visited is a pseudo class selector **/
 a:visited {color: var(--visted-color);}
 a:hover {color: var(--hover-color);}
 
-/** - body is an element selector **/
+
 body {
   /** ------------ 02.5 Grid helper  ------------**/
   --grid-item-mobile: repeat(1, 1fr);
@@ -109,6 +112,7 @@ body {
   max-width: 100%;
 }
 
+/** make sure the width of main bdoy is max 80% **/
 main {
   width: 80%;
   margin: auto;
@@ -118,7 +122,7 @@ main {
 /*            default behavier of button .btn-         */
 /**---------------------------------------------------**/
 
-/** Attribute Selector Styles **/
+/** S3. btn- is a css attribute Selector **/
 [class*='btn-'] {
   border-radius: var(--border-radius);
   background-color: var(--primary-color);
@@ -148,18 +152,19 @@ main {
              
 /* *********************************************************************************************************
 *********************************************************************************************************** 
-                            03. Header and Navigation
+                            03. HOME PAGE + HEADER + NAVIGATION
 ***********************************************************************************************************
 ************************************************************************************************************/
 
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
 main {padding-top: 100px;}
 
-/** - 2. img is a decedent selector of .hero **/
+/** - S4. img is a decedent selector of .hero **/
 .hero img {
   width: 100%
 }
 
+/** S5. .navBar is a class selector **/
 .navBar {
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,6 +192,7 @@ main {padding-top: 100px;}
   text-decoration: none;
 }
 
+/** S6. .headerNav li a is a combination of multiple types of selectors targeting a **/
 .headerNav li a {
   display: block;
   color: var(--text-dk-color); /** default li color for navigation links **/
@@ -195,11 +201,13 @@ main {padding-top: 100px;}
   font-weight: var(--fw-bold);
 }
 
-/* cant use default because of ham menu */
 .headerNav li a:hover {
   color: var(--hover-color);
 } 
 
+/** section for hamburger menu management **/
+/** S7. We leave with the most interesting selector **/
+/** .navToggler:checked~nav is a CSS selector that targets the "nav" element that is a sibling of an input element with the class "navToggler" when the "navToggler" input is checked. **/
 .navToggler:checked~nav {display: block;}
 .navToggler {display: none;}
 .mi {color: var(--primary-color);}
@@ -247,13 +255,13 @@ main {padding-top: 100px;}
 }
 
 /**----------------------------------------------------**/
-/*           03.1  style for common search bar          */
-/**-----------------------------------------------------*/
+/*           03.1  search bar :  common style          */
+/**----------------------------------------------------**/
 
 .box-viewCars,
 .btn-viewCars {display: block;}
 
-/* Style for the "box-viewCars" (initially hidden) */
+/* Style for the "box-viewCars" (initially hidden) mobile first */
 .box-viewCars {
   background-color: var(--secondary-color);
   padding: var(--spacer-dbl);
@@ -311,13 +319,11 @@ ul.search select {
 
 
 
-/****************************************************************************************/
-/*                                BEGIN  top lease car section                          */
-/*                Style specfic for the class cards in top leasing deal                 */
-/****************************************************************************************/
-
-/* method applied to top leasing sections, */
-
+/**----------------------------------------------------------------**/
+/*           03.2         top lease car section                     */
+/*              we have common class top for also inventory page    */
+/**----------------------------------------------------------------**/
+/* car details page also use similar class */
 .det-car,
 [class*='top'] {
 display: flex;
@@ -327,8 +333,7 @@ display: flex;
     background-color: var(--text-lt-color);
     padding-bottom: var(--spacer-dbl);
     margin-bottom: var(--spacer);
-    margin-top: var(--spacer);
-    
+    margin-top: var(--spacer); 
 }
 
   /** using class element with descendent selector **/
@@ -349,26 +354,20 @@ display: flex;
   border: solid 20px var(--tertiary-color);
   box-shadow: var(--shadow);
 }
-
 [class*='top'] dl{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-
-/****************************************************************************************/
-/*                       BEGIN         how does car leasing works                       */
-/*       With respionsive style of flex using same class [top] to encourge code reuse   */
-/****************************************************************************************/
-/* re-use class top as much as possible, the the top leasing part */
-
-
+/**-------------------------------------------------------------------------------**/
+/*           03.3      how does car leasing works                                  */
+/*  With respionsive style of flex using same class [top] to encourge code reuse   */
+/**-------------------------------------------------------------------------------**/
 .top-cards  {
   background-color: var(--accent-color);
   min-height: 300px;
   padding: var(--spacer);
 }
-
 .top-cards article {
   display:flex;
   border: none;  /* by default there is a border of 20px but for this one we don't need that */
@@ -380,11 +379,9 @@ display: flex;
   padding: var(--spacer);
 } 
 
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            4. Sign In and related pages
-***********************************************************************************************************
-************************************************************************************************************/
+/* ******************************************************************************************/
+/**                            04. Sign In and related pages                               **/
+/* ******************************************************************************************/
 .signIn {
   background-color: var(--secondary-color);
   width: 80%;
@@ -392,16 +389,13 @@ display: flex;
   margin:10% auto;
   box-shadow: var(--shadow);
 }
-
 .signIn .btn- {
   width: 98%;
   margin-bottom: 10px;
 }
-
 .signIn li {
   margin-bottom: 5px;
 }
-
 .signIn input {
   width: 95%;
   border: solid 1px #0B1C55;
@@ -409,7 +403,6 @@ display: flex;
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .signIn h2 {
   color: var(--text-dk-color);
   font-size: 1.25rem;
@@ -418,7 +411,6 @@ display: flex;
 text-align: left;
 padding:0;
 }
-
 .signIn p {
   color: var(--text-dk-color);
   font-family: var(--primary-font);
@@ -515,62 +507,61 @@ padding:0;
  margin:5px 0 10px;
 }
 
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            5. Body
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             6.About Us page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            7.Inventory page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            8.Leasing page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            9.Services Page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                            10.Offers page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             11.FAQs page
-***********************************************************************************************************
-************************************************************************************************************/
-
-
-/* *********************************************************************************************************
-*********************************************************************************************************** 
-                             12.Contact Us page
-***********************************************************************************************************
-************************************************************************************************************/
 /****************************************************************************************/
-/*                                BEGIN    CONTACT US                                     */
+/*                                05.    ABOUT US                                     */
+/****************************************************************************************/
+/* About US Header */
+.about_us #about-top {
+  min-height: 400px;
+  color: var(--text-lt-color);
+  background: var(--primary-color);
+}
+#about-top img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+.about_us h1 {
+  color: var(--text-lt-color);
+  text-align: center;
+  padding-top: 1em;
+}
+.about_us h2 {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+#about-top p {
+  text-align: left;
+  padding: 2em;
+}
+/* About Main */
+#about-a {
+  padding: 2em;
+  background: var(--tertiary-color);
+  margin: 1em 0;
+}
+#about-b {
+  padding: 2em;
+  background: var(--accent-color);
+  margin-bottom: 1em;
+}
+#about-c {
+  padding: 2em;
+  background: var(--tertiary-color);
+  margin-bottom: 1em;
+}
+#about-d {
+  padding: 2em;
+  background: var(--accent-color);
+  margin-bottom: 1em;
+}
+
+/* **END OF ABOUT US CSS****/
+
+/****************************************************************************************/
+/*                                06.   CONTACT US page                                 */
 /****************************************************************************************/
 
 .contactDetails {
@@ -647,14 +638,9 @@ border: solid 1px #0B1C55;
     margin:10px 0 0;
   }
 
-
-
-
-
-
 /****************************************************************************************/
-/*                                car inventory                                         */
-/*                Style specfic for the class inventory page                            */
+/*                           07.  Car inventory                                         */
+/*              Style specfic for the class inventory page , mostly using [top]         */                   */
 /****************************************************************************************/
 
 /** Restrict all image size to 250x150, keeping image original size 300x500 for car details page **/
@@ -665,32 +651,27 @@ border: solid 1px #0B1C55;
   margin-bottom: var(--spacer);
 } 
 
-
-/******************* SECTION FOR CAR DETAILS PAGE ********************/
-
-
-
+/****************************************************************************************/
+/*                           08.  Car details page                                       */
+/*              Style specific for the car details page                                  */
+/*****************************************************************************************/
 .det-car article:nth-child(1) {
   background-color: var(--accent-color);
   padding: 10px;
 }
-
 .det-car article:nth-child(2) {
   background-color: var(--tertiary-color);
   padding: 10px;
 }
-
 .det-car h1 { 
   color: var(--primary-color);
-  text-align: center; }
-  
-
+  text-align: center;
+ } 
 .det-car button {
   margin-top: var(--spacer-dbl); 
   padding: var(--spacer);
   width: 100%;
 }
- 
 .det-imgs img {
   max-width: 90%;
   height: auto;
@@ -699,7 +680,6 @@ border: solid 1px #0B1C55;
   margin-top: 20px; /* Add white space on top of images */
   border: solid 5px var(--secondary-color);
 }
-
 .det-imgs {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Four columns for desktop version */
@@ -714,14 +694,11 @@ border: solid 1px #0B1C55;
   width: 600px; /* Make it fill the whole width of the grid */
   justify-self: center; /* Center the image */
 }
-
 /* Adjust size for the rest of the images */
 .det-imgs img:not(:first-child) {
   width: 100%;
   height: auto;
 }
-
-
 .lease-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -729,135 +706,15 @@ border: solid 1px #0B1C55;
   margin: 0 auto; /* Center the grid horizontally */
   max-width: 80%; /* Adjust the percentage as needed */
 }
-
 .lease-details > dd:first-child {
   grid-column: 1 / -1;
   margin-bottom: 20px;
 }
+.lease-details > dd:not(:first-child) {margin-bottom: 10px;} 
 
-.lease-details > dd:not(:first-child) {
-  margin-bottom: 10px;
-}
-
-
-
-/* ************************************************************************************************************ */
-/*---------CSS FOR Sign In, Sign up pswd and usrnmreset page------*/
-/* ************************************************************************************************************ */
-
-
-
-/****************************************************************************************/
-/*                                BEGIN     FOOTER                                      */
-/****************************************************************************************/
-footer h1 {color: var(--text-lt-color);}
-
-footer {
-  background-color: var(--primary-color);
-  color: var(--text-lt-color);
-  width: 100%;
-  padding: 10px;
-}
-
-footer section {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-}
-
-footer h2 {
-  color: var(--text-lt-color);
-  font-size: 1.25rem;
-  font-family: var(--heading-font);
-  margin-bottom: 8px;
-  text-align: left;
-  padding:0;
-}
-
-footer button {
-  width: 30%;
-  margin-top: 10px;
-  background-color: var(--text-lt-color);
-  color: var(--text-dk-color);
-
-}
-
-footer a {
-  color: var(--text-lt-color);
-  font-family: var(--primary-font);
-  text-decoration: none;  
-}
-
-
-.d {display: none;}
-
-.mIcon a {
-  display: inline-block;
-  margin: 15px;
-}
-
-.i a {margin: 10px;}
-
-/* END FOOTER */
-
-/****************************************************************************************/
-/*                                BEGIN    ABOUT US                                     */
-/****************************************************************************************/
-/* About US Header */
-.about_us #about-top {
-  min-height: 400px;
-  color: var(--text-lt-color);
-  background: var(--primary-color);
-}
-#about-top img{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-
-}
-.about_us h1 {
-  color: var(--text-lt-color);
-  text-align: center;
-  padding-top: 1em;
-}
-.about_us h2 {
-  padding-top: 1.5em;
-  padding-bottom: 1em;
-}
-#about-top p {
-  text-align: left;
-  padding: 2em;
-}
-/* About Main */
-#about-a {
-  padding: 2em;
-  background: var(--tertiary-color);
-  margin: 1em 0;
-}
-#about-b {
-  padding: 2em;
-  background: var(--accent-color);
-  margin-bottom: 1em;
-}
-#about-c {
-  padding: 2em;
-  background: var(--tertiary-color);
-  margin-bottom: 1em;
-}
-#about-d {
-  padding: 2em;
-  background: var(--accent-color);
-  margin-bottom: 1em;
-}
-
-/* *************************************END OF ABOUT US CSS********************** */
-
-/****************************************************************************************/
-  /*                              begin---     Leasing page styling                       */
-  /****************************************************************************************/
-
-
+/*********************************************************************************/
+/*                            09.  Leasing page                                  */
+/*********************************************************************************/
 .leasingImage img {
   width: 100%;
   margin:auto;
@@ -874,9 +731,7 @@ article.dealers {
     text-align: left;
     padding-bottom: var(--spacer);
 }
-.dealers img {
-    padding: 1rem;
-}
+.dealers img {padding: 1rem;}
 .containerA {
     padding: 0 10px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -887,29 +742,24 @@ article.discountedPricing {
 }
 .discountedPricing h3 {
 	font-size: 1rem;
-        font-family: var(--heading-font);
+  font-family: var(--heading-font);
 	font-weight: var(--fw-b);
-    text-align: left;
-    padding-bottom: var(--spacer);
+  text-align: left;
+  padding-bottom: var(--spacer);
 }
-.discountedPricing img {
-    padding: 1rem;
-}
-
+.discountedPricing img {padding: 1rem;}
 article.lowerPayments {
     display: flex;
     padding-bottom: 10px;
 }
 .lowerPayments h3 {
 	font-size: 1rem;
-        font-family: var(--heading-font);
+  font-family: var(--heading-font);
 	font-weight: var(--fw-b);
-    text-align: left;
-    padding-bottom: var(--spacer);
+  text-align: left;
+  padding-bottom: var(--spacer);
 }
-.lowerPayments img {
-    padding: 1rem;
-}
+.lowerPayments img { padding: 1rem;}
 .containerA {
     background-color: var(--accent-color);
     border-radius: 8px;
@@ -923,10 +773,7 @@ article.list {
     display: flex;
     padding-bottom: 10px;
 }
-
-.list img {
-    padding: 1rem;
-}
+.list img {padding: 1rem;}
 .list p{
   color: var(--text-dk-color);
   font-family: var(--primary-font);
@@ -938,10 +785,7 @@ article.list2 {
     display: flex;
     padding-bottom: 10px;
 }
-
-.list2 img {
-    padding: 1rem;
-}
+.list2 img {padding: 1rem;}
 .list2 p{
   color: var(--text-dk-color);
   font-family: var(--primary-font);
@@ -954,10 +798,7 @@ article.list3 {
     display: flex;
     padding-bottom: 10px;
 }
-
-.list3 img {
-    padding: 1rem;
-}
+.list3 img { padding: 1rem;}
 .list3 p{
  color: var(--text-dk-color);
   font-family: var(--primary-font);
@@ -971,17 +812,11 @@ article.list3 {
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-article.rules {
-    display: block;
-    
-}
+article.rules {display: block;}
 .rules h3 {
     padding-top: var(--spacer);
 }
-.rules ul {
-    padding: 1rem;
-    
-}
+.rules ul { padding: 1rem;}
 .rules li {
     padding: 1rem;
     margin: 1rem;
@@ -1000,15 +835,9 @@ article.rules {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-article.important {
-    display: block; 
-}
-.important h3 {
-    padding: var(--spacer);
-}
-.important ul {
-    padding: var(--spacer);
-}
+article.important {display: block; }
+.important h3 {padding: var(--spacer);}
+.important ul {padding: var(--spacer);}
 .important li {
     padding: var(--spacer);
     list-style: disc;
@@ -1022,21 +851,15 @@ article.important {
     margin: 1rem;
 }
  /****************************************************************************************/
-  /*                                End LEASE, START OFFERS                                     */
-  /****************************************************************************************/
-
-
+  /*                              10. Offers page  common class used for rest            */
+  /***************************************************************************************/
 .offers {
   display: grid;
-  
   margin: 20px;
- 
 }
-
 /****************************************************************************************/
-  /*                              begin---     Services page styling                       */
-  /****************************************************************************************/
-
+  /*                              11. Services page                                     */
+  /**************************************************************************************/
 article.service1 {
     background-color: var(--accent-color);
      padding: var(--spacer);
@@ -1111,18 +934,9 @@ section.insurance {
     padding: var(--spacer);
 }
 
-
-
-
 /****************************************************************************************/
-   /**                             END---     Services page styling                    **/
-   /**                                         BEGIN FAQ                               **/       
-  /***************************************************************************************/
-
-  /*--------------------------------------------------------------
-FAQ's Header section 
---------------------------------------------------------------*/
-/* FAQ's Header */
+/**                             12.   FAQ                                              **/     
+/****************************************************************************************/
 .faq {
   width: 100%;
 }
@@ -1147,8 +961,6 @@ FAQ's Header section
   font-size: calc(var(--fs-base) * 1.1);
   padding: .5rem 4rem 2rem;
 }
-/* FAQ's Main */
-
 .faq main, h2 {
   text-align: center;
   padding-top: 1.5em;
@@ -1157,48 +969,40 @@ FAQ's Header section
 .faq main, h3 {
   padding: 1rem;
 }
-
 .faq details {
 	margin-bottom: 3px;
 	width: 100%;
 	font-family: var(--primary-font);
 }
-
 .faq details p {
   font-family: var(--primary-font);
 	padding: 20px;
 }
-
 .faq summary {
 	padding: 20px;
 	background-color: var(--tertiary-color);
 	border: 1px solid var(--accent-color);
 	outline: none;
 }
-
 .faq summary:hover,
 .faq summary:focus {
 	border: 1px solid var(--primary-color);
 }
-
 /** 4. - .faq details[open] is a decedent selector that open and collapse the section **/
 .faq details[open] summary {   
 	background-color: var(--tertiary-color);
 	border: 1px solid var(--accent-color);
 }
-
 .faq details[open] {
 	background: var(--accent-color);
 }
-
 #faq-c {
   padding-bottom: 3rem;
 }
 
-
-
-
-    /************ NEW CONTACT AGENT PAGE *********/
+/****************************************************************************************/
+/**                             13.   Contact Agent                                    **/     
+/****************************************************************************************/
   
     .contactAgentMain {
       display: flex;
@@ -1278,10 +1082,7 @@ contactAgentMain .contactUs h1 {
     width:90%
    }
 
-    /************ END NEW CONTACT AGENT PAGE *******/
-
 .contactAgentPage .contactDetails{width:100%;}
-
 .map {
     width: 100%;
     margin: auto;
@@ -1302,7 +1103,60 @@ contactAgentMain .contactUs h1 {
         grid-template-columns: var(--grid-item-mid);
 
     } 
-/* *************************************END OF CONTACT US CSS********************** */
+
+
+/****************************************************************************************/
+/*                                14.     FOOTER                                       */
+/****************************************************************************************/
+footer h1 {color: var(--text-lt-color);}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-lt-color);
+  width: 100%;
+  padding: 10px;
+}
+
+footer section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+footer h2 {
+  color: var(--text-lt-color);
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  margin-bottom: 8px;
+  text-align: left;
+  padding:0;
+}
+
+footer button {
+  width: 30%;
+  margin-top: 10px;
+  background-color: var(--text-lt-color);
+  color: var(--text-dk-color);
+
+}
+
+footer a {
+  color: var(--text-lt-color);
+  font-family: var(--primary-font);
+  text-decoration: none;  
+}
+
+
+.d {display: none;}
+
+.mIcon a {
+  display: inline-block;
+  margin: 15px;
+}
+
+.i a {margin: 10px;}
+
+/* END FOOTER */
 
 
 
@@ -1310,23 +1164,17 @@ contactAgentMain .contactUs h1 {
 /*                                   Media queries                                      */
 /****************************************************************************************/
 
-
-/** At least tablet size **/
 @media screen and (min-width: 950px) {
 
-
+  /* 03. Home page + Header and Navigation */
   /* Navigation Bar, hide hamberger */
   .navTogglerMenu { display: none; }
-
   .navBar {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-   
   }
-  /* .headerNav li a { color: var(--text-dk-color);} */ /* already dark color by default */
-
   .logo {
     display: flex;
     align-items: center;
@@ -1334,59 +1182,36 @@ contactAgentMain .contactUs h1 {
     top: .6rem;
     left: var(--spacer);
   }
-
   .logo img {
     width: 100px;
     /* Adjust the width as needed */
     height: 80px;
-
   }
-
   .headerNav {
     all: unset;
     align-self: flex-start;/* to remove hamburger icon for desktop version */
     z-index: 1000;
     height: 50px; /* this is needed to make sure that the navigation is not blocked by main */
-
   }
-
   .headerNav ul {
     display: flex;
     margin-right: 1rem;
   }
-
   .headerNav li {
     border-bottom: none;
     text-decoration: none;
   }
-
   .login {
     display: flex;
     justify-content: end;
     position: absolute;
     top: 1rem;
     right: 7rem;
-
   }
  .login i { color: var(--primary-color); /* change icon color here*/ }
 
-/** show offers **/
-/* .promotionTextInMobile {display: none;}
-.promotionTextInImage {display: block;} */
-
-.topText h1 {color: var(--text-lt-color);}
-.topText h3 {
-  color:red;
-  text-shadow: var(--shadow);
-}
-.bottomText h2 {
-  color: var(--primary-color);
-  text-shadow: var(--shadow);
-}
-  /* grid area for how does car leasing works */
-
   
-/***** ABOUT US PAGE *****/
+ /* 05. About Us page */
 .aboutUs-grid {
   display: grid;
   grid-template-columns: 1fr repeat(2, minmax(auto, 31em)) 1fr;
@@ -1417,7 +1242,8 @@ contactAgentMain .contactUs h1 {
 #about-a, #about-b, #about-c, #about-d {
   margin: 1em 0;
 }
-/* ****Contact us *****/
+
+/* 06. Contact Us page */
 .contactDetails {
   width: 80%;
   /* margin:15px auto; */
@@ -1482,6 +1308,7 @@ contactAgentMain .contactUs h1 {
 /*******************************************************************/
 @media screen and (min-width: 1200px) {
 
+   /* 03. Home page + Header and Navigation */
   /* header link  */
   .center-nav,
   .center-nav ul {
@@ -1502,11 +1329,14 @@ contactAgentMain .contactUs h1 {
     grid-template-columns: var(--grid-item-very-large);
     align-self: end;
   }
-	/* ******css for services page********* */
-
-	
-
-  /* ******css for contact us page********* */
+ /* 04. Sign In and related pages */
+  /* 0SIGN IN AND SIGN UP MEDIA QUERRY */
+  .signIn,
+  .signUp,
+  .pswdreset {
+    max-width: 600px;
+  }
+  /* ****** 06. css for contact us page********* */
 
   .contactAgentPage{
     font-family: var(--primary-font);
@@ -1580,52 +1410,7 @@ contactAgentMain .contactUs h1 {
     .map{grid-area: map;
         width:80%;
     height:90%;}
-/* span the image to 100% */
-    .contactAgentPage figure img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* This will ensure the aspect ratio of the image is maintained */
-  }
     
-/* CONTACT AGENT FORM */
-.contactAgentPage .contactUs {
-    margin: auto;
-    display: grid;
-    grid-template-areas:"aT aT"
-     "form map"
-     "cAPh2 cAPh2"
-     "cD cD"
-     "btn btn";
-    grid-template-columns: var(--grid-item-mid);
-    grid-row: auto;
-    box-shadow: var(--shadow);
-    margin-bottom: 20px;
-}
-.contactAgentPage .hours,.c1,.c2{
-    height:fit-content;
-    overflow: auto;
-    padding: 10px;
-}
-.agentTitle{grid-area: aT;}
-.contactDetails{grid-area: cD;}
-.cAPh2{grid-area: cAPh2;
-text-align: center;
-padding: 5px;}
-.btn{grid-area: btn;}
-.contactAgentPage .map{
-    margin-top: 45px;
-text-align: center;}
-
-    .contactAgentPage .contactDetails{
-        width:100%;
-    }
-    
-
-  /* SIGN IN AND SIGN UP MEDIA QUERRY */
-  .signIn,
-  .signUp,
-  .pswdreset {
-    max-width: 600px;
-  }
+  
 
 }
