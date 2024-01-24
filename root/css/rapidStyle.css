@@ -5,21 +5,20 @@
                    Dhanashree  */
 /* *********************************************************************************************************
                             TABLE OF CONTENTS
-                            1. CSS reset
-                            2.Global styles
-                              2.1 Color
-                              2.2 Typography
-                              2.3 Helper
-                              2.4 Default style for all pags
-            
-                            3. Header and Navigation
-                            4. Sign In and related pages
-                            5. Body 
-                               5.1 Grid Helper 
-                            6.About Us page
-                            7.Inventory page
-                            8.Leasing page
-                            9.Services Page
+                            01. CSS reset
+                            02. Global styles
+                              02.1 Color
+                              02.2 Typography
+                              02.3 Helper
+                              02.4 Default style for all pags     
+                              02.5 Grid Helper 
+                            03. Header and Navigation
+                            04. Sign In and related pages
+                           
+                            06.About Us page
+                            07.Inventory page
+                            08.Leasing page
+                            09.Services Page
                            10.Offers page
                            11.FAQs page
                            12.Contact Us page
@@ -28,13 +27,12 @@
 ************************************************************************************************************/
 
 /* *********************************************************************************************************
-                            1. CSS reset (Eric mayer reset) in seperate file cc/reset.css
+                            01. CSS reset (Eric mayer reset) in seperate file cc/reset.css
 ************************************************************************************************************/
 
 
 /* *********************************************************************************************************
-
-                            2.Global styles/Global Variable 
+                            02.Global styles/Global Variable 
 ***********************************************************************************************************
 ************************************************************************************************************/
 :root {
@@ -93,12 +91,9 @@ ul {list-style-type: none;}
 a:visited {color: var(--visted-color);}
 a:hover {color: var(--hover-color);}
 
-
-
 /** - body is an element selector **/
 body {
-
-  /** ------------ 5.1 Grid helper  ------------**/
+  /** ------------ 02.5 Grid helper  ------------**/
   --grid-item-mobile: repeat(1, 1fr);
   --grid-item-mid: repeat(2, 1fr);
   --grid-item-ml: repeat(3, 1fr);
@@ -118,14 +113,11 @@ main {
   margin: auto;
 }
 
+/**---------------------------------------------------**/
+/*            default behavier of button .btn-         */
+/**---------------------------------------------------**/
 
-/****************************************************************************************/
-/*                                BEGIN  .btn                                           */
-/*                Style specfic for the class btn and inverted btn                      */
-/****************************************************************************************/
-
-
-/** 3. Attribute Selector Styles **/
+/** Attribute Selector Styles **/
 [class*='btn-'] {
   border-radius: var(--border-radius);
   background-color: var(--primary-color);
@@ -155,10 +147,9 @@ main {
              
 /* *********************************************************************************************************
 *********************************************************************************************************** 
-                            3. Header and Navigation
+                            03. Header and Navigation
 ***********************************************************************************************************
 ************************************************************************************************************/
-
 
 /* !!!!! NECESSARY TO PUSH THE MAIN section down as navBar has a fixed position !!!!! */
 main {padding-top: 100px;}
@@ -233,7 +224,6 @@ main {padding-top: 100px;}
 
 .logo img {
   width: 80px;
-  /* Adjust the width as needed */
   height: 50px;
   margin: 0 1rem 0 0;  
 }
@@ -326,10 +316,7 @@ ul.search select {
 /*                Style specfic for the class cards in top leasing deal                 */
 /****************************************************************************************/
 
-
-
-
-/* method applied for all top leasing sections */
+/* method applied to top leasing sections, */
 
 .det-car,
 [class*='top'] {
