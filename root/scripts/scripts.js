@@ -49,7 +49,7 @@ function handleReset(event) {
 
     }
     function redirectToSearchCars() {
-        // Get form elements
+        // Get form elements, in preparation for next step, get a database and server, with dymamic data
         var make = document.getElementById("make").value;
         var model = document.getElementById("model").value;
         var year = document.getElementById("year").value;
@@ -65,40 +65,25 @@ function handleReset(event) {
 
         // Show a pop-up message
         alert("Please be patient while we search for your car with the following data: Make: " + make + ", Model: " + model + ", Year: " + year + ", Type: " + type + ", Budget: " + budget);
-      
 
-        // Redirect to car inventory or perform other actions
-        //window.location.href = 'carInventory.html';
+        // Redirect to check car inventory or perform other actions in future
+        //window.location.href = 'carInventoryCheck.html';
     }
 
     function redirectToCarDetails() {
 
         // Redirect to carDetails.jpg when the form is submitted
         window.location.href = 'carDetails.html';
-        // alert('redirecting to car inventory');
-
+        
     }
 
     function redirectTocarCntAgent() {
 
-        // Redirect to carDetails.jpg when the form is submitted
-        window.location.href = '../pages/carCntAgent.html';
-        // alert('redirectinging to car contact agent');
+        // Redirect to carContact.html when the form is submitted
+         window.location.href = 'pages/Contact.html';
+        
 
     }
  
-
-
-
-// function redirectToCarInventory(x) {
-//     // Redirect to car inventory when the form is submitted
-//     alert(x);
-//     if (x='Home') {
-//         alert ('x=',x);
-//     } else {
-//         alert ( 'not at home');
-//     }
-//     window.location.href = 'pages/carInventory.html';
-// }
 
 

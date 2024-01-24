@@ -327,7 +327,7 @@ display: flex;
     background-color: var(--text-lt-color);
     padding-bottom: var(--spacer-dbl);
     margin-bottom: var(--spacer);
-    margin-top: var(--spacer-dbl);
+    margin-top: var(--spacer);
     
 }
 
