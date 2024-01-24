@@ -1019,26 +1019,25 @@ article.important {
   /*                                End LEASE, START OFFERS                                     */
   /****************************************************************************************/
 
-  .offers article:first-child p {
-    display: none; /* Hide the paragraph by default on smaller screens */
-  }
+  /* .offers article:first-child p {
+    display: none;
+  } */ /* Hide the paragraph by default on smaller screens */
+
   .offersImage img { width:100%; }
  
  .offersImage {
   position: relative;
   margin-top: var(--spacer);  
-  background-color: var(--accent-color);
-   border: 10px solid var(--primary-color);
 }
+/* Hide .promotionText in image by default */
+.promotionTextInImage {display: none;}
+.promotionTextInMobile {display: block;}
 
  .offers article {
   padding: var(--spacer);
   margin: var(--spacer);
   font-family: var(--heading-font);
 }
-
-
-
 
 .offers article span {
   padding: var(--spacer);
@@ -1338,9 +1337,9 @@ contactAgentMain .contactUs h1 {
 /** At least tablet size **/
 @media screen and (min-width: 950px) {
 /** show offers **/
-.offers article:first-child p {
-  display: block; /* Show the paragraph on smaller screens (mobile devices) */
-}
+.promotionTextInMobile {display: none;}
+.promotionTextInImage {display: block;}
+
 .topText h1 {color: var(--text-lt-color);}
 .topText h3 {
   color:red;
